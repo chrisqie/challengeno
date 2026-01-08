@@ -1,0 +1,1930 @@
+{
+  "common": {
+    "appName": "ChallengeNo",
+    "slogan": "¿Desafío? ¡Sin presión!",
+    "developer": "onFuture Studio",
+    "loading": "Cargando...",
+    "initializing": "Inicializando aplicación...",
+    "error": "Error",
+    "success": "Éxito",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "submit": "Enviar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "all": "Todos",
+    "yes": "Sí",
+    "no": "No",
+    "refreshing": "Actualizando...",
+    "pullToRefresh": "Desliza para actualizar"
+  },
+  "nav": {
+    "home": "Inicio",
+    "create": "Crear",
+    "discover": "Descubrir",
+    "profile": "Perfil",
+    "settings": "Configuración",
+    "logout": "Cerrar sesión",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "search": "Buscar desafíos...",
+    "achievements": "Logros",
+    "achievementsTitle": "Sistema de Logros",
+    "shop": "Tienda",
+    "shopTitle": "Tienda de Puntos",
+    "teams": "Equipos",
+    "teamsTitle": "Mis Equipos",
+    "notifications": "Notificaciones",
+    "notificationsTitle": "Notificaciones",
+    "vip": "VIP",
+    "vipTitle": "Centro VIP",
+    "myProfile": "Mi Perfil",
+    "myGames": "Mis Desafíos",
+    "referral": "Referidos",
+    "admin": "Admin",
+    "logoutConfirm": "¿Estás seguro de que quieres cerrar sesión?",
+    "darkMode": "Modo Oscuro",
+    "lightMode": "Modo Claro"
+  },
+  "home": {
+    "welcomeBack": "¡Bienvenido de nuevo, {{name}}!",
+    "welcomeGuest": "Bienvenido a ChallengeNo",
+    "subtitle": "¡Desafíate a ti mismo, crece junto a otros. Sin presión!",
+    "discoverChallenges": "Descubre nuevos desafíos, crece con amigos",
+    "challengesCreated": "Desafíos Creados",
+    "challengesJoined": "Desafíos Unidos",
+    "challengesCompleted": "Desafíos Completados",
+    "myAchievements": "Mis Logros",
+    "inviteFriends": "Invitar Amigos",
+    "signUpNow": "Regístrate Ahora",
+    "logIn": "Iniciar Sesión",
+    "searchResults": "Resultados de Búsqueda",
+    "results": "resultados",
+    "noChallenges": "Aún No Hay Desafíos",
+    "noChallengesDesc": "No hay desafíos que coincidan con tus filtros. ¡Sé el primero en crear uno!",
+    "categories": {
+      "all": "Todos",
+      "health": "Salud",
+      "fitness": "Fitness",
+      "learning": "Aprendizaje",
+      "personal": "Personal",
+      "weather": "Clima",
+      "custom": "Personalizado"
+    },
+    "filters": {
+      "all": "Todos",
+      "open": "Abierto",
+      "featured": "Destacado",
+      "inProgress": "En Progreso",
+      "peerReview": "Revisión de Pares",
+      "completed": "Completado"
+    },
+    "location": {
+      "title": "Filtro de Ubicación",
+      "subtitle": "Filtrado inteligente basado en tu ubicación",
+      "all": "Todos",
+      "local": "Local",
+      "tough": "Difícil",
+      "localDesc": "Desafíos basados en ubicación",
+      "toughDesc": "Desafíos difíciles y duraderos"
+    },
+    "advanced": {
+      "title": "Filtros Avanzados",
+      "sortBy": "Ordenar Por",
+      "smartSort": "Orden Inteligente (Recomendado)",
+      "latest": "Más Reciente",
+      "newest": "Más Nuevo",
+      "featured": "Destacados Primero",
+      "startingSoon": "Próximos a Comenzar",
+      "oldest": "Más Antiguo",
+      "mostParticipants": "Más Participantes",
+      "leastParticipants": "Menos Participantes",
+      "mostPopular": "Más Popular",
+      "highestRewards": "Mayores Recompensas",
+      "challengeType": "Tipo de Desafío",
+      "gameType": "Tipo de Juego",
+      "allChallenges": "Todos los Desafíos",
+      "allGames": "Todos los Juegos",
+      "individual": "Individual",
+      "individualChallenge": "Desafío Individual",
+      "team": "Equipo",
+      "teamGame": "Juego en Equipo",
+      "quickFilters": "Filtros Rápidos",
+      "available": "Disponible",
+      "healthChallenges": "Desafíos de Salud",
+      "smartSortHint": "💡 Orden Inteligente: Desafíos que comienzan pronto primero, luego los más recientes",
+      "createChallenge": "Crear Desafío"
+    }
+  },
+  "auth": {
+    "loginSuccess": "¡Inicio de sesión exitoso!",
+    "registerSuccess": "¡Registro exitoso!",
+    "registerFailed": "Registro fallido",
+    "logoutSuccess": "Sesión cerrada exitosamente",
+    "sessionExpired": "Sesión expirada, por favor inicia sesión nuevamente",
+    "login": {
+      "title": "¡Bienvenido de nuevo!",
+      "subtitle": "¿Desafío? ¡Sin presión!",
+      "username": "Usuario o Correo",
+      "usernamePlaceholder": "Ingresa tu usuario o correo",
+      "password": "Contraseña",
+      "passwordPlaceholder": "Ingresa tu contraseña",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "loginButton": "Iniciar Sesión",
+      "noAccount": "¿No tienes cuenta?",
+      "signUpNow": "Regístrate ahora",
+      "errors": {
+        "usernameRequired": "Por favor ingresa usuario o correo",
+        "passwordRequired": "Por favor ingresa contraseña",
+        "accountLocked": "Cuenta bloqueada. Espera {{time}} antes de reintentar"
+      }
+    },
+    "register": {
+      "title": "Crea tu cuenta",
+      "subtitle": "¡Comienza tu viaje de desafíos!",
+      "username": "Usuario",
+      "usernamePlaceholder": "Ingresa tu usuario",
+      "email": "Correo",
+      "emailPlaceholder": "Ingresa tu correo",
+      "fullName": "Nombre Completo",
+      "fullNamePlaceholder": "Ingresa tu nombre completo",
+      "dateOfBirth": "Fecha de Nacimiento",
+      "referralCode": "Código de Referido (Opcional)",
+      "referralCodePlaceholder": "Ingresa código de referido para bonos",
+      "referralCodeHint": "¿Tienes código de referido? ¡Obtén recompensas extra!",
+      "password": "Contraseña",
+      "passwordPlaceholder": "Ingresa tu contraseña",
+      "confirmPassword": "Confirmar Contraseña",
+      "confirmPasswordPlaceholder": "Reingresa tu contraseña",
+      "agreeTerms": "He leído y acepto",
+      "termsOfService": "Términos de Servicio",
+      "privacyPolicy": "Política de Privacidad",
+      "and": "y",
+      "registerButton": "Registrarse",
+      "haveAccount": "¿Ya tienes cuenta?",
+      "logInNow": "Inicia sesión ahora",
+      "errors": {
+        "usernameRequired": "Por favor ingresa usuario",
+        "usernameLength": "Usuario debe tener 3-20 caracteres",
+        "emailRequired": "Por favor ingresa correo",
+        "emailInvalid": "Por favor ingresa un correo válido",
+        "fullNameRequired": "Por favor ingresa nombre completo",
+        "fullNameLength": "Nombre debe tener al menos 2 caracteres",
+        "dateOfBirthRequired": "Por favor ingresa fecha de nacimiento",
+        "under18": "Debes tener al menos 18 años",
+        "passwordRequired": "Por favor ingresa contraseña",
+        "passwordLength": "Contraseña debe tener al menos 6 caracteres",
+        "passwordMismatch": "Las contraseñas no coinciden",
+        "agreeTermsRequired": "Por favor acepta Términos de Servicio y Política de Privacidad",
+        "ageWarning18to21": "Tienes 18-21 años. Algunas funciones estarán limitadas: solo desafíos de salud, máx 3 desafíos por día."
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} ChallengeNo. ¿Desafío? ¡Sin presión!",
+    "craftedBy": "Hecho con ❤️ por onFuture Studio",
+    "disclaimer": "Esta plataforma no admite apuestas en efectivo/financieras y prohíbe tales actividades"
+  },
+  "settings": {
+    "title": "Configuración",
+    "subtitle": "Administra tu cuenta y preferencias",
+    "sections": {
+      "profile": {
+        "title": "Perfil Personal",
+        "description": "Administra tu información personal"
+      },
+      "password": {
+        "title": "Cambiar Contraseña",
+        "description": "Cambia tu contraseña de inicio de sesión"
+      },
+      "notifications": {
+        "title": "Configuración de Notificaciones",
+        "description": "Administra preferencias de notificaciones"
+      },
+      "privacy": {
+        "title": "Configuración de Privacidad",
+        "description": "Administra configuración de privacidad y seguridad"
+      },
+      "vip": {
+        "title": "Gestión VIP",
+        "description": "Administra tu membresía VIP"
+      }
+    },
+    "options": "Opciones de Configuración"
+  },
+  "createGame": {
+    "title": "Crear Nuevo Desafío",
+    "subtitle": "Elige una plantilla, establece parámetros, comienza tu viaje de desafío"
+  },
+  "achievements": {
+    "title": "Sistema de Logros",
+    "subtitle": "Desbloquea logros, gana recompensas",
+    "shareAchievements": "Compartir Logros",
+    "shareAchievementsTitle": "Compartir Mis Logros",
+    "noAchievements": "Sin Logros",
+    "noAchievementsDesc": "Aún no hay logros en esta categoría"
+  },
+  "wizard": {
+    "steps": {
+      "safety": "Aviso de Seguridad",
+      "template": "Elegir Plantilla",
+      "config": "Configurar Detalles",
+      "confirm": "Confirmar y Publicar"
+    },
+    "success": "¡Desafío creado con éxito!",
+    "error": "Error al crear, por favor intenta de nuevo",
+    "agreeTerms": "Por favor lee y acepta el aviso de seguridad",
+    "selectTemplate": "Por favor selecciona una plantilla",
+    "fillRequired": "Por favor completa todos los campos requeridos",
+    "configureDetails": "Configurar Detalles del Desafío",
+    "quickTemplate": {
+      "title": "🚀 Plantilla Rápida",
+      "description": "Esta plantilla tiene configuraciones óptimas. Puedes publicar directamente o ajustar la información básica.",
+      "challengeTitle": "Título del Desafío",
+      "challengeDescription": "Descripción del Desafío",
+      "evidenceInstructions": "Instrucciones de Evidencia"
+    },
+    "generalTemplate": {
+      "title": "🔧 Plantilla General",
+      "description": "Plantilla de desafío totalmente personalizable. Agrega cualquier campo para crear desafíos únicos.",
+      "basicInfo": "Información Básica",
+      "titlePlaceholder": "Ingresa el título del desafío",
+      "descriptionPlaceholder": "Describe los requisitos y objetivos específicos del desafío"
+    },
+    "parametricTemplate": {
+      "title": "⚙️ Plantilla Paramétrica",
+      "description": "Plantilla de configuración personalizada. Ajusta los parámetros según tus necesidades."
+    },
+    "selectTemplateType": "Seleccionar Tipo de Plantilla",
+    "quickTemplateCard": {
+      "title": "🚀 Plantilla Rápida",
+      "subtitle": "Sin configuración, publicar con un clic",
+      "description": "Mejores prácticas preestablecidas, perfecto para inicio rápido"
+    },
+    "customTemplateCard": {
+      "title": "⚙️ Plantilla Avanzada",
+      "subtitle": "Configuración personalizada",
+      "description": "Ajusta los parámetros según tus necesidades"
+    },
+    "generalTemplateCard": {
+      "title": "🔧 Plantilla General",
+      "subtitle": "Totalmente personalizable",
+      "description": "Agrega libremente campos y configuraciones"
+    },
+    "quickTemplates": "🚀 Plantillas Rápidas",
+    "quickTemplatesDesc": "Mejores prácticas preestablecidas, comenzar con un clic",
+    "advancedTemplates": "⚙️ Plantillas Avanzadas",
+    "loadingTemplates": "Cargando plantillas...",
+    "noTemplatesFound": "No se encontraron plantillas",
+    "timeSettings": {
+      "title": "Configuración de Tiempo",
+      "quickSelect": "Selección Rápida",
+      "preciseSet": "Configuración Precisa",
+      "selected": "✅ Seleccionado: {{label}}",
+      "startTime": "Hora de Inicio",
+      "endTime": "Hora de Finalización",
+      "evidenceDeadline": "Fecha Límite de Envío de Evidencia",
+      "evidenceDeadlineHint": "Los participantes deben enviar la evidencia de finalización antes de esta hora"
+    },
+    "participationSettings": {
+      "title": "Configuración de Participación",
+      "maxParticipants": "Máximo de Participantes",
+      "visibility": "Visibilidad",
+      "public": "Público",
+      "friendsOnly": "Solo Amigos",
+      "locationRestriction": "Restricción de Ubicación",
+      "noRestriction": "Sin Restricción",
+      "localChallenge": "Desafío Local",
+      "customLocation": "Ubicación Personalizada",
+      "maxDistance": "Distancia Máxima: {{distance}}km",
+      "maxDistanceHint": "Solo los usuarios dentro de {{distance}}km pueden participar en este desafío",
+      "customLocationPlaceholder": "ej., Distrito Chaoyang, Beijing",
+      "customLocationHint": "Especifica una ubicación, solo los usuarios en esa área pueden participar",
+      "additionalNotes": "Notas Adicionales (Opcional)",
+      "additionalNotesPlaceholder": "Puedes agregar más detalles, requisitos especiales o palabras motivacionales aquí...",
+      "charactersRemaining": "{{count}}/500 caracteres"
+    },
+    "confirmPublish": {
+      "title": "Confirmar y Publicar",
+      "preview": "Vista Previa del Desafío",
+      "previewTitle": "Título:",
+      "previewCategory": "Categoría:",
+      "previewDifficulty": "Dificultad:",
+      "previewTime": "Tiempo:",
+      "previewParticipants": "Participantes:",
+      "previewVisibility": "Visibilidad:",
+      "previewNotes": "Notas Adicionales:",
+      "finalReminder": "🏆 Recordatorio Final: La moderación es mejor que el éxito o el fracaso, la salud es más importante que ganar o perder",
+      "confirmGoals": "Confirmo que he establecido objetivos de desafío razonables y actuaré dentro de mis capacidades"
+    },
+    "navigation": {
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "publishing": "Publicando...",
+      "publish": "Publicar Desafío"
+    }
+  },
+  "profile": {
+    "title": "Perfil",
+    "subtitle": "Ver tus logros y estadísticas de desafíos",
+    "joinedDate": "Unido: {{date}}",
+    "vipMember": "Miembro VIP",
+    "vipExpiresAt": "Válido hasta: {{date}}",
+    "settings": "Configuración",
+    "stats": {
+      "participationPoints": "Puntos de Participación",
+      "trustPoints": "Puntos de Confianza",
+      "laborPoints": "Puntos de Trabajo"
+    },
+    "pointsStats": {
+      "title": "Estadísticas de Puntos",
+      "viewHistory": "Ver Historial"
+    },
+    "challengeStats": {
+      "title": "Estadísticas de Desafíos",
+      "created": "Desafíos Creados",
+      "joined": "Desafíos Unidos",
+      "completed": "Desafíos Completados",
+      "completionRate": "Tasa de Finalización"
+    },
+    "activityStats": {
+      "title": "Estadísticas de Actividad",
+      "daysSinceJoined": "Días Desde que se Unió",
+      "averageGamesPerDay": "Promedio Diario",
+      "totalPoints": "Puntos Totales",
+      "currentLevel": "Nivel Actual"
+    },
+    "achievements": {
+      "title": "Insignias de Logros",
+      "unlocked": "{{count}} / {{total}} Desbloqueados",
+      "noData": "Aún no hay datos de logros",
+      "viewAll": "Ver Todos los Logros ({{count}})",
+      "rarity": {
+        "LEGENDARY": "Legendario",
+        "EPIC": "Épico",
+        "RARE": "Raro",
+        "COMMON": "Común"
+      }
+    },
+    "favorites": {
+      "title": "Mis Favoritos",
+      "myGames": "Mis Juegos Favoritos",
+      "viewFavorites": "Ver Desafíos Favoritos"
+    },
+    "pointsCenter": {
+      "title": "Centro de Puntos",
+      "statistics": "Estadísticas de Puntos",
+      "statisticsDesc": "Ver datos detallados de puntos",
+      "leaderboard": "Tabla de Clasificación",
+      "leaderboardDesc": "Ver clasificaciones de la comunidad"
+    },
+    "disputes": {
+      "title": "Gestión de Disputas",
+      "records": "Registros de Disputas",
+      "recordsDesc": "Ver y gestionar solicitudes de disputas"
+    },
+    "level": {
+      "title": "Nivel de Usuario",
+      "level": "Nivel {{level}}",
+      "nextLevel": "Siguiente Nivel",
+      "pointsToNextLevel": "{{points}} puntos necesarios para subir de nivel"
+    }
+  },
+  "gameDetail": {
+    "share": {
+      "copySuccess": "¡Enlace de compartir del juego copiado al portapapeles!",
+      "copyFailed": "Copia fallida, por favor copie el enlace manualmente",
+      "shareFailed": "Compartir fallido, por favor genere el código de referencia primero",
+      "achievementCopySuccess": "¡Enlace de compartir del logro copiado al portapapeles!",
+      "shareGame": "Compartir Juego",
+      "shareAchievement": "Compartir Logro",
+      "shareGameTitle": "Compartir juego con amigos",
+      "shareAchievementTitle": "Compartir logro de finalización"
+    },
+    "favorite": {
+      "loginRequired": "Por favor inicie sesión primero",
+      "favoriteSuccess": "Añadido a favoritos exitosamente",
+      "favoriteFailed": "Error al añadir a favoritos",
+      "unfavoriteSuccess": "Eliminado de favoritos exitosamente",
+      "unfavoriteFailed": "Error al eliminar de favoritos",
+      "favorited": "Favorito",
+      "favorite": "Añadir a Favoritos",
+      "cancel": "Cancelar Favorito"
+    },
+    "report": {
+      "title": "Reportar Juego",
+      "submitSuccess": "Reporte enviado, lo procesaremos lo antes posible",
+      "submitFailed": "Envío de reporte fallido, por favor intente de nuevo",
+      "selectReason": "Por favor seleccione una razón para reportar",
+      "reasonLabel": "Razón del Reporte",
+      "reasonRequired": "Requerido",
+      "descriptionLabel": "Descripción Detallada (Opcional)",
+      "descriptionPlaceholder": "Por favor describa su razón para reportar en detalle, esto nos ayudará a procesarlo más rápido...",
+      "cancel": "Cancelar",
+      "submit": "Enviar Reporte",
+      "submitting": "Enviando...",
+      "reportButton": "Reportar",
+      "reasons": {
+        "select": "Por favor seleccione una razón para reportar",
+        "INAPPROPRIATE_CONTENT": "Contenido Inapropiado",
+        "SPAM": "Spam",
+        "FRAUD": "Comportamiento Fraudulento",
+        "HARASSMENT": "Acoso",
+        "FAKE_EVIDENCE": "Evidencia Falsa",
+        "OTHER": "Otro"
+      }
+    },
+    "error": {
+      "notFound": "Desafío No Encontrado",
+      "loadFailed": "Carga Fallida",
+      "notFoundDesc": "Este desafío puede haber sido eliminado o no tiene acceso",
+      "loadFailedDesc": "Por favor intente de nuevo más tarde o contacte soporte",
+      "backToHome": "Volver al Inicio",
+      "reload": "Recargar",
+      "challengeNotExist": "El desafío no existe"
+    },
+    "status": {
+      "OPEN": "Abierto para Unirse",
+      "IN_PROGRESS": "En Progreso",
+      "EVIDENCE_SUBMISSION": "Envío de Evidencia",
+      "PEER_REVIEW": "Revisión por Pares",
+      "COMPLETED": "Completado",
+      "DISPUTED": "En Disputa",
+      "CLOSED": "Cerrado",
+      "openPhase": "Fase Abierta para Unirse",
+      "inProgressPhase": "Juego en Progreso",
+      "evidencePhase": "Fase de Envío de Evidencia",
+      "reviewPhase": "Fase de Revisión por Pares",
+      "completedPhase": "Juego Completado",
+      "disputedPhase": "Procesamiento de Disputa",
+      "closedPhase": "Juego Cerrado",
+      "currentPhase": "Fase Actual:",
+      "waitingSettlement": "Esperando Liquidación"
+    },
+    "info": {
+      "creator": "Creador:",
+      "trustLevel": "Nivel de Confianza:",
+      "visibility": {
+        "FRIENDS_ONLY": "Solo Amigos",
+        "PRIVATE": "Privado",
+        "PUBLIC": "Público"
+      },
+      "localChallenge": "Desafío Local {{distance}}km",
+      "distanceFromYou": "{{distance}} de ti",
+      "participants": "Participantes",
+      "daysRemaining": "Días Restantes",
+      "category": "Categoría",
+      "evidenceType": "Tipo de Evidencia",
+      "participationProgress": "Progreso de Participación",
+      "stake": "Apuesta"
+    },
+    "closed": {
+      "title": "El Juego Ha Sido Cerrado",
+      "description": "Este juego ha sido reportado por violar las reglas de la comunidad y ha sido cerrado por los administradores."
+    },
+    "dispute": {
+      "title": "Juego en Disputa",
+      "description": "Actualmente hay {{count}} disputas siendo procesadas, los resultados del juego pueden ajustarse según los resultados del arbitraje.",
+      "viewDetails": "Ver Detalles de Disputa →",
+      "records": "Registros de Disputa ({{count}})",
+      "createNew": "Crear Nueva Disputa",
+      "deadlinePassed": "⏰ El plazo de envío de disputas ha pasado (dentro de 48 horas después de completar el juego)",
+      "waitingAdmin": "Esperando que el administrador procese las disputas existentes",
+      "hoursLeft": "{{hours}} horas restantes para enviar disputa (máx. 3 por persona)",
+      "canSubmit": "¿Tiene objeciones a los resultados del juego? Puede solicitar procesamiento de disputa dentro de 48 horas (máx. 3 por persona)",
+      "status": {
+        "PENDING": "⏳ Pendiente",
+        "UNDER_REVIEW": "🔍 En Revisión",
+        "INVESTIGATING": "🔎 Investigando",
+        "RESOLVED": "✅ Resuelto",
+        "REJECTED": "❌ Rechazado",
+        "CANCELLED": "🚫 Cancelado"
+      }
+    },
+    "actions": {
+      "submitEvidence": "Enviar Evidencia",
+      "evaluate": "Evaluar Otros Participantes",
+      "selfEvaluate": "Autoevaluación",
+      "youJoined": "Te has unido a este desafío",
+      "evidenceSubmitted": "Evidencia Enviada: {{status}}",
+      "evidenceSubmittedYes": "✅ Enviada",
+      "evidenceSubmittedNo": "⏳ No Enviada",
+      "viewEvaluationDetails": "Haga clic para ver detalles de evaluación",
+      "finalResult": "Resultado Final: {{result}}",
+      "finalResultSuccess": "✅ Éxito",
+      "finalResultFailure": "❌ Fracaso",
+      "finalResultPending": "⏳ Esperando finalización del juego",
+      "singlePlayerMode": "Modo de Desafío Individual",
+      "singlePlayerCreator": "💪 ¡Ir solo también es un tipo de coraje! ¡Sigue adelante y demuéstratelo a ti mismo!",
+      "singlePlayerOther": "¡El creador está trabajando duro solo!"
+    },
+    "timeline": {
+      "title": "Línea de Tiempo",
+      "joinDeadline": "Fecha Límite para Unirse",
+      "gameStart": "Inicio del Juego",
+      "gameEnd": "Fin del Juego",
+      "evidenceDeadline": "Fecha Límite de Evidencia",
+      "reviewDeadline": "Fecha Límite de Revisión",
+      "disputeDeadline": "Fecha Límite de Envío de Disputa",
+      "arbitrationDeadline": "Fecha Límite de Arbitraje del Administrador"
+    },
+    "evidence": {
+      "title": "Requisitos de Evidencia",
+      "typeLabel": "Tipo de Evidencia:",
+      "typePhoto": "Evidencia Fotográfica",
+      "typeText": "Descripción de Texto",
+      "notSubmitted": "Evidencia no enviada",
+      "clickToView": "Haga clic en la imagen para ver el original",
+      "selfReportSuccess": "Autoevaluación: ✅ Éxito",
+      "selfReportFailure": "Autoevaluación: ❌ Fracaso",
+      "videoEvidence": "Evidencia de Video",
+      "participantsTitle": "Evidencia de Participantes",
+      "you": "Tú",
+      "creator": "Creador",
+      "trustLevel": "Nivel de Confianza:",
+      "evidenceSubmitted": "Evidencia Enviada",
+      "viewEvidence": "Ver Evidencia",
+      "evidenceNotSubmitted": "Evidencia No Enviada",
+      "modalTitle": "Evidencia de @{{username}}",
+      "selfEvaluateSuccess": "✅ El participante se autoevaluó como éxito",
+      "selfEvaluateFailure": "❌ El participante se autoevaluó como fracaso"
+    },
+    "evaluations": {
+      "title": "Evaluaciones Recibidas",
+      "count": "Recibió {{count}} evaluaciones",
+      "recognize": "Reconocer Finalización",
+      "notRecognize": "No Completado"
+    },
+    "progress": {
+      "title": "Progreso del Juego",
+      "joinChallenge": "Unirse al Desafío",
+      "joinedSuccess": "Te has unido exitosamente a este desafío",
+      "submitEvidence": "Enviar Evidencia",
+      "evidenceSubmitted": "Evidencia enviada",
+      "submitNow": "Por favor envíe la evidencia a tiempo",
+      "waitingPhase": "Esperando fase de envío de evidencia",
+      "peerReview": "Revisión por Pares",
+      "selfEvaluate": "Fase de Autoevaluación",
+      "peerReviewCompleted": "Revisión por pares completada",
+      "selfEvaluateCompleted": "Autoevaluación completada",
+      "pleaseEvaluate": "Por favor evalúe a otros participantes",
+      "pleaseSelfEvaluate": "Por favor realice la autoevaluación",
+      "waitingReview": "Esperando fase de revisión por pares",
+      "waitingSelfEvaluate": "Esperando fase de autoevaluación",
+      "startReview": "Iniciar Revisión por Pares",
+      "startSelfEvaluate": "Iniciar Autoevaluación",
+      "arbitration": "Fase de Arbitraje",
+      "arbitrationEnded": "El período de arbitraje ha terminado",
+      "disputeWindowOpen": "La ventana de envío de disputas está abierta ({{hours}} horas restantes)",
+      "disputeWindowClosed": "El período de envío de disputas ha pasado, esperando procesamiento del administrador",
+      "disputeProcessing": "Hay disputas, esperando procesamiento del administrador",
+      "noArbitration": "No se necesita arbitraje",
+      "challengeResult": "Resultado del Desafío",
+      "success": "🎉 ¡Desafío Exitoso!",
+      "failure": "😔 Desafío Fallido",
+      "gameEnded": "✅ Juego Terminado",
+      "waitingArbitration": "⏳ Esperando que el administrador procese las disputas",
+      "arbitrationPeriod": "⏳ Durante el período de arbitraje, los resultados pueden ajustarse",
+      "disputeProcessingResult": "⚖️ Procesamiento de disputa, resultado pendiente",
+      "waitingReviewEnd": "⏱️ Esperando que termine la revisión por pares",
+      "viewDetails": "Ver Detalles",
+      "waitingAdminDispute": "Esperando que el administrador procese las disputas",
+      "arbitrationPeriod": "Durante el período de arbitraje, los resultados pueden ajustarse",
+      "disputeInProgress": "Procesamiento de disputa, resultado pendiente"
+    },
+    "modal": {
+      "evidenceTitle": "Evidencia de @{{username}}",
+      "selfReportSuccess": "El participante se autoevaluó como exitoso",
+      "selfReportFailure": "El participante se autoevaluó como fallido",
+      "reportTitle": "Reportar Juego",
+      "reportReasonLabel": "Razón del Reporte",
+      "selectReason": "Por favor seleccione una razón para reportar",
+      "reasonInappropriate": "Contenido Inapropiado",
+      "reasonSpam": "Spam",
+      "reasonFraud": "Fraude",
+      "reasonHarassment": "Acoso",
+      "reasonFakeEvidence": "Evidencia Falsa",
+      "reasonOther": "Otro",
+      "descriptionLabel": "Descripción Detallada (Opcional)",
+      "descriptionPlaceholder": "Por favor describa en detalle la razón de su reporte, esto nos ayudará a procesarlo más rápido...",
+      "cancel": "Cancelar",
+      "submitting": "Enviando...",
+      "submitReport": "Enviar Reporte"
+    }
+  },
+  "notifications": {
+    "title": "Centro de Notificaciones",
+    "unreadCount": "{{count}} mensajes no leídos",
+    "settings": "Configuración",
+    "batchActions": "Acciones por Lotes",
+    "markAllRead": "Marcar Todo como Leído",
+    "filter": "Filtrar",
+    "filterAll": "Todos",
+    "filterUnread": "No Leídos",
+    "filterRead": "Leídos",
+    "allTypes": "Todos los Tipos",
+    "types": {
+      "friendRequest": "Solicitud de Amistad",
+      "friendAccepted": "Amistad Aceptada",
+      "gameStarted": "Juego Iniciado",
+      "gameCompleted": "Juego Completado",
+      "evidenceRequired": "Enviar Evidencia",
+      "system": "Notificación del Sistema",
+      "notification": "Notificación"
+    },
+    "selected": "{{count}} seleccionados",
+    "markRead": "Marcar como Leído",
+    "delete": "Eliminar",
+    "selectAll": "Seleccionar Todo",
+    "deselectAll": "Deseleccionar Todo",
+    "noNotifications": "Sin notificaciones",
+    "noMatchingNotifications": "No hay notificaciones coincidentes",
+    "notificationsWillAppear": "Tus notificaciones aparecerán aquí",
+    "tryAdjustFilters": "Intenta ajustar los filtros",
+    "markAsRead": "Marcar como leído",
+    "deleteNotification": "Eliminar notificación",
+    "loadFailed": "Error al cargar notificaciones",
+    "batchMarkSuccess": "Marcadas {{count}} notificaciones como leídas",
+    "batchOperationFailed": "Operación por lotes fallida",
+    "confirmDelete": "¿Estás seguro de que quieres eliminar {{count}} notificaciones?",
+    "batchDeleteSuccess": "Eliminadas {{count}} notificaciones",
+    "batchDeleteFailed": "Error al eliminar por lotes",
+    "operationFailed": "Operación fallida",
+    "markAllSuccess": "Todas las notificaciones marcadas como leídas",
+    "deleteSuccess": "Notificación eliminada",
+    "deleteFailed": "Error al eliminar",
+    "time": {
+      "justNow": "Justo ahora",
+      "minutesAgo": "hace {{count}} minutos",
+      "hoursAgo": "hace {{count}} horas",
+      "daysAgo": "hace {{count}} días"
+    },
+    "messages": {
+      "friendRequest": {
+        "title": "Nueva Solicitud de Amistad",
+        "message": "@{{requesterUsername}} quiere agregarte como amigo"
+      },
+      "friendAccepted": {
+        "title": "Solicitud de Amistad Aceptada",
+        "message": "@{{addresseeUsername}} aceptó tu solicitud de amistad"
+      },
+      "friendRejected": {
+        "title": "Solicitud de Amistad Rechazada",
+        "message": "@{{addresseeUsername}} rechazó tu solicitud de amistad"
+      },
+      "achievementUnlocked": {
+        "title": "� ¡Logro Desbloqueado!",
+        "message": "¡Felicidades! Desbloqueaste el logro: {{achievementName}}"
+      },
+      "gameInvite": {
+        "title": "Invitación al Juego",
+        "message": "{{inviterName}} te invitó a unirte al juego: \"{{gameTitle}}\""
+      },
+      "gameStarted": {
+        "title": "¡Juego Iniciado!",
+        "message": "El juego \"{{gameTitle}}\" al que te uniste ha comenzado"
+      },
+      "evidenceRequired": {
+        "title": "Por Favor Envía Evidencia",
+        "message": "Por favor envía evidencia para el juego \"{{gameTitle}}\", fecha límite: {{deadline}}"
+      },
+      "vipExpired": {
+        "title": "Membresía VIP Próxima a Expirar",
+        "message": "Tu membresía VIP expirará el {{expirationDate}}"
+      },
+      "gameCompleted": {
+        "title": "Desafío Completado",
+        "message": "El desafío \"{{gameTitle}}\" ha sido completado, ¡revisa los resultados ahora!"
+      },
+      "disputeCreated": {
+        "title": "Notificación de Disputa del Juego",
+        "message": "El juego \"{{gameTitle}}\" tiene una nueva disputa: \"{{disputeTitle}}\""
+      },
+      "vipPurchased": {
+        "title": "Compra de VIP Exitosa",
+        "message": "¡Felicidades por comprar {{planName}}! Disfruta de privilegios exclusivos VIP, válido hasta {{expiresAt}}."
+      },
+      "vipExpiring": {
+        "title": "VIP Por Expirar",
+        "message": "Tu membresía VIP expirará en {{daysLeft}} días. Renueva para continuar disfrutando de privilegios exclusivos."
+      },
+      "disputeResolved": {
+        "title": "Notificación de Resultado de Arbitraje"
+      },
+      "disputeResolvedInitiator": {
+        "message": "Tu disputa \"{{disputeTitle}}\" ha sido resuelta. Decisión: {{decision}}. {{resolution}}"
+      },
+      "disputeResolvedParticipant": {
+        "message": "@{{initiatorUsername}} inició la disputa \"{{disputeTitle}}\" para el juego \"{{gameTitle}}\" que ha sido resuelta. Decisión: {{decision}}."
+      },
+      "disputeRejectedCanRetry": {
+        "message": "Tu disputa \"{{disputeTitle}}\" ha sido rechazada. Decisión: {{decision}}. {{resolution}} Puedes enviar {{remainingAttempts}} arbitraje(s) más."
+      },
+      "disputeRejectedNoRetry": {
+        "message": "Tu disputa \"{{disputeTitle}}\" ha sido rechazada. Decisión: {{decision}}. {{resolution}} Has alcanzado el límite de arbitrajes."
+      }
+    }
+  },
+  "userProfile": {
+    "detailsTitle": "Detalles",
+    "joinedDate": "Se unió: {{date}}",
+    "participationPoints": "Puntos de Participación: {{points}}",
+    "laborPoints": "Puntos de Trabajo: {{points}}",
+    "vipMember": "Miembro VIP",
+    "blockSuccess": "Usuario bloqueado exitosamente",
+    "blockFailed": "Bloqueo fallido",
+    "friendsOnlyMessage": "Solo puedes enviar mensajes a amigos",
+    "confirmRemoveFriend": "¿Estás seguro de que quieres eliminar este amigo?",
+    "confirmBlock": "¿Estás seguro de que quieres bloquear a @{{username}}?"
+  },
+  "changePassword": {
+    "title": "Cambiar Contraseña",
+    "subtitle": "Para la seguridad de tu cuenta, cambia tu contraseña regularmente",
+    "currentPassword": "Contraseña Actual",
+    "newPassword": "Nueva Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
+    "enterCurrentPassword": "Por favor ingresa la contraseña actual",
+    "enterNewPassword": "Por favor ingresa la nueva contraseña",
+    "minLength": "La contraseña debe tener al menos 8 caracteres",
+    "noDigitsOnly": "La contraseña no puede ser solo números",
+    "noLettersOnly": "La contraseña no puede ser solo letras",
+    "tooWeak": "La contraseña es demasiado simple, usa una más compleja",
+    "noRepeatingChars": "La contraseña no puede contener 4 o más caracteres idénticos consecutivos",
+    "passwordsNotMatch": "Las contraseñas no coinciden",
+    "changeSuccess": "¡Contraseña cambiada exitosamente!",
+    "changeFailed": "Cambio de contraseña fallido, intenta de nuevo",
+    "cancel": "Cancelar",
+    "saving": "Guardando...",
+    "save": "Guardar Cambios",
+    "requirements": {
+      "title": "Requisitos de Contraseña",
+      "length": "Al menos 8 caracteres",
+      "notAllDigits": "No puede ser solo números",
+      "notAllLetters": "No puede ser solo letras",
+      "noRepeating": "Sin 4+ caracteres idénticos consecutivos"
+    }
+  },
+  "profileEditor": {
+    "title": "Editar Perfil",
+    "subtitle": "Completa tu información personal para ayudar a otros a conocerte mejor",
+    "avatar": "Avatar",
+    "username": "Nombre de Usuario",
+    "email": "Correo Electrónico",
+    "fullName": "Nombre Completo",
+    "bio": "Biografía",
+    "location": "Ubicación",
+    "birthDate": "Fecha de Nacimiento",
+    "phone": "Teléfono",
+    "website": "Sitio Web",
+    "interests": "Intereses",
+    "privacySettings": "Configuración de Privacidad",
+    "showEmail": "Mostrar Correo",
+    "showPhone": "Mostrar Teléfono",
+    "showLocation": "Mostrar Ubicación",
+    "showBirthDate": "Mostrar Fecha de Nacimiento",
+    "allowFriendRequests": "Permitir Solicitudes de Amistad",
+    "allowGameInvites": "Permitir Invitaciones a Juegos",
+    "cancel": "Cancelar",
+    "saving": "Guardando...",
+    "save": "Guardar",
+    "saveSuccess": "Perfil guardado exitosamente",
+    "saveFailed": "Guardado fallido, intenta de nuevo",
+    "enterUsername": "Por favor ingresa nombre de usuario",
+    "enterEmail": "Por favor ingresa correo electrónico",
+    "invalidEmail": "Formato de correo inválido",
+    "enterFullName": "Por favor ingresa nombre completo",
+    "bioMaxLength": "La biografía no puede exceder 500 caracteres",
+    "selectInterests": "Selecciona tus intereses (hasta 10)",
+    "interestPlaceholder": "Escribe para buscar intereses..."
+  },
+  "pointsStats": {
+    "title": "Estadísticas de Puntos",
+    "subtitle": "Ver detalles de puntos y clasificaciones",
+    "totalPoints": "Puntos Totales",
+    "monthlyChange": "Cambio Mensual",
+    "currentPoints": "Puntos Actuales",
+    "monthlySource": "Fuentes de Puntos Mensuales",
+    "types": {
+      "participation": {
+        "name": "Puntos de Participación",
+        "description": "Puntos obtenidos al participar en juegos"
+      },
+      "trust": {
+        "name": "Puntos de Confianza",
+        "description": "Puntos obtenidos por rendimiento de compromiso"
+      },
+      "labor": {
+        "name": "Puntos de Trabajo",
+        "description": "Puntos obtenidos por contribuciones a la comunidad"
+      }
+    },
+    "explanation": {
+      "title": "Explicación de Puntos",
+      "participation": {
+        "title": "Puntos de Participación (Puntos P)",
+        "createGame": "Crear juego: +10 puntos",
+        "joinGame": "Unirse a juego: +5 puntos",
+        "completeGame": "Completar juego: +15 puntos",
+        "perfectCompletion": "Completado perfecto: +5 puntos (bonificación)"
+      },
+      "trust": {
+        "title": "Puntos de Confianza (Puntos T)",
+        "approved": "Aprobado por otros: +1-2 puntos",
+        "rejected": "Rechazado por otros: -2 a -5 puntos",
+        "appealSuccess": "Apelación exitosa: +3 puntos",
+        "maliciousDispute": "Pérdida de disputa maliciosa: -10 puntos"
+      },
+      "labor": {
+        "title": "Puntos de Trabajo (Puntos L)",
+        "peerReview": "Participar en revisión por pares: +2 puntos",
+        "qualityEvidence": "Enviar evidencia de calidad: +5 puntos",
+        "reportViolation": "Reporte de violación exitoso: +5 puntos",
+        "arbitration": "Asistir en arbitraje: +15 puntos"
+      }
+    }
+  },
+  "shop": {
+    "title": "Tienda de Puntos",
+    "subtitle": "Intercambia puntos por regalos increíbles",
+    "exchangeHistory": "Historial de Intercambios",
+    "myPoints": "Mis Puntos",
+    "pointTypes": {
+      "participation": "Puntos de Participación",
+      "trust": "Puntos de Confianza",
+      "labor": "Puntos de Trabajo",
+      "total": "Puntos Totales",
+      "points": "Puntos"
+    },
+    "category": "Categoría",
+    "all": "Todos",
+    "categories": {
+      "virtual": "Artículos Virtuales",
+      "physical": "Productos Físicos",
+      "vip": "VIP",
+      "privilege": "Privilegios"
+    },
+    "noItems": "Sin artículos",
+    "noItemsInCategory": "Aún no hay artículos en esta categoría",
+    "stock": "Stock",
+    "soldOut": "Agotado",
+    "exchangeNow": "Intercambiar Ahora",
+    "loadFailed": "Error al cargar, por favor intenta de nuevo",
+    "insufficientPoints": "Puntos insuficientes",
+    "outOfStock": "Sin stock",
+    "exchangeSuccess": "¡Intercambio exitoso!",
+    "exchangeFailed": "Intercambio fallido"
+  },
+  "vip": {
+    "title": "Membresía VIP",
+    "back": "Volver",
+    "currentMember": "Eres miembro {{tier}}",
+    "expiresAt": "Expira el",
+    "upgradeTitle": "Actualizar a Membresía VIP",
+    "upgradeSubtitle": "Desbloquea más funciones, disfruta de privilegios exclusivos y mejora tu experiencia de desafío",
+    "mostPopular": "Más Popular",
+    "days": " días",
+    "processing": "Procesando...",
+    "currentPlan": "Plan Actual",
+    "buyNow": "Comprar Ahora",
+    "pleaseLogin": "Por favor inicia sesión primero",
+    "purchaseSuccess": "¡Compra VIP exitosa!",
+    "purchaseFailed": "Compra fallida, por favor intenta de nuevo",
+    "benefitsTitle": "Beneficios de Membresía VIP",
+    "benefits": {
+      "moreCreation": "Más Oportunidades de Creación",
+      "moreCreationDesc": "Aumenta significativamente el límite diario de creación de juegos",
+      "moreParticipation": "Únete a Más Desafíos",
+      "moreParticipationDesc": "Aumenta significativamente el límite diario de participación en juegos",
+      "exclusiveBadge": "Insignia de Miembro Exclusiva",
+      "exclusiveBadgeDesc": "Muestra tu estado VIP",
+      "prioritySupport": "Soporte Prioritario al Cliente",
+      "prioritySupportDesc": "Disfruta de servicio al cliente exclusivo"
+    },
+    "usageStats": {
+      "title": "Estadísticas de Uso VIP",
+      "todayCreated": "Desafíos de Hoy",
+      "todayJoined": "Participación de Hoy",
+      "remaining": "{{count}} restantes",
+      "expiresAt": "Fecha de Expiración"
+    },
+    "purchaseHistory": "Historial de Compras",
+    "table": {
+      "plan": "Plan",
+      "purchaseDate": "Fecha de Compra",
+      "validity": "Período de Validez",
+      "amount": "Monto",
+      "status": "Estado",
+      "active": "Activo",
+      "expired": "Expirado"
+    },
+    "faqTitle": "Preguntas Frecuentes",
+    "faq": {
+      "billing": {
+        "question": "¿Cómo se factura la membresía VIP?",
+        "answer": "La membresía VIP se factura mensualmente, entra en vigor inmediatamente después de la compra y vuelve automáticamente al estado de usuario regular después de la expiración."
+      },
+      "cancel": {
+        "question": "¿Puedo cancelar VIP en cualquier momento?",
+        "answer": "La membresía VIP no se renueva automáticamente después de la expiración. Puedes elegir si continuar comprando."
+      },
+      "immediate": {
+        "question": "¿Los privilegios VIP entran en vigor inmediatamente?",
+        "answer": "Sí, todos los privilegios entran en vigor inmediatamente después de comprar VIP, y puedes disfrutar de los servicios VIP de inmediato."
+      }
+    }
+  },
+  "teams": {
+    "title": "Equipos",
+    "subtitle": "Completa desafíos con amigos",
+    "createTeam": "Crear Equipo",
+    "fetchFailed": "Error al cargar equipos",
+    "joinSuccess": "¡Te uniste al equipo exitosamente!",
+    "joinFailed": "Error al unirse al equipo",
+    "types": {
+      "casual": "Equipo Casual",
+      "competitive": "Equipo Competitivo",
+      "private": "Equipo Privado"
+    },
+    "vipPrompt": {
+      "title": "Actualiza a VIP para Desbloquear Funciones de Equipo",
+      "description": "Los miembros VIP pueden crear y administrar equipos, y completar más desafíos con amigos.",
+      "upgradeNow": "Actualizar a VIP Ahora"
+    },
+    "tabs": {
+      "myTeams": "Mis Equipos",
+      "discover": "Descubrir Equipos"
+    },
+    "loading": "Cargando...",
+    "emptyMyTeams": "Aún no te has unido a ningún equipo",
+    "createFirstTeam": "Crea tu primer equipo",
+    "leader": "Líder",
+    "memberCount": "{{current}}/{{max}} miembros",
+    "noDescription": "Sin descripción",
+    "viewDetails": "Ver Detalles",
+    "searchPlaceholder": "Buscar equipos...",
+    "emptyDiscover": "No hay equipos disponibles para unirse",
+    "applyToJoin": "Solicitar Unirse"
+  },
+  "achievements": {
+    "title": "Logros",
+    "shareAchievements": "Compartir Logros",
+    "shareLinkCopied": "¡Enlace para compartir el logro \"{{name}}\" copiado!",
+    "overviewLinkCopied": "¡Enlace de resumen de logros copiado!",
+    "copyFailed": "Error al copiar, por favor intenta de nuevo",
+    "shareFailed": "Error al compartir, por favor genera primero el código de referido",
+    "loadFailed": "Error al cargar, por favor intenta de nuevo",
+    "categories": {
+      "participation": "Participación",
+      "creation": "Creación",
+      "social": "Social",
+      "trust": "Confianza",
+      "milestone": "Hito",
+      "special": "Especial",
+      "other": "Otro"
+    },
+    "rarity": {
+      "common": "Común",
+      "rare": "Raro",
+      "epic": "Épico",
+      "legendary": "Legendario"
+    },
+    "stats": {
+      "total": "Logros Totales",
+      "unlocked": "Desbloqueados",
+      "locked": "Bloqueados"
+    },
+    "filterLabel": "Categoría:",
+    "filters": {
+      "all": "Todos",
+      "unlocked": "Desbloqueados",
+      "locked": "Bloqueados"
+    },
+    "unlocked": "Desbloqueado",
+    "locked": "Bloqueado",
+    "share": "Compartir",
+    "shareTitle": "Compartir logro \"{{name}}\"",
+    "reward": "Recompensa:",
+    "rewardPoints": "+{{amount}} Puntos",
+    "rewardVip": "{{days}} Días VIP"
+  },
+  "myGames": {
+    "title": "Mis Desafíos",
+    "subtitle": "Gestiona todos los desafíos que creaste y en los que participas",
+    "tabs": {
+      "all": "Todos",
+      "created": "Creados",
+      "joined": "Participando",
+      "favorites": "Favoritos"
+    },
+    "empty": {
+      "all": {
+        "title": "Aún no hay desafíos",
+        "description": "Comienza tu viaje de desafíos"
+      },
+      "created": {
+        "title": "Aún no has creado desafíos",
+        "description": "Crea tu primer desafío e invita a amigos a participar"
+      },
+      "joined": {
+        "title": "Aún no has participado en desafíos",
+        "description": "Ve a la página de descubrimiento para encontrar desafíos interesantes"
+      },
+      "favorites": {
+        "title": "Aún no has marcado desafíos como favoritos",
+        "description": "Ve a la página de inicio para encontrar y marcar desafíos interesantes"
+      }
+    }
+  },
+  "friends": {
+    "title": "Gestión de Amigos",
+    "loading": "Cargando...",
+    "loadFailed": "Error al cargar datos",
+    "searchFailed": "Error en la búsqueda",
+    "requestSent": "¡Solicitud de amistad enviada!",
+    "sendFailed": "Error al enviar",
+    "requestAccepted": "¡Solicitud de amistad aceptada!",
+    "requestRejected": "Solicitud de amistad rechazada",
+    "operationFailed": "Operación fallida",
+    "confirmRemove": "¿Estás seguro de que quieres eliminar a este amigo?",
+    "friendRemoved": "Amigo eliminado",
+    "removeFailed": "Error al eliminar",
+    "confirmBlock": "¿Estás seguro de que quieres bloquear a @{{username}}? No podrán agregarse como amigos ni enviarse mensajes después del bloqueo.",
+    "userBlocked": "Usuario bloqueado",
+    "blockFailed": "Error al bloquear",
+    "recommendations": "Recomendaciones de Amigos",
+    "blockedList": "Lista de Bloqueados",
+    "tabs": {
+      "myFriends": "Mis Amigos",
+      "recommended": "Recomendados",
+      "search": "Buscar Usuarios"
+    },
+    "advancedSearch": "Búsqueda Avanzada",
+    "pendingRequests": "Solicitudes Pendientes ({{count}})",
+    "accept": "Aceptar",
+    "reject": "Rechazar",
+    "block": "Bloquear",
+    "myFriendsList": "Mis Amigos ({{count}})",
+    "filters": {
+      "all": "Todos los Amigos",
+      "vip": "Amigos VIP",
+      "online": "Amigos en Línea"
+    },
+    "noFriends": "Aún no tienes amigos, ¡ve a agregar algunos!",
+    "status": {
+      "alreadyFriends": "Ya son Amigos",
+      "requestSent": "Solicitud Enviada",
+      "pendingConfirm": "Pendiente de Confirmación",
+      "cannotAdd": "No se Puede Agregar"
+    },
+    "addFriend": "Agregar Amigo"
+  },
+  "favorites": {
+    "title": "Mis Desafíos Favoritos",
+    "subtitle": "Ver todos tus desafíos favoritos",
+    "totalCount": "Total {{count}} desafíos favoritos",
+    "empty": {
+      "title": "Aún no tienes favoritos",
+      "description": "Ve a la página de descubrimiento para encontrar desafíos interesantes y marcarlos como favoritos"
+    }
+  },
+  "leaderboard": {
+    "title": "Tabla de Clasificación de Puntos",
+    "subtitle": "Ver clasificaciones de puntos de la comunidad",
+    "points": "Puntos",
+    "noData": "No hay datos de clasificación disponibles",
+    "tabs": {
+      "total": "Puntos Totales",
+      "participation": "Puntos de Participación",
+      "trust": "Puntos de Confianza",
+      "labor": "Puntos de Trabajo"
+    },
+    "explanation": {
+      "title": "Explicación de Puntos",
+      "participation": {
+        "title": "Puntos de Participación (P)",
+        "description": "Obtenidos al crear y participar en desafíos"
+      },
+      "trust": {
+        "title": "Puntos de Confianza (T)",
+        "description": "Puntuación de crédito basada en el rendimiento de compromiso"
+      },
+      "labor": {
+        "title": "Puntos de Trabajo (L)",
+        "description": "Obtenidos a través de contribuciones a la comunidad"
+      }
+    }
+  },
+  "pointsHistory": {
+    "title": "Historial de Puntos",
+    "subtitle": "Ver tus registros de obtención y uso de puntos",
+    "loadError": "Error al cargar el historial de puntos",
+    "reload": "Recargar",
+    "currentPoints": "Puntos Actuales",
+    "types": {
+      "participation": "Puntos de Participación (P)",
+      "trust": "Puntos de Confianza (T)",
+      "labor": "Puntos de Trabajo (L)",
+      "points": "Puntos"
+    },
+    "time": {
+      "today": "Hoy",
+      "yesterday": "Ayer",
+      "daysAgo": "Hace {{days}} días"
+    },
+    "filters": {
+      "typeLabel": "Tipo de Punto",
+      "allTypes": "Todos los Tipos",
+      "timeLabel": "Rango de Tiempo",
+      "allTime": "Todo el Tiempo",
+      "lastWeek": "Última Semana",
+      "lastMonth": "Último Mes",
+      "lastQuarter": "Últimos 3 Meses"
+    },
+    "recordsCount": "Registros de Puntos ({{count}})",
+    "noRecords": "Aún no hay registros de puntos"
+  },
+  "referral": {
+    "title": "Recomendar Amigos",
+    "myCode": "Mi Código de Referido",
+    "generateCode": "Generar Código",
+    "generating": "Generando...",
+    "copyCode": "Copiar Código",
+    "generateHint": "Haz clic en el botón de arriba para generar tu código de referido exclusivo",
+    "codeGenerated": "¡Código de referido generado con éxito!",
+    "generateFailed": "Error al generar",
+    "copied": "¡Copiado al portapapeles!",
+    "copyFailed": "Error al copiar",
+    "copyFailedManual": "Error al copiar, por favor copia el enlace manualmente",
+    "stats": {
+      "totalReferred": "Total Referidos",
+      "totalRewards": "Recompensas Totales",
+      "pendingRewards": "Recompensas Pendientes"
+    },
+    "shareLink": {
+      "title": "Generar Enlace para Compartir",
+      "appTitle": "Compartir APP para Invitar Amigos",
+      "appDesc": "Invita amigos a descargar y registrarse, obtén recompensas VIP",
+      "generateButton": "Generar Enlace de Invitación",
+      "linkLabel": "Enlace de Invitación:",
+      "copyAgain": "Copiar de Nuevo",
+      "gameTipTitle": "💡 Consejo para Compartir Juegos",
+      "gameTipDesc": "¿Quieres compartir un juego específico? Ve a la página de detalles del juego y haz clic en el botón \"Compartir Juego\" o \"Compartir Logro\" para compartir más fácilmente!"
+    },
+    "referredUsers": {
+      "title": "Usuarios Referidos ({{count}})",
+      "vipUser": "Usuario VIP"
+    },
+    "rewards": {
+      "title": "🎁 Recompensas por Referidos",
+      "item1": "• Por cada referido exitoso, recibirás 3 días VIP + 20 Puntos de Participación",
+      "item2": "• Las recompensas se emitirán automáticamente después de que el usuario referido complete el registro",
+      "item3": "• La duración VIP es acumulativa, los puntos se pueden canjear en la tienda",
+      "item4": "• ¡Cuanto más refieras, más recompensas obtendrás!"
+    }
+  },
+  "userStats": {
+    "title": "Estadísticas de Datos",
+    "subtitle": "Ver tus datos de actividad detallados y progreso de logros",
+    "period": {
+      "last7Days": "Últimos 7 Días",
+      "last30Days": "Últimos 30 Días",
+      "last90Days": "Últimos 90 Días",
+      "allTime": "Todo el Tiempo"
+    },
+    "overview": {
+      "totalPoints": "Puntos Totales",
+      "thisMonth": "+{{points}} Este Mes",
+      "completionRate": "Tasa de Finalización",
+      "completed": "{{completed}}/{{total}} Completados",
+      "trustPoints": "Puntos de Confianza",
+      "trustLevel": "Nivel de Confianza",
+      "excellent": "Excelente",
+      "good": "Bueno",
+      "average": "Promedio",
+      "activeDays": "Días Activos",
+      "joinedOn": "Unido el {{date}}"
+    },
+    "details": {
+      "pointsTitle": "Detalles de Puntos",
+      "participationPoints": "Puntos de Participación",
+      "trustPoints": "Puntos de Confianza",
+      "laborPoints": "Puntos de Trabajo",
+      "recentChanges": "Cambios Recientes de Puntos",
+      "gamesTitle": "Estadísticas de Juegos",
+      "gamesCreated": "Juegos Creados",
+      "gamesJoined": "Juegos Unidos",
+      "gamesCompleted": "Juegos Completados",
+      "categoryStats": "Estadísticas por Categoría",
+      "times": "{{count}} veces",
+      "successRate": "{{rate}}% éxito",
+      "recentActivity": "Actividad Reciente"
+    }
+  },
+  "vipPlans": {
+    "basic": {
+      "name": "Miembro Básico",
+      "benefit1": "Límite de creación de juegos diarios +5",
+      "benefit2": "Límite de participación en juegos diarios +10",
+      "benefit3": "Insignia de miembro exclusiva",
+      "benefit4": "Soporte al cliente prioritario"
+    },
+    "premium": {
+      "name": "Miembro Premium",
+      "benefit1": "Límite de creación de juegos diarios +10",
+      "benefit2": "Límite de participación en juegos diarios +20",
+      "benefit3": "Insignia de miembro exclusiva",
+      "benefit4": "Soporte al cliente prioritario",
+      "benefit5": "Estadísticas de datos avanzadas",
+      "benefit6": "Plantillas de juegos personalizadas"
+    },
+    "elite": {
+      "name": "Miembro Elite",
+      "benefit1": "Creación de juegos ilimitada",
+      "benefit2": "Participación en juegos ilimitada",
+      "benefit3": "Insignia de miembro exclusiva",
+      "benefit4": "Soporte al cliente dedicado",
+      "benefit5": "Estadísticas de datos avanzadas",
+      "benefit6": "Plantillas de juegos personalizadas",
+      "benefit7": "Salas de juegos privadas",
+      "benefit8": "Prioridad en juegos destacados"
+    }
+  },
+  "bottomNav": {
+    "home": "Inicio",
+    "create": "Crear",
+    "myGames": "Mis Juegos",
+    "friends": "Amigos",
+    "profile": "Perfil"
+  },
+  "feedback": {
+    "title": "Comentarios",
+    "type": {
+      "label": "Tipo de Comentario",
+      "suggestion": "Sugerencia de Función",
+      "bug": "Reporte de Error",
+      "other": "Otro"
+    },
+    "content": {
+      "label": "Descripción Detallada",
+      "placeholder": "Por favor describe el problema o sugerencia en detalle..."
+    },
+    "email": {
+      "label": "Correo de Contacto (Opcional)",
+      "placeholder": "Deja tu correo si necesitas una respuesta"
+    },
+    "buttons": {
+      "cancel": "Cancelar",
+      "submit": "Enviar",
+      "submitting": "Enviando..."
+    },
+    "success": "¡Comentario enviado con éxito! Gracias por tu sugerencia. Lo procesaremos lo antes posible.",
+    "note": "Tus comentarios son importantes para nosotros. Consideraremos cuidadosamente cada sugerencia.",
+    "errors": {
+      "emptyContent": "Por favor ingresa el contenido del comentario",
+      "submitFailed": "Envío fallido, por favor intenta de nuevo más tarde"
+    }
+  },
+  "enhancedProfile": {
+    "updateSuccess": "Perfil actualizado con éxito",
+    "updateError": "Actualización fallida, por favor intenta de nuevo",
+    "editProfile": "Editar Perfil",
+    "vipUser": "Usuario VIP",
+    "setLocation": "Ubicación Configurada",
+    "website": "Sitio Web Personal",
+    "birthday": "Cumpleaños",
+    "interests": "Intereses",
+    "trustBadges": {
+      "diamond": "Miembro Diamante",
+      "gold": "Miembro Oro",
+      "silver": "Miembro Plata",
+      "bronze": "Miembro Bronce",
+      "regular": "Miembro Regular",
+      "newbie": "Miembro Novato"
+    },
+    "stats": {
+      "trustPoints": "Puntos de Confianza",
+      "gamesJoined": "Juegos Participados",
+      "friendsCount": "Amigos",
+      "achievements": "Logros"
+    },
+    "recentActivity": {
+      "title": "Actividad Reciente",
+      "empty": "Sin actividad reciente",
+      "hint": "Tus registros de actividad aparecerán aquí después de unirte a juegos"
+    },
+    "privacy": {
+      "title": "Protección de Privacidad",
+      "description": "Puedes controlar qué información es visible para otros usuarios al editar tu perfil. Valoramos tu privacidad y seguridad."
+    }
+  },
+  "peerEvaluation": {
+    "title": "Evaluar Otros Participantes",
+    "selfEvaluation": "Autoevaluación",
+    "recognize": "Reconocer Completado",
+    "notRecognize": "No Completado",
+    "submitSuccess": "¡Evaluación enviada con éxito!",
+    "submitFailed": "Envío fallido",
+    "selectEvaluation": "Por favor selecciona un resultado de evaluación",
+    "participantError": "Error de información del participante",
+    "noEvidence": "Este usuario no ha enviado evidencia",
+    "evidencePhoto": "Foto de Evidencia",
+    "imageLoadFailed": "Carga de imagen fallida",
+    "videoNotSupported": "Tu navegador no soporta reproducción de video",
+    "loadFailed": "Carga de datos fallida",
+    "backToHome": "Volver al Inicio",
+    "trustPoints": "Puntos de Confianza",
+    "selfCompleted": "Auto: Completado",
+    "selfNotCompleted": "Auto: No Completado",
+    "submittedEvidence": "Evidencia Enviada",
+    "participantSelfEval": "Autoevaluación del Participante",
+    "believesCompleted": "Cree que completó el desafío",
+    "believesNotCompleted": "Cree que no completó el desafío",
+    "evaluationHint": "Por favor haz tu juicio objetivo basado en la evidencia y la autoevaluación del participante",
+    "yourEvaluation": "Tu Evaluación",
+    "submitted": "Enviado",
+    "reasoningLabel": "Razonamiento de Evaluación (Opcional)",
+    "reasoningPlaceholder": "Por favor explica tu razonamiento de evaluación...",
+    "evaluationSubmitted": "Evaluación Enviada",
+    "submitting": "Enviando...",
+    "submitEvaluation": "Enviar Evaluación",
+    "noParticipants": "No hay participantes para evaluar",
+    "waitingEvidence": "Esperando que otros participantes envíen evidencia",
+    "singlePlayer": {
+      "title": "Modo Desafío Personal",
+      "description": "¡Este es tu desafío personal! Por favor evalúa honestamente si has completado el objetivo.",
+      "tip": "¡La autoevaluación honesta es el primer paso para crecer!",
+      "needEvidence": "Los juegos de un solo jugador requieren envío de evidencia antes de la autoevaluación"
+    }
+  },
+  "arbitration": {
+    "title": "Solicitar Arbitraje",
+    "subtitle": "Solicitar arbitraje de disputa al administrador",
+    "relatedGame": "Juego Relacionado",
+    "respondentLabel": "Demandado de la Disputa *",
+    "selectRespondentPlaceholder": "Por favor selecciona el demandado de la disputa",
+    "selectRespondent": "Por favor selecciona el demandado de la disputa",
+    "disputeTypeLabel": "Tipo de Disputa *",
+    "descriptionLabel": "Detalles de la Disputa *",
+    "descriptionPlaceholder": "Por favor describe la disputa en detalle, incluyendo tiempo, ubicación, eventos específicos, etc...",
+    "descriptionHint": "Por favor describe la situación de la disputa con el mayor detalle posible, esto ayudará al administrador a manejar mejor tu solicitud",
+    "describeDispute": "Por favor describe los detalles de la disputa",
+    "submitSuccess": "Solicitud de arbitraje enviada, el administrador procesará dentro de 24 horas",
+    "cancel": "Cancelar",
+    "submit": "Enviar Solicitud",
+    "instructions": {
+      "title": "Instrucciones de Arbitraje:",
+      "point1": "El administrador procesará tu solicitud de arbitraje dentro de 24 horas",
+      "point2": "Por favor asegúrate de que la información proporcionada sea verdadera y precisa",
+      "point3": "Las solicitudes de arbitraje maliciosas pueden ser penalizadas",
+      "point4": "Los resultados del arbitraje se te enviarán mediante notificación en el sitio"
+    }
+  },
+  "game": {
+    "joinChallenge": "Unirse al Desafío",
+    "leaveChallenge": "Abandonar Desafío",
+    "youAreCreator": "Eres el creador",
+    "challengeInProgress": "Desafío en progreso",
+    "alreadyJoined": "Ya unido",
+    "joinSuccess": "🎉 ¡Te has unido al desafío exitosamente!",
+    "leaveSuccess": "✅ Has abandonado el desafío",
+    "textDescription": "Descripción de Texto",
+    "textDescriptionOptional": "Descripción de Texto (Opcional)",
+    "textDescriptionRequired": "Descripción de Texto (Requerida)",
+    "loading": "Cargando...",
+    "loginSuccess": "¡Inicio de sesión exitoso!",
+    "viewDetails": "Ver Detalles",
+    "initiator": "Iniciador",
+    "respondent": "Demandado",
+    "rejected": "Rechazado",
+    "approved": "Aprobado",
+    "pending": "Pendiente",
+    "inReview": "En Revisión",
+    "recruiting": "Reclutando",
+    "started": "Iniciado",
+    "ended": "Finalizado",
+    "category": "Categoría",
+    "difficulty": "Dificultad",
+    "time": "Tiempo",
+    "participants": "Participantes",
+    "visibility": "Visibilidad",
+    "characters": "caracteres",
+    "startTime": {
+      "5min": "Comenzar en 5 minutos",
+      "5minDesc": "Comenzar inmediatamente, esperando usuarios",
+      "15min": "Comenzar en 15 minutos",
+      "15minDesc": "Inicio rápido, dar a los amigos suficiente tiempo para unirse",
+      "1hour": "Comenzar en 1 hora",
+      "1hourDesc": "Date a ti y a otros tiempo suficiente de preparación",
+      "tonight8": "Comenzar esta noche a las 8 PM",
+      "tonight8Desc": "Horario estelar por la noche, mayor participación",
+      "tomorrow8": "Comenzar mañana a las 8 AM",
+      "tomorrow8Desc": "Desafío matutino, desarrollar buenos hábitos",
+      "weekend": "Comenzar este fin de semana",
+      "weekendDesc": "Más tiempo para participar los fines de semana",
+      "selectAppropriateTime": "Selecciona un tiempo de inicio apropiado para permitir que más usuarios se unan a tu desafío"
+    },
+    "timeline": {
+      "preview": "Vista Previa Completa del Cronograma",
+      "joinDeadline": "Fecha Límite de Unión:",
+      "gameStart": "Inicio del Juego:",
+      "gameEnd": "Fin del Juego:",
+      "evidenceDeadline": "Fecha Límite de Evidencia:",
+      "reviewDeadline": "Fecha Límite de Revisión:",
+      "arbitrationDeadline": "Fecha Límite de Arbitraje:",
+      "gameClosure": "Cierre del Juego: Se cierra automáticamente después de la fecha límite de arbitraje"
+    },
+    "admin": {
+      "newGameCreated": "Nuevo juego creado",
+      "newUserRegistered": "Nuevo usuario registrado",
+      "disputeProcessed": "Disputa procesada",
+      "createdGame": "creó el juego"
+    },
+    "status": {
+      "open": "Abierto para Unirse",
+      "inProgress": "Juego en Progreso",
+      "evidenceSubmission": "Período de Envío de Evidencia",
+      "peerReview": "Revisión por Pares en Progreso",
+      "completed": "Juego Terminado",
+      "disputed": "Procesamiento de Disputa",
+      "closed": "Cerrado",
+      "unknown": "Estado Desconocido"
+    },
+    "visibility": {
+      "public": "Público",
+      "friendsOnly": "Solo Amigos",
+      "private": "Privado"
+    },
+    "teamGame": "🏆 Juego de Equipo",
+    "stake": "Apuesta",
+    "participationProgress": "Progreso de Participación",
+    "teamMode": {
+      "teamVsTeam": "Versus",
+      "collaborative": "Colaborativo",
+      "challenge": "Desafío"
+    },
+    "trustLevel": "Nivel de Confianza"
+  },
+  "evidence": {
+    "submitSuccess": "🎉 ¡Evidencia enviada exitosamente!",
+    "submitFailed": "Envío fallido, por favor intenta de nuevo",
+    "invalidFormat": "El formato de evidencia es incorrecto",
+    "timeExpired": "El tiempo de envío ha pasado o permisos insuficientes",
+    "alreadySubmitted": "Ya has enviado evidencia",
+    "fileTooLarge": "¡Archivo demasiado grande! Por favor selecciona un archivo más pequeño (Imagen<30MB, Video<150MB)",
+    "networkError": "¡Error de red! El archivo puede ser demasiado grande o la red inestable, por favor verifica el tamaño del archivo e intenta de nuevo",
+    "uploadError": "Error al cargar el archivo, por favor intenta de nuevo",
+    "textDescription": "Descripción de Texto",
+    "textDescriptionOptional": "Descripción de Texto (Opcional)",
+    "textDescriptionRequired": "Descripción de Texto (Requerida)",
+    "textDescriptionHintOptional": "Puedes agregar una descripción de texto para complementar la evidencia (opcional, sin límite de caracteres).",
+    "textDescriptionHintRequired": "Por favor describe en detalle cómo completaste el desafío (al menos 20 caracteres).",
+    "textPlaceholderOptional": "Agregar descripción de texto para complementar evidencia... (opcional)",
+    "textPlaceholderRequired": "Por favor describe en detalle cómo completaste el desafío... (al menos 20 caracteres)",
+    "charactersCount": "{{count}} caracteres",
+    "mustUploadOrText": "Por favor carga un archivo o completa al menos 20 caracteres de descripción de texto",
+    "mustSelectSelfEvaluation": "Por favor selecciona tu autoevaluación (éxito o fracaso)",
+    "noParticipants": {
+      "title": "Nadie se ha unido a tu desafío aún",
+      "subtitle": "El desafío requiere al menos 2 participantes para comenzar la revisión por pares",
+      "encouragement": "¿Nadie se atreve a desafiar, o nadie está interesado? ¡No te desanimes, invita a amigos a unirse al desafío! (•̀ᴗ•́)و",
+      "shareLink": "Compartir enlace del desafío",
+      "shareLinkDesc": "Copiar enlace y enviar a amigos",
+      "shareSocial": "Compartir en redes sociales",
+      "shareSocialDesc": "Deja que más personas vean tu desafío",
+      "copyLink": "Copiar enlace para compartir",
+      "linkCopied": "¡Enlace copiado al portapapeles!"
+    }
+  },
+  "disputes": {
+    "title": "Gestión de Disputas",
+    "subtitle": "Ver y gestionar tus solicitudes de disputa",
+    "createDispute": "Crear Disputa",
+    "viewDetails": "Ver Detalles",
+    "initiator": "Iniciador:",
+    "respondent": "Demandado:",
+    "game": "Juego:",
+    "type": "Tipo:",
+    "evidence": "Evidencia:",
+    "evidenceCount": "{{count}} elementos",
+    "tabs": {
+      "all": "Todas las Disputas",
+      "initiated": "Iniciadas por Mí",
+      "targeted": "Contra Mí"
+    },
+    "status": {
+      "filter": "Filtro de Estado",
+      "all": "Todos los Estados"
+    },
+    "empty": {
+      "title": "Sin registros de disputas",
+      "all": "Aún no tienes ningún registro de disputa",
+      "initiated": "Aún no has iniciado ninguna disputa",
+      "targeted": "Aún no hay disputas contra ti"
+    },
+    "decisions": {
+      "approveInitiator": "Apoyar al Iniciador",
+      "approveTarget": "Apoyar al Demandado",
+      "partialApproval": "Aprobación Parcial",
+      "noActionNeeded": "No Se Requiere Acción",
+      "insufficientEvidence": "Evidencia Insuficiente",
+      "invalidDispute": "Disputa Inválida"
+    }
+  },
+  "safety": {
+    "title": "Recordatorio Importante - La Seguridad Primero",
+    "coreMessage": "🏆 La moderación sobre el éxito, la salud sobre ganar",
+    "principles": {
+      "withinCapacity": "Dentro de Tu Capacidad",
+      "withinCapacityDesc": "Establece metas razonables según tus habilidades",
+      "healthFirst": "La Salud Primero",
+      "healthFirstDesc": "Detente inmediatamente si te sientes mal y consulta a un médico",
+      "gradual": "Progreso Gradual",
+      "gradualDesc": "Comienza con metas pequeñas y mejora gradualmente",
+      "safetyFirst": "La Seguridad Primero",
+      "safetyFirstDesc": "Sigue la orientación profesional y evita comportamientos peligrosos"
+    },
+    "disclaimer": {
+      "title": "Descargo de Responsabilidad",
+      "description": "Esta plataforma solo proporciona servicios de registro de desafíos e interacción social. No asume ninguna responsabilidad por lesiones físicas, problemas de salud u otras pérdidas causadas por participar en desafíos. Los participantes deben elegir razonablemente proyectos de desafío según su estado de salud, nivel de habilidad y tolerancia al riesgo.",
+      "showDetails": "Ver términos detallados",
+      "hideDetails": "Ocultar detalles",
+      "details": {
+        "highRisk": "Las actividades de alto riesgo (como deportes extremos) requieren orientación profesional y equipo de seguridad",
+        "healthIssues": "Aquellos con problemas de salud deben consultar primero a un médico",
+        "minors": "Los menores necesitan el consentimiento y supervisión del tutor para participar",
+        "noMedicalAdvice": "La plataforma no proporciona asesoramiento médico. Si tienes preguntas, consulta a un profesional",
+        "fullResponsibility": "Los participantes son totalmente responsables de sus acciones y consecuencias"
+      }
+    },
+    "mentalHealth": {
+      "title": "La Salud Mental es Igualmente Importante",
+      "description": "Mantén una actitud positiva y disfruta del proceso del desafío. Si te sientes demasiado estresado o ansioso, ajusta tus objetivos adecuadamente o busca ayuda. Recuerda: ¡la participación y el intento en sí mismo es éxito!"
+    },
+    "agreement": {
+      "title": "He leído cuidadosamente y comprendo completamente los recordatorios de seguridad y el descargo de responsabilidad anteriores",
+      "description": "Confirmo que participaré en desafíos razonablemente según mi propia situación y asumiré la responsabilidad de mis acciones",
+      "thankYou": "¡Gracias por tu comprensión! Ahora puedes elegir una plantilla de desafío para comenzar tu viaje de salud 🎉"
+    }
+  },
+  "evidenceGuide": {
+    "deadline": "Fecha límite",
+    "hoursLeft": "{{hours}} horas restantes",
+    "closingSoon": "Cerrando pronto",
+    "requirements": "Requisitos de Envío",
+    "specificRequirements": "Requisitos Específicos",
+    "importantReminder": "Recordatorio Importante",
+    "reminders": {
+      "authentic": "Asegúrate de que la evidencia sea auténtica y válida. La evidencia falsa afectará tu puntuación de confianza",
+      "noEdit": "No se puede editar después del envío. Por favor verifica cuidadosamente antes de enviar",
+      "peerReview": "La evidencia será revisada por otros participantes",
+      "deadline": "No se puede enviar evidencia después de la fecha límite"
+    },
+    "photo": {
+      "title": "Evidencia Fotográfica",
+      "description": "Sube fotos claras como evidencia de finalización",
+      "tips": {
+        "clear": "Asegúrate de que las fotos sean claras y visibles",
+        "keyElements": "Incluye elementos clave de finalización",
+        "avoidBlur": "Evita fotos borrosas o demasiado oscuras",
+        "format": "Soporta formatos JPG, PNG, máx 10MB"
+      }
+    },
+    "video": {
+      "title": "Evidencia en Video",
+      "description": "Graba un video mostrando el proceso de finalización",
+      "tips": {
+        "duration": "Duración de video recomendada de 30 segundos a 5 minutos",
+        "quality": "Asegura audio y video claros",
+        "complete": "Muestra el proceso completo de finalización",
+        "format": "Soporta formatos MP4, MOV, máx 50MB"
+      }
+    },
+    "text": {
+      "title": "Descripción de Texto",
+      "description": "Describe la finalización en detalle",
+      "tips": {
+        "detailed": "La descripción debe ser detallada y específica",
+        "timePlace": "Incluye tiempo, lugar y proceso",
+        "minLength": "Al menos 50 caracteres",
+        "honest": "Describe honesta y objetivamente"
+      }
+    },
+    "document": {
+      "title": "Evidencia Documental",
+      "description": "Sube documentos relevantes como evidencia",
+      "tips": {
+        "readable": "Asegúrate de que los documentos sean claros y legibles",
+        "necessary": "Incluye información necesaria",
+        "format": "Soporta formatos PDF, DOC, DOCX",
+        "size": "Máx 10MB"
+      }
+    }
+  },
+  "categoryPage": {
+    "subcategories": "Subcategorías",
+    "relatedTemplates": "Plantillas de Juego Relacionadas",
+    "allTemplates": "Todas las Plantillas de Juego",
+    "noTemplates": "No hay plantillas de juego relacionadas disponibles",
+    "browseAll": "Explorar Todas las Plantillas",
+    "backToHome": "Volver al Inicio",
+    "retry": "Reintentar",
+    "error": {
+      "notFound": "Categoría No Encontrada",
+      "fetchFailed": "Error al obtener plantillas, por favor intenta más tarde"
+    }
+  },
+  "simpleTimeSelector": {
+    "title": "Hora de Inicio del Juego",
+    "hint": "Elige una hora de inicio apropiada para dar a más usuarios la oportunidad de unirse a tu desafío",
+    "options": {
+      "fiveMinutes": {
+        "label": "Comenzar en 5 Minutos",
+        "description": "Comenzar inmediatamente, perfecto para usuarios impacientes"
+      },
+      "oneHour": {
+        "label": "Comenzar en 1 Hora",
+        "description": "Date un tiempo de preparación"
+      },
+      "tonight": {
+        "label": "Comenzar Esta Noche a las 8 PM",
+        "description": "Horario estelar de la noche, mayor participación"
+      },
+      "tomorrow": {
+        "label": "Comenzar Mañana a las 8 AM",
+        "description": "Desafío matutino, construye buenos hábitos"
+      },
+      "weekend": {
+        "label": "Comenzar Este Fin de Semana",
+        "description": "Más tiempo para participar los fines de semana"
+      }
+    }
+  },
+  "categories": {
+    "HEALTH": {
+      "name": "Vida Saludable",
+      "description": "Desafíos relacionados con la salud física y mental"
+    },
+    "HEALTH_DIET": {
+      "name": "Dieta y Nutrición",
+      "description": "Alimentación saludable, equilibrio nutricional"
+    },
+    "HEALTH_SLEEP": {
+      "name": "Horario de Sueño",
+      "description": "Acostarse temprano, levantarse temprano, rutina regular"
+    },
+    "HEALTH_MENTAL": {
+      "name": "Salud Mental",
+      "description": "Meditación, atención plena, gestión emocional"
+    },
+    "HEALTH_HABIT": {
+      "name": "Hábitos Saludables",
+      "description": "Formación de hábitos saludables diarios"
+    },
+    "FITNESS": {
+      "name": "Fitness y Ejercicio",
+      "description": "Relacionado con deportes y fitness"
+    },
+    "FITNESS_CARDIO": {
+      "name": "Ejercicio Cardiovascular",
+      "description": "Correr, nadar, ciclismo, etc."
+    },
+    "FITNESS_STRENGTH": {
+      "name": "Entrenamiento de Fuerza",
+      "description": "Gimnasio, entrenamiento con equipos"
+    },
+    "FITNESS_SPORTS": {
+      "name": "Deportes de Pelota",
+      "description": "Fútbol, baloncesto, tenis, etc."
+    },
+    "FITNESS_YOGA": {
+      "name": "Yoga y Pilates",
+      "description": "Yoga, Pilates, estiramientos"
+    },
+    "LEARNING": {
+      "name": "Aprendizaje y Crecimiento",
+      "description": "Aprendizaje de conocimientos y mejora de habilidades"
+    },
+    "LEARNING_READING": {
+      "name": "Lectura y Escritura",
+      "description": "Lectura, escritura, toma de notas"
+    },
+    "LEARNING_LANGUAGE": {
+      "name": "Aprendizaje de Idiomas",
+      "description": "Aprendizaje de idiomas extranjeros, práctica oral"
+    },
+    "LEARNING_SKILL": {
+      "name": "Desarrollo de Habilidades",
+      "description": "Programación, diseño, instrumentos, etc."
+    },
+    "LEARNING_EXAM": {
+      "name": "Preparación de Exámenes",
+      "description": "Preparación para varios exámenes"
+    },
+    "PERSONAL": {
+      "name": "Desarrollo Personal",
+      "description": "Crecimiento personal y automejora"
+    },
+    "PERSONAL_PRODUCTIVITY": {
+      "name": "Productividad",
+      "description": "Gestión del tiempo, eficiencia laboral"
+    },
+    "PERSONAL_CREATIVITY": {
+      "name": "Expresión Creativa",
+      "description": "Pintura, fotografía, manualidades"
+    },
+    "PERSONAL_SOCIAL": {
+      "name": "Comunicación Social",
+      "description": "Relaciones interpersonales, habilidades de comunicación"
+    },
+    "PERSONAL_FINANCE": {
+      "name": "Planificación Financiera",
+      "description": "Ahorro, inversión, gestión financiera"
+    },
+    "LIFESTYLE": {
+      "name": "Estilo de Vida",
+      "description": "Vida diaria y pasatiempos"
+    },
+    "LIFESTYLE_COOKING": {
+      "name": "Cocina y Gastronomía",
+      "description": "Cocinar, hornear, comida gourmet"
+    },
+    "LIFESTYLE_TRAVEL": {
+      "name": "Viajes y Exploración",
+      "description": "Turismo, actividades al aire libre, exploración"
+    },
+    "LIFESTYLE_HOBBY": {
+      "name": "Pasatiempos",
+      "description": "Coleccionar, juegos, entretenimiento"
+    },
+    "LIFESTYLE_HOME": {
+      "name": "Vida en el Hogar",
+      "description": "Organización, decoración, jardinería"
+    },
+    "WORK": {
+      "name": "Trabajo y Carrera",
+      "description": "Desarrollo profesional y relacionado con el trabajo"
+    },
+    "WORK_STARTUP": {
+      "name": "Proyectos de Startup",
+      "description": "Emprendimiento, desarrollo de proyectos, planes de negocio"
+    },
+    "WORK_CAREER": {
+      "name": "Desarrollo Profesional",
+      "description": "Mejora de habilidades, crecimiento laboral"
+    },
+    "WORK_PRODUCTIVITY": {
+      "name": "Eficiencia Laboral",
+      "description": "Gestión del tiempo, métodos de trabajo"
+    },
+    "SOCIAL": {
+      "name": "Interacción Social",
+      "description": "Relaciones interpersonales y actividades sociales"
+    },
+    "SOCIAL_FRIENDSHIP": {
+      "name": "Amigos y Reuniones",
+      "description": "Reuniones de amigos, actividades sociales"
+    },
+    "SOCIAL_FAMILY": {
+      "name": "Relaciones Familiares",
+      "description": "Tiempo en familia, vínculos familiares"
+    },
+    "SOCIAL_COMMUNITY": {
+      "name": "Participación Comunitaria",
+      "description": "Servicio voluntario, actividades comunitarias"
+    },
+    "ENTERTAINMENT": {
+      "name": "Entretenimiento y Ocio",
+      "description": "Actividades de entretenimiento y tiempo libre"
+    },
+    "ENTERTAINMENT_MEDIA": {
+      "name": "Cine y TV",
+      "description": "Películas, series de TV, documentales"
+    },
+    "ENTERTAINMENT_GAMING": {
+      "name": "Juegos",
+      "description": "Videojuegos, juegos de mesa"
+    },
+    "ENTERTAINMENT_MUSIC": {
+      "name": "Apreciación Musical",
+      "description": "Descubrimiento de música, asistencia a conciertos"
+    }
+  },
+  "templateConfig": {
+    "pleaseSelect": "Por favor seleccione...",
+    "challengeTitle": "Título del Desafío",
+    "challengeDescription": "Descripción del Desafío",
+    "titlePlaceholder": "Ingrese el título del desafío",
+    "descriptionPlaceholder": "Ingrese la descripción del desafío",
+    "characters": "caracteres",
+    "parameterConfig": "Configuración de Parámetros del Desafío",
+    "evidenceRequirements": "Requisitos de Envío de Evidencia",
+    "required": "Requerido",
+    "evidenceDescription": "Descripción de Evidencia",
+    "evidencePlaceholder": "Describa brevemente los requisitos de envío de evidencia",
+    "importantReminder": "Recordatorio Importante",
+    "customFieldConfig": "Configuración de Campos Personalizados",
+    "addField": "Agregar Campo",
+    "selectFieldTemplate": "Seleccionar Plantilla de Campo Predefinida:",
+    "noFieldsYet": "Aún no se han agregado campos personalizados",
+    "clickToAddField": "Haga clic en \"Agregar Campo\" para comenzar a configurar su desafío",
+    "configPreview": "Vista Previa de Configuración",
+    "configuredFields": "Campos Configurados: ",
+    "requiredFields": "Campos Requeridos: ",
+    "optionalFields": "Campos Opcionales: ",
+    "fields": "campos",
+    "noExtraConfig": "El desafío general no requiere configuración adicional",
+    "fullyCustomizable": "Puede personalizar completamente el contenido del desafío"
+  },
+  "generalFields": {
+    "target_description": {
+      "label": "Descripción del Objetivo",
+      "placeholder": "Por favor describa su objetivo del desafío en detalle...",
+      "description": "Explique el objetivo específico que desea lograr"
+    },
+    "daily_goal": {
+      "label": "Objetivo Diario",
+      "placeholder": "Ej.: Correr 5km, Leer durante 30 minutos",
+      "description": "Establezca la tarea específica a completar cada día"
+    },
+    "motivation": {
+      "label": "Motivación",
+      "placeholder": "Comparta sus razones y expectativas para este desafío...",
+      "description": "Explique por qué quiere participar en este desafío"
+    },
+    "difficulty_level": {
+      "label": "Nivel de Dificultad",
+      "description": "Elija una dificultad que se adapte a su nivel actual",
+      "options": {
+        "0": "Fácil",
+        "1": "Medio",
+        "2": "Difícil",
+        "3": "Extremo"
+      }
+    },
+    "frequency": {
+      "label": "Frecuencia de Ejecución",
+      "description": "Elija la frecuencia de ejecución para el desafío",
+      "options": {
+        "0": "Diario",
+        "1": "3 veces por semana",
+        "2": "5 veces por semana",
+        "3": "Fines de semana",
+        "4": "Personalizado"
+      }
+    },
+    "categories": {
+      "label": "Categorías Relacionadas",
+      "description": "Seleccione categorías relacionadas con su desafío (se permiten múltiples selecciones)",
+      "options": {
+        "0": "Salud",
+        "1": "Aprendizaje",
+        "2": "Trabajo",
+        "3": "Vida",
+        "4": "Social",
+        "5": "Creativo",
+        "6": "Ejercicio",
+        "7": "Otro"
+      }
+    },
+    "time_commitment": {
+      "label": "Compromiso de Tiempo",
+      "description": "Tiempo requerido para cada ejecución del desafío",
+      "options": {
+        "0": "Menos de 15 minutos",
+        "1": "15-30 minutos",
+        "2": "30-60 minutos",
+        "3": "1-2 horas",
+        "4": "Más de 2 horas"
+      }
+    },
+    "tracking_method": {
+      "label": "Método de Seguimiento",
+      "description": "Elija su método preferido de registro y envío de evidencia",
+      "options": {
+        "0": "Foto",
+        "1": "Diario de Texto",
+        "2": "Registro de Datos",
+        "3": "Video",
+        "4": "Audio"
+      }
+    },
+    "success_criteria": {
+      "label": "Criterios de Éxito",
+      "placeholder": "Ej.: Completar 7 días seguidos, alcanzar objetivos numéricos específicos, etc...",
+      "description": "Defina claramente qué cuenta como éxito del desafío"
+    },
+    "reward_system": {
+      "label": "Sistema de Recompensas",
+      "placeholder": "Ej.: Comprarme un libro, ver una película después de completar, etc.",
+      "description": "Establezca una recompensa para usted después de completar el desafío"
+    }
+  }
+}
+

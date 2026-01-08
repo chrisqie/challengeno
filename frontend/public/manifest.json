@@ -1,0 +1,77 @@
+{
+  "name": "ChallengeNo - 挑战无压力",
+  "short_name": "ChallengeNo",
+  "description": "和朋友一起设定目标，互相监督，共同成长的社交挑战平台。Challenge? No pressure!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "zh-CN",
+  "categories": ["social", "lifestyle", "productivity"],
+  "icons": [
+    {
+      "src": "https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+
+
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.challengeno.app",
+      "id": "com.challengeno.app"
+    }
+  ],
+  "prefer_related_applications": false,
+  "share_target": {
+    "action": "/share",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

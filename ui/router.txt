@@ -1,0 +1,182 @@
+
+📋 ChallengeNo 项目完整路由列表
+
+说明：
+
+网站域名：https://challengeno.com
+网站测试用户：username:  xunpeihu@163.com     password: hellohello123
+项目前端开发：react + tailwinds
+
+
+🌐 公开路由 (无需登录)
+
+路由	页面组件	说明
+/	HomePage	首页 - 游戏列表
+/login	LoginPage	登录页面
+/register	RegisterPage	注册页面
+/forgot-password	ForgotPasswordPage	忘记密码
+/reset-password	ResetPasswordPage	重置密码
+/game/:id	    GameDetailPage	游戏详情页 (公开访问)
+/category/:categoryId	CategoryPage	分类页面
+/category/:categoryId/:subcategoryId	CategoryPage	子分类页面
+/leaderboard	LeaderboardPage	排行榜
+
+🔐 需要登录的路由
+
+
+游戏相关
+
+路由	页面组件	说明
+/create	CreateGamePage	创建游戏  （已经废弃）
+/create-wizard	CreateGameWizardPage	创建游戏向导 (新版)
+/templates	TemplateSelectionPage	模板选择页面
+/game/:id/evidence	SubmitEvidencePageV2	提交证据
+/game/:id/evaluate	PeerEvaluationPage	互相评价
+/my-games	MyGamesPage	我的游戏
+/favorites 	FavoritesPage	收藏的游戏
+
+
+用户相关
+
+路由	页面组件	说明
+/profile	ProfilePage	个人资料
+/enhanced-profile	EnhancedProfilePage	增强版个人资料
+/change-password	ChangePasswordPage	修改密码
+/user/:username	UserProfilePage	查看其他用户资料
+/discover	UserDiscoveryPage	发现用户
+/stats	UserStatsPage	用户统计
+
+
+好友相关
+
+路由	页面组件	说明
+/friends	FriendsPage	好友列表
+/friends/recommendations	FriendRecommendationsPage	好友推荐
+/friends/blocked	BlockedUsersPage	黑名单
+/chat/:friendId	ChatPage	聊天页面
+
+
+通知相关
+
+路由	页面组件	说明
+/notifications	NotificationsPage	通知中心
+/notifications/settings	NotificationSettingsPage	通知设置
+
+VIP & 商城
+
+路由	页面组件	说明
+/vip	VipPage	VIP会员
+/shop	ShopPage	商城
+/shop/exchanges	ShopExchangesPage	兑换记录
+
+
+积分相关
+
+路由	页面组件	说明
+/points/history	PointsHistoryPage	积分历史
+/points/stats	PointsStatsPage	积分统计
+
+成就 & 推荐
+
+路由	页面组件	说明
+/achievements	AchievementsPage	成就系统
+/referral	ReferralPage	推荐系统
+
+团队相关
+
+路由	页面组件	说明
+/teams	TeamsPage	团队列表
+/teams/:id	TeamDetailPage	团队详情
+
+争议 & 仲裁
+
+路由	页面组件	说明
+/disputes	DisputesPage	争议列表
+/disputes/create	CreateDisputePage	创建争议
+/disputes/:id	DisputeDetailPage	争议详情
+/arbitration/:gameId	ArbitrationPage	仲裁页面  （已经废弃）
+
+设置相关
+
+路由	页面组件	说明
+/settings	SettingsPage	设置
+/settings/privacy	PrivacySettingsPage	隐私设置
+
+👨‍💼 管理后台路由
+
+路由	页面组件	说明
+/admin/login	AdminLoginPage	管理员登录
+/admin/dashboard	AdminDashboardPage	管理后台首页
+/admin/users	AdminUsersPage	用户管理
+/admin/games	AdminGamesPage	游戏管理
+/admin/reports	AdminReportsPage	举报管理
+/admin/stats	AdminStatsPage	统计数据
+/admin/vip	AdminVipPage	VIP管理
+/admin/shop	AdminShopPage	商城管理
+/admin/teams	AdminTeamsPage	团队管理
+/admin/arbitration	AdminArbitrationPage	仲裁管理
+/admin/disputes	AdminDisputesPage	争议管理
+/admin/feedback	AdminFeedbackPage	反馈管理
+
+🐛 调试路由 (开发用)
+
+路由	页面组件	说明
+/debug-templates	TemplateDiagnosePage	模板诊断
+/debug-vip	DebugVipPage	VIP调试
+/timezone-test	TimezoneTestPage	时区测试
+/location-test	LocationTestPage	地理位置测试
+/location-debug	LocationDebugPage	地理位置调试
+
+
+
+以下管理员后端路由还需要继续由中文翻译成英文 （管理面板只翻译成英文即可）：
+
+/admin/dashboard
+/admin/reports   
+/admin/arbitration
+/admin/disputes  （浏览器直接打打不开，好像也是废弃的，现在用的是 /admin/arbitration 和前端相反）
+
+
+
+
+
+
+
+
+
+
+/settings_privacy
+/settings
+/disputes/:id
+/disputes/create
+/disputes
+/teams/:id
+/achievements
+/points/stats
+/shop/exchanges
+/shop
+/notifications/settings
+/notifications
+/chat/:friendId （无法验证）
+/friends/blocked
+/friends/recommendations
+/friends
+/stats  下面调用的 Recent Activity 部分还是中文，如果涉及到调用同样部分，3种语言和管理员后台冲突，以用户前端为主，或灵活处理
+/discover
+/user/:username
+/change-password
+/enhanced-profile   (点击edit profile 按钮后，里面是中文)
+/profile  （调用的 Achievement Badges 部分还有中文）
+/templates  （这个路由好像是独立的，前端界面没有链接和使用这个页面的部分）
+/create-wizard  （中的部分模板，这部分先不用翻译，我到时候每个翻译的模板给你说一下）
+/category/:categoryId	
+/category/:categoryId/:subcategoryId	
+/game/:id （中的少量按钮和文字，或提示文字）
+/forgot-password
+/reset-password
+/register  （注册成功后，提示中文的“注册成功”）
+/login  （登录成功后，提示中文，看截图）
+
+
+
+

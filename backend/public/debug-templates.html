@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模板API调试</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .result { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+        .success { background-color: #d4edda; border-color: #c3e6cb; }
+        .error { background-color: #f8d7da; border-color: #f5c6cb; }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+        pre { background: #f8f9fa; padding: 10px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>模板API调试工具</h1>
+    
+    <div>
+        <button onclick="testLogin()">1. 测试登录</button>
+        <button onclick="testTemplatesAPI()">2. 测试模板API</button>
+        <button onclick="clearResults()">清除结果</button>
+    </div>
+    
+    <div id="results"></div>
+
+    <script>
+        let authToken = null;
+        const API_BASE = 'http://142.171.117.89/api';
+        
+        function addResult(message, isError = false) {
+            const results = document.getElementById('results');
+            const div = document.createElement('div');
+            div.className = `result ${isError ? 'error' : 'success'}`;
+            div.innerHTML = message;
+            results.appendChild(div);
+        }
+        
+        function clearResults() {
+            document.getElementById('results').innerHTML = '';
+        }
+        
+        async function testLogin() {
+            try {
+                addResult('🔍 开始测试登录...');
+                
+                const response = await fetch(`${API_BASE}/auth/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: 'admin',
+                        password: 'admin123'
+                    })
+                });
+                
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`HTTP ${response.status}: ${errorText}`);
+                }
+                
+                const data = await response.json();
+                authToken = data.accessToken;
+                
+                addResult(`✅ 登录成功！<br>Token: ${authToken.substring(0, 50)}...<br>用户: ${data.user.username}<br>VIP状态: ${data.user.isVip}<br>管理员: ${data.user.isAdmin}`);
+                
+            } catch (error) {
+                addResult(`❌ 登录失败: ${error.message}`, true);
+            }
+        }
+        
+        async function testTemplatesAPI() {
+            if (!authToken) {
+                addResult('❌ 请先登录获取token', true);
+                return;
+            }
+            
+            try {
+                addResult('🔍 开始测试模板API...');
+                
+                const response = await fetch(`${API_BASE}/templates`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${authToken}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`HTTP ${response.status}: ${errorText}`);
+                }
+                
+                const templates = await response.json();
+                
+                const freeTemplates = templates.filter(t => !t.isVipOnly);
+                const vipTemplates = templates.filter(t => t.isVipOnly);
+                
+                addResult(`✅ 模板API调用成功！<br>
+                    总模板数: ${templates.length}<br>
+                    免费模板: ${freeTemplates.length}<br>
+                    VIP模板: ${vipTemplates.length}<br><br>
+                    <strong>VIP模板列表:</strong><br>
+                    ${vipTemplates.map(t => `• ${t.title} (${t.vipTier})`).join('<br>')}<br><br>
+                    <details>
+                        <summary>完整数据</summary>
+                        <pre>${JSON.stringify(templates, null, 2)}</pre>
+                    </details>
+                `);
+                
+            } catch (error) {
+                addResult(`❌ 模板API调用失败: ${error.message}`, true);
+            }
+        }
+    </script>
+</body>
+</html>

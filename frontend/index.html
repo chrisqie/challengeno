@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- 基础图标 -->
+    <link rel="icon" type="image/x-icon" href="https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/favicon.ico" />
+
+    <!-- 移动端优化 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="ChallengeNo" />
+
+    <!-- 性能优化 -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- iOS 图标 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-180x180.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-144x144.png" />
+
+    <!-- Android 图标 -->
+    <link rel="icon" type="image/png" sizes="192x192" href="https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-512x512.png" />
+
+    <!-- 主题颜色 -->
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="msapplication-TileColor" content="#3b82f6" />
+    <meta name="msapplication-TileImage" content="https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-144x144.png" />
+
+    <!-- SEO Optimization -->
+    <meta name="description" content="ChallengeNo: Where Challenges Become Fun. Challenge yourself, grow together — with zero pressure. Set goals with friends, cheer each other on, and build lasting healthy habits through motivating, non-monetary challenges." />
+    <meta name="keywords" content="ChallengeNo,social challenge app,no pressure challenges,goal setting with friends,habit building,accountability partner,fitness challenges,peer support,self-improvement,points system,friendly competition,health goals,growth community" />
+    <meta name="author" content="onFuture Studio" />
+    <meta name="robots" content="index, follow" />
+    <meta name="application-name" content="ChallengeNo" />
+    <meta name="apple-mobile-web-app-title" content="ChallengeNo" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://challengeno.com" />
+    <meta property="og:title" content="ChallengeNo: Fun Challenges, Zero Pressure" />
+    <meta property="og:description" content="Tired of stressful challenges? On ChallengeNo, it's all about support and growth. Set goals with friends, build better habits, and celebrate every win together. Join the no-pressure challenge community today!" />
+    <meta property="og:image" content="https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-512x512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:site_name" content="ChallengeNo" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://challengeno.com" />
+    <meta name="twitter:title" content="ChallengeNo: Fun Challenges, Zero Pressure" />
+    <meta name="twitter:description" content="Turn goals into a team sport. 🎯 With ChallengeNo, you and your friends build healthy habits through encouraging, peer-supported challenges. No stress, just growth. Ready to start?" />
+    <meta name="twitter:image" content="https://app-together.nyc3.cdn.digitaloceanspaces.com/challenge-no/icons/icon-512x512.png" />
+    <meta name="twitter:creator" content="@ChallengeNo" />
+
+    <title>ChallengeNo - Challenge? No pressure!</title>
+
+    <!-- DNS 预解析和预连接 -->
+    <link rel="dns-prefetch" href="https://app-together.nyc3.cdn.digitaloceanspaces.com" />
+    <link rel="preconnect" href="https://app-together.nyc3.cdn.digitaloceanspaces.com" crossorigin />
+
+    <!-- 移除 Google Fonts，使用系统字体以提升性能 -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- PWA 安装提示 -->
+    <script>
+      let deferredPrompt;
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        // 可以在这里显示自定义的安装提示
+        console.log('PWA install prompt available');
+      });
+    </script>
+  </body>
+</html>

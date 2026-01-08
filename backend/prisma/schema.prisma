@@ -1,0 +1,1360 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                    String   @id @default(cuid())
+  username              String   @unique
+  email                 String   @unique
+  fullName              String?  @map("full_name")
+  dateOfBirth           DateTime @map("date_of_birth")
+  passwordHash          String   @map("password_hash")
+  avatar                String?  // 头像URL
+
+  // 个人资料扩展字段
+  bio                   String?  // 个人简介
+  location              String?  // 所在地
+  country               String?  // 国家名称
+  countryCode           String?  @map("country_code") // 国家代码 (如: CN, US)
+  city                  String?  // 城市名称
+  phone                 String?  // 电话号码
+  website               String?  // 个人网站
+  interests             Json?    // 兴趣爱好数组
+
+  // 隐私设置
+  showEmail             Boolean  @default(true) @map("show_email")
+  showPhone             Boolean  @default(false) @map("show_phone")
+  showLocation          Boolean  @default(true) @map("show_location")
+  showBirthDate         Boolean  @default(false) @map("show_birth_date")
+  allowFriendRequests   Boolean  @default(true) @map("allow_friend_requests")
+  allowGameInvites      Boolean  @default(true) @map("allow_game_invites")
+  
+  // 积分系统
+  participationPoints   Int      @default(0) @map("participation_points")
+  trustPoints           Int      @default(10) @map("trust_points")
+  laborPoints           Int      @default(0) @map("labor_points")
+  
+  // 游戏统计
+  totalGamesCreated     Int      @default(0) @map("total_games_created")
+  totalGamesJoined      Int      @default(0) @map("total_games_joined")
+  gamesCompleted        Int      @default(0) @map("games_completed")
+  
+  // 设置
+  privacyMode           PrivacyMode @default(PUBLIC) @map("privacy_mode")
+  dailyGameLimit        Int      @default(10) @map("daily_game_limit")
+  preferredLanguage     String   @default("en") @map("preferred_language")
+  
+  // VIP
+  isVip                 Boolean  @default(false) @map("is_vip")
+  vipExpiresAt          DateTime? @map("vip_expires_at")
+  
+  createdAt             DateTime @default(now()) @map("created_at")
+  updatedAt             DateTime @updatedAt @map("updated_at")
+  
+  // 管理员相关
+  isAdmin               Boolean  @default(false) @map("is_admin")
+  adminRole             AdminRole? @map("admin_role")
+  adminCreatedAt        DateTime? @map("admin_created_at")
+
+  // 封禁相关
+  isBanned              Boolean  @default(false) @map("is_banned")
+  bannedUntil           DateTime? @map("banned_until")
+  banReason             String?  @map("ban_reason")
+
+  // 软删除相关
+  isDeleted             Boolean  @default(false) @map("is_deleted")
+  deletedAt             DateTime? @map("deleted_at")
+  deleteReason          String?  @map("delete_reason")
+
+  // 关系
+  createdGames          BetGame[] @relation("GameCreator")
+  participations        BetParticipant[]
+  givenEvaluations      PeerEvaluation[] @relation("Evaluator")
+  receivedEvaluations   PeerEvaluation[] @relation("Evaluated")
+  pointsHistory         PointsHistory[]
+  notifications         Notification[]
+  sentFriendRequests    Friendship[] @relation("FriendshipRequester")
+  receivedFriendRequests Friendship[] @relation("FriendshipAddressee")
+  adminActions          AdminAction[]
+  reports               Report[] @relation("Reporter")
+  handledReports        Report[] @relation("Handler")
+  feedbacks             Feedback[]
+  handledFeedbacks      Feedback[] @relation("FeedbackHandler")
+  vipSubscriptions      VipSubscription[]
+  shopExchanges         ShopExchange[]
+  userAchievements      UserAchievement[]
+  notificationSettings  NotificationSettings?
+  sentMessages          Message[] @relation("MessageSender")
+  receivedMessages      Message[] @relation("MessageReceiver")
+
+  // 争议相关
+  initiatedDisputes     Dispute[] @relation("DisputeInitiator")
+  targetedDisputes      Dispute[] @relation("DisputeTarget")
+  handledDisputes       Dispute[] @relation("DisputeHandler")
+  disputeEvidence       DisputeEvidence[]
+
+  // 惩罚相关
+  penaltyRecords        PenaltyRecord[]
+  executedPenalties     PenaltyRecord[] @relation("PenaltyExecutor")
+
+  // 团队相关
+  createdTeams          Team[] @relation("TeamCreator")
+  teamMemberships       TeamMember[] @relation("UserTeamMember")
+  sentTeamInvites       TeamInvite[] @relation("TeamInviter")
+  receivedTeamInvites   TeamInvite[] @relation("TeamInvitee")
+
+  // 推荐码系统
+  referralCode          String?      @unique @map("referral_code") // 用户的推荐码
+  referredBy            String?      @map("referred_by") // 被谁推荐
+  referredByUser        User?        @relation("UserReferrer", fields: [referredBy], references: [id])
+  referredUsers         User[]       @relation("UserReferrer") // 推荐的用户
+  referralRewards       ReferralReward[] // 推荐奖励记录
+  referredUserRewards   ReferralReward[] @relation("ReferredUserReward") // 作为被推荐人的奖励记录
+
+  // 密码重置
+  passwordResetTokens   PasswordResetToken[]
+
+  // 社交功能关系
+  followers             UserFollow[] @relation("UserFollower")
+  following             UserFollow[] @relation("UserFollowee")
+  socialActivities      SocialActivity[]
+  socialInteractions    SocialInteraction[]
+  groupMemberships      GroupMember[]
+  groupPosts            GroupPost[]
+  createdGroups         CommunityGroup[] @relation("GroupCreator")
+
+  // 游戏加入历史
+  gameJoinHistory       GameJoinHistory[]
+
+  // 收藏功能
+  favorites             Favorite[]
+
+  @@map("users")
+}
+
+model GameTemplate {
+  id                    String   @id @default(cuid())
+  name                  String   @unique
+  title                 String
+  description           String
+  category              GameCategory
+  subcategory           String   @default("其他") // 小分类 (如: 运动健身、饮食营养等)
+  evidenceType          EvidenceType @map("evidence_type")
+  isAgeRestricted       Boolean  @default(true) @map("is_age_restricted")
+  defaultDurationHours  Int      @map("default_duration_hours")
+  maxParticipants       Int      @default(6) @map("max_participants")
+  instructions          String
+  exampleEvidence       String?  @map("example_evidence")
+  isActive              Boolean  @default(true) @map("is_active")
+
+  // Multilingual support - JSON format: { en: "...", es: "...", ja: "..." }
+  titleTranslations         Json?    @map("title_translations")
+  descriptionTranslations   Json?    @map("description_translations")
+  instructionsTranslations  Json?    @map("instructions_translations")
+  exampleEvidenceTranslations Json? @map("example_evidence_translations")
+
+  // 模板配置选项
+  templateOptions       Json?    @map("template_options") // 存储模板的配置选项
+  difficultyLevel       DifficultyLevel? @default(BEGINNER) @map("difficulty_level")
+  riskLevel             RiskLevel? @default(LOW) @map("risk_level")
+  isQuickStart          Boolean  @default(false) @map("is_quick_start") // 是否为快速开始模板
+
+  // VIP功能扩展
+  isVipOnly             Boolean  @default(false) @map("is_vip_only")
+  vipTier               VipTier? @map("vip_tier")
+  uiTheme               Json?    @map("ui_theme") // 存储UI主题配置
+  features              Json?    // 存储模板特殊功能配置
+
+  // 统计信息
+  usageCount            Int?     @default(0) @map("usage_count")
+  successRate           Float?   @map("success_rate")
+
+  createdAt             DateTime @default(now()) @map("created_at")
+  updatedAt             DateTime @default(now()) @updatedAt @map("updated_at")
+
+  // 关系
+  games                 BetGame[]
+
+  @@map("game_templates")
+}
+
+// VIP等级枚举
+enum VipTier {
+  BASIC
+  PREMIUM
+  ELITE
+}
+
+// 难度等级枚举
+enum DifficultyLevel {
+  BEGINNER      // 初级
+  INTERMEDIATE  // 中级
+  ADVANCED      // 高级
+  EXPERT        // 专家级
+}
+
+// 风险等级枚举
+enum RiskLevel {
+  LOW           // 低风险
+  MEDIUM        // 中等风险
+  HIGH          // 高风险
+  EXTREME       // 极高风险 (不推荐)
+}
+
+model BetGame {
+  id                    String   @id @default(cuid())
+  title                 String
+  description           String
+  creatorId             String   @map("creator_id")
+  templateId            String?  @map("template_id")
+  
+  // 赌注设置
+  stakeType             StakeType @map("stake_type")
+  betAmount             Decimal?  @map("bet_amount")
+  currency              String   @default("USD")
+  stakeDescription      String?  @map("stake_description")
+  
+  // 证据设置
+  evidenceType          EvidenceType @map("evidence_type")
+  evidenceInstructions  String   @map("evidence_instructions")
+  
+  // 参与设置
+  maxParticipants       Int      @map("max_participants")
+  currentParticipants   Int      @default(1) @map("current_participants")
+  
+  // 完整时间流程设置
+  createdAt             DateTime  @default(now()) @map("created_at") // 1. 游戏创建时间
+  joinDeadline          DateTime? @map("join_deadline")              // 2. 加入截止时间（游戏开始时间）
+  startDate             DateTime  @map("start_date")                 // 3. 游戏进行开始时间（不可再加入）
+  endDate               DateTime  @map("end_date")                   // 4. 游戏结束时间（挑战结束，开始提交证据）
+  evidenceDeadline      DateTime  @map("evidence_deadline")          // 5. 证据提交截止时间
+  reviewDeadline        DateTime? @map("review_deadline")            // 6. 互评截止时间（游戏结束第二阶段）
+  disputeSubmissionDeadline DateTime? @map("dispute_submission_deadline") // 7. 用户提交争议截止时间（完成后48小时）
+  arbitrationDeadline   DateTime? @map("arbitration_deadline")       // 8. 管理员仲裁截止时间（争议提交截止后72小时）
+  // 注：游戏关闭时间由系统自动计算（仲裁截止后自动关闭）
+  
+  // 状态
+  status                GameStatus @default(OPEN)
+  category              GameCategory
+  visibility            GameVisibility @default(PUBLIC)
+
+  // 团队游戏设置
+  isTeamGame            Boolean @default(false) @map("is_team_game")
+  teamMode              TeamGameMode? @map("team_mode") // 团队游戏模式
+  maxTeams              Int? @map("max_teams") // 最大团队数量
+  minTeamSize           Int? @map("min_team_size") // 最小团队规模
+  maxTeamSize           Int? @map("max_team_size") // 最大团队规模
+  
+  // 结果
+  result                String?
+  winnerIds             String[] @map("winner_ids")
+  disputeCount          Int      @default(0) @map("dispute_count")
+  isFeatured            Boolean  @default(false) @map("is_featured")
+  viewCount             Int      @default(0) @map("view_count")
+
+  // 收藏统计
+  favoritesCount        Int      @default(0) @map("favorites_count")
+  
+  // 额外信息
+  additionalNotes       String?  @map("additional_notes")
+
+  // 模板配置
+  templateConfig        Json?    @map("template_config")
+  dynamicConfig         Json?    @map("dynamic_config")
+
+  // 地理位置限制
+  locationRestriction   LocationRestriction @default(NONE) @map("location_restriction")
+  maxDistance           Int?     @map("max_distance") // 最大距离（公里）
+  customLocation        String?  @map("custom_location") // 自定义位置描述
+
+  // 创建者IP位置信息（游戏创建时记录）
+  creatorIpLocation     String?  @map("creator_ip_location") // 创建时的IP位置描述
+  creatorIpCountry      String?  @map("creator_ip_country")  // 创建时的IP国家
+  creatorIpCity         String?  @map("creator_ip_city")     // 创建时的IP城市
+
+  updatedAt             DateTime @updatedAt @map("updated_at")
+
+  // 关系
+  creator               User     @relation("GameCreator", fields: [creatorId], references: [id])
+  template              GameTemplate? @relation(fields: [templateId], references: [id])
+  participants          BetParticipant[]
+  evaluations           PeerEvaluation[]
+  pointsHistory         PointsHistory[]
+  disputes              Dispute[]
+  penaltyRecords        PenaltyRecord[]
+  teamGames             TeamGame[]
+  teamParticipations    TeamGameParticipation[]
+  joinHistory           GameJoinHistory[]
+  favorites             Favorite[]
+
+  @@map("bet_games")
+}
+
+model BetParticipant {
+  id                    String   @id @default(cuid())
+  gameId                String   @map("game_id")
+  userId                String   @map("user_id")
+  position              String?
+  joinedAt              DateTime @default(now()) @map("joined_at")
+  
+  // 证据提交
+  evidenceSubmitted     Boolean  @default(false) @map("evidence_submitted")
+  evidenceType          EvidenceType? @map("evidence_type")
+  evidenceContent       String?  @db.Text @map("evidence_content")
+  evidenceDescription   String?  @db.Text @map("evidence_description")
+  evidenceSubmittedAt   DateTime? @map("evidence_submitted_at")
+  selfReportedSuccess   Boolean? @map("self_reported_success")
+  
+  // 互评统计
+  peerEvaluationsReceived Int    @default(0) @map("peer_evaluations_received")
+  peerEvaluationsGiven    Int    @default(0) @map("peer_evaluations_given")
+  
+  // 结果
+  finalResult           ParticipantResult @default(PENDING) @map("final_result")
+  completionVerified    Boolean  @default(false) @map("completion_verified")
+
+  // 仲裁惩罚
+  penaltyPoints         Int      @default(0) @map("penalty_points")  // 惩罚积分（负数）
+  penaltyReason         String?  @map("penalty_reason")  // 惩罚原因
+  penalizedAt           DateTime? @map("penalized_at")  // 惩罚时间
+
+  createdAt             DateTime @default(now()) @map("created_at")
+  
+  // 关系
+  game                  BetGame  @relation(fields: [gameId], references: [id])
+  user                  User     @relation(fields: [userId], references: [id])
+  
+  @@unique([gameId, userId])
+  @@map("bet_participants")
+}
+
+model PeerEvaluation {
+  id                    String   @id @default(cuid())
+  gameId                String   @map("game_id")
+  evaluatorId           String   @map("evaluator_id")
+  evaluatedId           String   @map("evaluated_id")
+  
+  evaluation            EvaluationResult
+  reasoning             String?
+  status                EvaluationStatus @default(ACTIVE)
+  disputeDeadline       DateTime? @map("dispute_deadline")
+  disputedAt            DateTime? @map("disputed_at")
+  
+  createdAt             DateTime @default(now()) @map("created_at")
+  
+  // 关系
+  game                  BetGame  @relation(fields: [gameId], references: [id])
+  evaluator             User     @relation("Evaluator", fields: [evaluatorId], references: [id])
+  evaluated             User     @relation("Evaluated", fields: [evaluatedId], references: [id])
+  
+  @@unique([gameId, evaluatorId, evaluatedId])
+  @@map("peer_evaluations")
+}
+
+model PointsHistory {
+  id                    String   @id @default(cuid())
+  userId                String   @map("user_id")
+  pointType             PointType @map("point_type")
+  change                Int
+  reason                String
+  gameId                String?  @map("game_id")
+
+  createdAt             DateTime @default(now()) @map("created_at")
+
+  // 关系
+  user                  User     @relation(fields: [userId], references: [id])
+  game                  BetGame? @relation(fields: [gameId], references: [id])
+
+  @@map("points_history")
+}
+
+model Notification {
+  id                    String   @id @default(cuid())
+  userId                String   @map("user_id")
+  type                  NotificationType
+  title                 String
+  message               String
+  data                  Json?    // 额外数据，如游戏ID、好友请求ID等
+  isRead                Boolean  @default(false) @map("is_read")
+
+  // 通知渠道
+  channels              NotificationChannel[] @default([IN_APP]) // 通知发送渠道
+  priority              NotificationPriority @default(NORMAL) // 通知优先级
+
+  // 邮件通知相关
+  emailSent             Boolean  @default(false) @map("email_sent")
+  emailSentAt           DateTime? @map("email_sent_at")
+
+  createdAt             DateTime @default(now()) @map("created_at")
+  readAt                DateTime? @map("read_at")
+
+  // 关系
+  user                  User     @relation(fields: [userId], references: [id])
+
+  @@map("notifications")
+}
+
+// 用户通知设置
+model NotificationSettings {
+  id                    String   @id @default(cuid())
+  userId                String   @unique @map("user_id")
+
+  // 站内通知设置
+  inAppEnabled          Boolean  @default(true) @map("in_app_enabled")
+
+  // 邮件通知设置
+  emailEnabled          Boolean  @default(true) @map("email_enabled")
+  emailFrequency        EmailFrequency @default(IMMEDIATE) @map("email_frequency")
+
+  // 推送通知设置
+  pushEnabled           Boolean  @default(true) @map("push_enabled")
+
+  // 具体通知类型设置
+  gameInvites           Boolean  @default(true) @map("game_invites")
+  gameUpdates           Boolean  @default(true) @map("game_updates")
+  friendRequests        Boolean  @default(true) @map("friend_requests")
+  achievements          Boolean  @default(true) @map("achievements")
+  systemUpdates         Boolean  @default(true) @map("system_updates")
+
+  // 免打扰时间设置
+  quietHoursEnabled     Boolean  @default(false) @map("quiet_hours_enabled")
+  quietHoursStart       String?  @map("quiet_hours_start") // 格式: "22:00"
+  quietHoursEnd         String?  @map("quiet_hours_end")   // 格式: "08:00"
+
+  createdAt             DateTime @default(now()) @map("created_at")
+  updatedAt             DateTime @updatedAt @map("updated_at")
+
+  // 关系
+  user                  User     @relation(fields: [userId], references: [id])
+
+  @@map("notification_settings")
+}
+
+// 争议处理模型
+model Dispute {
+  id                    String   @id @default(cuid())
+  gameId                String   @map("game_id")
+  initiatorId           String   @map("initiator_id")
+  targetId              String?  @map("target_id") // 被争议的用户ID，可为空（争议整个游戏结果）
+
+  // 争议内容
+  disputeType           DisputeType @map("dispute_type")
+  title                 String   // 争议标题
+  description           String   // 争议描述
+  reason                String?  // 争议理由
+
+  // 状态管理
+  status                DisputeStatus @default(PENDING)
+  priority              DisputePriority @default(NORMAL)
+
+  // 处理信息
+  handlerId             String?  @map("handler_id") // 处理管理员ID
+  handlerType           DisputeHandlerType? @map("handler_type") // AI或人工
+
+  // 结果
+  resolution            String?  // 处理结果描述
+  decision              DisputeDecision? // 处理决定
+  compensationAmount    Int?     @map("compensation_amount") // 补偿积分
+
+  // 惩罚记录
+  penalizedUserIds      String[] @default([]) @map("penalized_user_ids") // 被惩罚的用户ID列表
+  pointsAdjustments     Json?    @map("points_adjustments") // 积分调整记录
+
+  // 时间管理
+  disputeDeadline       DateTime @map("dispute_deadline") // 争议截止时间
+  handledAt             DateTime? @map("handled_at")
+  resolvedAt            DateTime? @map("resolved_at")
+
+  createdAt             DateTime @default(now()) @map("created_at")
+  updatedAt             DateTime @updatedAt @map("updated_at")
+
+  // 关系
+  game                  BetGame  @relation(fields: [gameId], references: [id], onDelete: Cascade)
+  initiator             User     @relation("DisputeInitiator", fields: [initiatorId], references: [id])
+  target                User?    @relation("DisputeTarget", fields: [targetId], references: [id])
+  handler               User?    @relation("DisputeHandler", fields: [handlerId], references: [id])
+  evidence              DisputeEvidence[]
+
+  @@map("disputes")
+}
+
+// 争议证据模型
+model DisputeEvidence {
+  id                    String   @id @default(cuid())
+  disputeId             String   @map("dispute_id")
+  uploaderId            String   @map("uploader_id")
+
+  // 证据内容
+  type                  DisputeEvidenceType
+  title                 String?  // 证据标题
+  description           String?  // 证据描述
+  content               String   // 证据内容（文本或文件URL）
+  metadata              Json?    // 额外元数据
+
+  // 状态
+  isVerified            Boolean  @default(false) @map("is_verified")
+  verifiedBy            String?  @map("verified_by")
+  verifiedAt            DateTime? @map("verified_at")
+
+  createdAt             DateTime @default(now()) @map("created_at")
+
+  // 关系
+  dispute               Dispute  @relation(fields: [disputeId], references: [id], onDelete: Cascade)
+  uploader              User     @relation(fields: [uploaderId], references: [id])
+
+  @@map("dispute_evidence")
+}
+
+// 惩罚记录模型
+model PenaltyRecord {
+  id                    String   @id @default(cuid())
+  userId                String   @map("user_id")
+  gameId                String?  @map("game_id")
+  disputeId             String?  @map("dispute_id")
+
+  // 惩罚类型
+  penaltyType           PenaltyType @map("penalty_type")
+
+  // 惩罚内容
+  reason                String   // 惩罚原因
+  trustPointsDeduction  Int      @map("trust_points_deduction") // 信任积分扣除
+  gamePointsDeduction   Int      @default(0) @map("game_points_deduction") // 游戏积分扣除
+
+  // 执行信息
+  executedBy            String?  @map("executed_by") // 执行管理员ID
+  executedAt            DateTime @default(now()) @map("executed_at")
+
+  createdAt             DateTime @default(now()) @map("created_at")
+
+  // 关系
+  user                  User     @relation(fields: [userId], references: [id])
+  game                  BetGame? @relation(fields: [gameId], references: [id])
+  executor              User?    @relation("PenaltyExecutor", fields: [executedBy], references: [id])
+
+  @@map("penalty_records")
+}
+
+model Report {
+  id                    String   @id @default(cuid())
+  reporterId            String   @map("reporter_id")
+  targetType            ReportTargetType @map("target_type")
+  targetId              String   @map("target_id")
+  reason                ReportReason
+  description           String?
+  status                ReportStatus @default(PENDING)
+  handlerId             String?  @map("handler_id")
+  handledAt             DateTime? @map("handled_at")
+  resolution            String?
+
+  createdAt             DateTime @default(now()) @map("created_at")
+
+  // 关系
+  reporter              User     @relation("Reporter", fields: [reporterId], references: [id])
+  handler               User?    @relation("Handler", fields: [handlerId], references: [id])
+
+  @@map("reports")
+}
+
+model AdminAction {
+  id                    String   @id @default(cuid())
+  adminId               String   @map("admin_id")
+  action                AdminActionType
+  targetType            String   @map("target_type")
+  targetId              String   @map("target_id")
+  details               Json?
+  reason                String?
+
+  createdAt             DateTime @default(now()) @map("created_at")
+
+  // 关系
+  admin                 User     @relation(fields: [adminId], references: [id])
+
+  @@map("admin_actions")
+}
+
+model VipSubscription {
+  id                    String   @id @default(cuid())
+  userId                String   @map("user_id")
+  tier                  VipTier
+  startDate             DateTime @map("start_date")
+  endDate               DateTime @map("end_date")
+  isActive              Boolean  @default(true) @map("is_active")
+  paymentAmount         Decimal? @map("payment_amount")
+  paymentMethod         String?  @map("payment_method")
+
+  createdAt             DateTime @default(now()) @map("created_at")
+
+  // 关系
+  user                  User     @relation(fields: [userId], references: [id])
+
+  @@map("vip_subscriptions")
+}
+
+// 枚举类型
+enum PrivacyMode {
+  PUBLIC
+  FRIENDS_ONLY
+}
+
+enum GameCategory {
+  HEALTH
+  FITNESS
+  LEARNING
+  WEATHER
+  PERSONAL
+  CUSTOM
+  LIFESTYLE
+  ENTERTAINMENT
+  SOCIAL
+  WORK
+}
+
+enum EvidenceType {
+  PHOTO
+  TEXT
+  VIDEO
+  DOCUMENT
+  AUTOMATIC
+  MANUAL
+}
+
+enum StakeType {
+  MONEY
+  ITEM
+  FAVOR
+  POINTS
+}
+
+enum GameStatus {
+  OPEN                    // 开放加入阶段（创建后到joinDeadline）
+  IN_PROGRESS            // 游戏进行中（startDate到endDate，不可加入）
+  EVIDENCE_SUBMISSION    // 证据提交阶段（endDate到evidenceDeadline）
+  PEER_REVIEW           // 互评阶段（evidenceDeadline到reviewDeadline）
+  COMPLETED             // 游戏完成（reviewDeadline后，无争议）
+  DISPUTED              // 争议处理中（arbitrationDeadline前）
+  CLOSED                // 游戏关闭（arbitrationDeadline后，存档状态）
+}
+
+enum GameVisibility {
+  PUBLIC
+  FRIENDS_ONLY
+}
+
+enum LocationRestriction {
+  NONE
+  LOCAL
+  CUSTOM
+}
+
+enum ParticipantResult {
+  SUCCESS
+  FAILURE
+  DISPUTED
+  PENDING
+}
+
+enum EvaluationResult {
+  RECOGNIZE
+  NOT_RECOGNIZE
+}
+
+enum EvaluationStatus {
+  ACTIVE
+  DISPUTED
+  CONFIRMED
+}
+
+enum PointType {
+  PARTICIPATION
+  TRUST
+  LABOR
+}
+
+enum FriendshipStatus {
+  PENDING    // 待确认
+  ACCEPTED   // 已接受
+  BLOCKED    // 已屏蔽
+}
+
+enum NotificationType {
+  FRIEND_REQUEST      // 好友请求
+  FRIEND_ACCEPTED     // 好友请求被接受
+  FRIEND_REJECTED     // 好友请求被拒绝
+  GAME_STARTED        // 游戏开始
+  GAME_INVITE         // 游戏邀请
+  EVIDENCE_REQUIRED   // 需要提交证据
+  EVIDENCE_SUBMITTED  // 证据已提交
+  PEER_REVIEW_REQUEST // 同伴评审请求
+  PEER_EVALUATION_STARTED // 互评阶段开始
+  REVIEW_COMPLETED    // 评审完成
+  GAME_COMPLETED      // 游戏完成
+  GAME_CANCELLED      // 游戏取消
+  GAME_UNDER_REVIEW   // 游戏结果审核中
+  ACHIEVEMENT_UNLOCKED // 成就解锁
+  VIP_EXPIRED         // VIP过期
+  VIP_RENEWED         // VIP续费
+  SECURITY_ALERT      // 安全警报
+  SYSTEM              // 系统通知
+}
+
+// 通知渠道
+enum NotificationChannel {
+  IN_APP      // 站内通知
+  EMAIL       // 邮件通知
+  PUSH        // 推送通知
+}
+
+// 通知优先级
+enum NotificationPriority {
+  LOW
+  NORMAL
+  HIGH
+  URGENT
+}
+
+// 邮件通知频率
+enum EmailFrequency {
+  IMMEDIATE   // 立即发送
+  HOURLY      // 每小时汇总
+  DAILY       // 每日汇总
+  WEEKLY      // 每周汇总
+  DISABLED    // 禁用邮件通知
+}
+
+model Friendship {
+  id          String           @id @default(cuid())
+  requesterId String           @map("requester_id")
+  addresseeId String           @map("addressee_id")
+  status      FriendshipStatus @default(PENDING)
+  createdAt   DateTime         @default(now()) @map("created_at")
+  updatedAt   DateTime         @updatedAt @map("updated_at")
+
+  requester User @relation("FriendshipRequester", fields: [requesterId], references: [id], onDelete: Cascade)
+  addressee User @relation("FriendshipAddressee", fields: [addresseeId], references: [id], onDelete: Cascade)
+
+  @@unique([requesterId, addresseeId])
+  @@map("friendships")
+}
+
+// 团队模型
+model Team {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  creatorId   String   @map("creator_id")
+  maxMembers  Int      @default(10) @map("max_members")
+  isPrivate   Boolean  @default(false) @map("is_private")
+  inviteCode  String?  @unique @map("invite_code") // 邀请码
+  teamType    TeamType @default(CASUAL) @map("team_type") // 团队类型
+  status      TeamStatus @default(ACTIVE) @map("status")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  // 关系
+  creator     User         @relation("TeamCreator", fields: [creatorId], references: [id], onDelete: Cascade)
+  members     TeamMember[]
+  invites     TeamInvite[]
+  games       TeamGame[]   // 团队参与的游戏
+  gameParticipations TeamGameParticipation[] // 团队游戏参与记录
+
+  @@map("teams")
+}
+
+// 团队成员
+model TeamMember {
+  id       String   @id @default(cuid())
+  teamId   String   @map("team_id")
+  userId   String   @map("user_id")
+  role     TeamRole @default(MEMBER)
+  joinedAt DateTime @default(now()) @map("joined_at")
+
+  // 关系
+  team Team @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  user User @relation("UserTeamMember", fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([teamId, userId])
+  @@map("team_members")
+}
+
+// 团队邀请
+model TeamInvite {
+  id        String       @id @default(cuid())
+  teamId    String       @map("team_id")
+  inviterId String       @map("inviter_id")
+  inviteeId String?      @map("invitee_id") // 可为空，支持邀请码邀请
+  email     String?      // 邮箱邀请
+  status    InviteStatus @default(PENDING)
+  createdAt DateTime     @default(now()) @map("created_at")
+  expiresAt DateTime     @map("expires_at")
+
+  // 关系
+  team    Team  @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  inviter User  @relation("TeamInviter", fields: [inviterId], references: [id], onDelete: Cascade)
+  invitee User? @relation("TeamInvitee", fields: [inviteeId], references: [id], onDelete: Cascade)
+
+  @@map("team_invites")
+}
+
+// 团队游戏关联
+model TeamGame {
+  id     String @id @default(cuid())
+  teamId String @map("team_id")
+  gameId String @map("game_id")
+
+  // 关系
+  team Team    @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  game BetGame @relation(fields: [gameId], references: [id], onDelete: Cascade)
+
+  @@unique([teamId, gameId])
+  @@map("team_games")
+}
+
+// 团队游戏参与记录
+model TeamGameParticipation {
+  id              String   @id @default(cuid())
+  gameId          String   @map("game_id")
+  teamId          String   @map("team_id")
+  joinedAt        DateTime @default(now()) @map("joined_at")
+  status          TeamParticipationStatus @default(ACTIVE)
+  teamScore       Int?     @map("team_score") // 团队得分
+  teamRank        Int?     @map("team_rank")  // 团队排名
+  isWinner        Boolean  @default(false) @map("is_winner")
+
+  // 关系
+  game BetGame @relation(fields: [gameId], references: [id], onDelete: Cascade)
+  team Team    @relation(fields: [teamId], references: [id], onDelete: Cascade)
+
+  @@unique([gameId, teamId])
+  @@map("team_game_participations")
+}
+
+enum AdminRole {
+  SUPER_ADMIN
+  ADMIN
+  MODERATOR
+}
+
+enum ReportTargetType {
+  USER
+  GAME
+  EVIDENCE
+  COMMENT
+}
+
+enum ReportReason {
+  INAPPROPRIATE_CONTENT
+  SPAM
+  FRAUD
+  HARASSMENT
+  FAKE_EVIDENCE
+  OTHER
+}
+
+enum ReportStatus {
+  PENDING
+  INVESTIGATING
+  RESOLVED
+  REJECTED
+}
+
+enum AdminActionType {
+  USER_BAN
+  USER_UNBAN
+  USER_WARNING
+  DELETE_USER
+  GAME_DELETE
+  GAME_SUSPEND
+  GAME_RESUME
+  EVIDENCE_DELETE
+  REPORT_RESOLVE
+  REPORT_APPROVE
+  REPORT_REJECT
+  POINTS_ADJUST
+}
+
+// 聊天消息模型
+model Message {
+  id         String      @id @default(cuid())
+  senderId   String      @map("sender_id")
+  receiverId String      @map("receiver_id")
+  content    String      @db.Text
+  type       MessageType @default(TEXT)
+  isRead     Boolean     @default(false) @map("is_read")
+  readAt     DateTime?   @map("read_at")
+  createdAt  DateTime    @default(now()) @map("created_at")
+  updatedAt  DateTime    @updatedAt @map("updated_at")
+
+  // 关系
+  sender   User @relation("MessageSender", fields: [senderId], references: [id], onDelete: Cascade)
+  receiver User @relation("MessageReceiver", fields: [receiverId], references: [id], onDelete: Cascade)
+
+  @@index([senderId, receiverId])
+  @@index([receiverId, isRead])
+  @@map("messages")
+}
+
+enum MessageType {
+  TEXT
+  EMOJI
+  SYSTEM
+}
+
+// 商城商品模型
+model ShopItem {
+  id          String   @id @default(cuid())
+  name        String   // 商品名称
+  description String?  // 商品描述
+  image       String?  // 商品图片
+  category    String   // 商品分类
+  pointType   PointType // 使用的积分类型
+  pointCost   Int      // 积分价格
+  stock       Int      @default(-1) // 库存数量，-1表示无限
+  isActive    Boolean  @default(true) // 是否上架
+  sortOrder   Int      @default(0) // 排序权重
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // 关联的兑换记录
+  exchanges   ShopExchange[]
+
+  @@map("shop_items")
+}
+
+// 积分兑换记录模型
+model ShopExchange {
+  id          String   @id @default(cuid())
+  userId      String
+  itemId      String
+  pointType   PointType // 使用的积分类型
+  pointCost   Int      // 消耗的积分
+  status      ExchangeStatus @default(PENDING) // 兑换状态
+  deliveryInfo String? // 配送信息
+  notes       String?  // 备注
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // 关联
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  item        ShopItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+
+  @@map("shop_exchanges")
+}
+
+// 兑换状态枚举
+enum ExchangeStatus {
+  PENDING     // 待处理
+  PROCESSING  // 处理中
+  COMPLETED   // 已完成
+  CANCELLED   // 已取消
+}
+
+// 成就系统模型
+model Achievement {
+  id          String   @id @default(cuid())
+  name        String   // 成就名称
+  description String   // 成就描述
+  icon        String?  // 成就图标
+  category    AchievementCategory // 成就分类
+  type        AchievementType // 成就类型
+  condition   Json     // 解锁条件 (JSON格式)
+  reward      Json     // 奖励内容 (JSON格式)
+  rarity      AchievementRarity @default(COMMON) // 稀有度
+  isActive    Boolean  @default(true) // 是否启用
+  sortOrder   Int      @default(0) // 排序权重
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // 关联的用户成就
+  userAchievements UserAchievement[]
+
+  @@map("achievements")
+}
+
+// 用户成就记录
+model UserAchievement {
+  id            String   @id @default(cuid())
+  userId        String
+  achievementId String
+  unlockedAt    DateTime @default(now())
+  progress      Json?    // 进度信息 (JSON格式)
+  isDisplayed   Boolean  @default(true) // 是否在个人资料中显示
+
+  // 关联
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievement   Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, achievementId])
+  @@map("user_achievements")
+}
+
+// 推荐奖励记录
+model ReferralReward {
+  id            String   @id @default(cuid())
+  userId        String   @map("user_id")
+  referredUserId String  @map("referred_user_id")
+  rewardType    ReferralRewardType @map("reward_type")
+  rewardValue   Int      @map("reward_value") // 奖励数值（VIP天数、积分等）
+  description   String   // 奖励描述
+  isGranted     Boolean  @default(false) @map("is_granted") // 是否已发放
+  grantedAt     DateTime? @map("granted_at") // 发放时间
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  // 关系
+  user         User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  referredUser User @relation("ReferredUserReward", fields: [referredUserId], references: [id], onDelete: Cascade)
+
+  @@map("referral_rewards")
+}
+
+// 成就分类枚举
+enum AchievementCategory {
+  PARTICIPATION  // 参与类
+  CREATION      // 创建类
+  SOCIAL        // 社交类
+  TRUST         // 信用类
+  SPECIAL       // 特殊类
+  MILESTONE     // 里程碑类
+}
+
+// 成就类型枚举
+enum AchievementType {
+  COUNT         // 计数类 (完成X次)
+  THRESHOLD     // 阈值类 (达到X分)
+  STREAK        // 连续类 (连续X天)
+  RATIO         // 比率类 (成功率X%)
+  SPECIAL       // 特殊类 (特定条件)
+}
+
+// 成就稀有度枚举
+enum AchievementRarity {
+  COMMON        // 普通
+  RARE          // 稀有
+  EPIC          // 史诗
+  LEGENDARY     // 传说
+}
+
+// 争议相关枚举
+enum DisputeType {
+  EVIDENCE_DISPUTE      // 证据争议
+  RULE_VIOLATION        // 规则违反
+  UNFAIR_EVALUATION     // 不公平评价
+  HARASSMENT            // 骚扰行为
+  TECHNICAL_ISSUE       // 技术问题
+  GAME_RESULT_DISPUTE   // 游戏结果争议
+  OTHER                 // 其他
+}
+
+enum DisputeStatus {
+  PENDING               // 待处理
+  UNDER_REVIEW          // 审核中
+  INVESTIGATING         // 调查中
+  WAITING_EVIDENCE      // 等待证据
+  RESOLVED              // 已解决
+  REJECTED              // 已拒绝
+  CANCELLED             // 已取消
+  ESCALATED             // 已升级
+}
+
+enum DisputePriority {
+  LOW                   // 低优先级
+  NORMAL                // 普通优先级
+  HIGH                  // 高优先级
+  URGENT                // 紧急
+}
+
+enum DisputeHandlerType {
+  AI_AUTO               // AI自动处理
+  AI_ASSISTED           // AI辅助处理
+  HUMAN_MANUAL          // 人工处理
+}
+
+enum DisputeDecision {
+  APPROVE_INITIATOR     // 支持申请人
+  APPROVE_TARGET        // 支持被申请人
+  PARTIAL_APPROVAL      // 部分支持
+  NO_ACTION_NEEDED      // 无需处理
+  INSUFFICIENT_EVIDENCE // 证据不足
+  INVALID_DISPUTE       // 无效争议
+}
+
+enum DisputeEvidenceType {
+  TEXT                  // 文本证据
+  IMAGE                 // 图片证据
+  VIDEO                 // 视频证据
+  DOCUMENT              // 文档证据
+  SCREENSHOT            // 截图证据
+  CHAT_LOG              // 聊天记录
+  SYSTEM_LOG            // 系统日志
+}
+
+enum PenaltyType {
+  DISPUTE_VIOLATION     // 仲裁违规（被仲裁惩罚）
+  MALICIOUS_DISPUTE     // 恶意仲裁
+  FRAUD                 // 作弊
+  HARASSMENT            // 骚扰
+  OTHER                 // 其他
+}
+
+// 团队相关枚举
+enum TeamType {
+  CASUAL      // 休闲团队 - 任何人都可以加入
+  COMPETITIVE // 竞技团队 - 需要审核加入
+  PRIVATE     // 私密团队 - 仅邀请制
+}
+
+enum TeamRole {
+  LEADER      // 队长
+  MEMBER      // 成员
+}
+
+enum TeamStatus {
+  ACTIVE      // 活跃
+  INACTIVE    // 不活跃
+  DISBANDED   // 已解散
+}
+
+enum InviteStatus {
+  PENDING     // 待处理
+  ACCEPTED    // 已接受
+  DECLINED    // 已拒绝
+  EXPIRED     // 已过期
+}
+
+enum TeamGameMode {
+  TEAM_VS_TEAM        // 团队对抗模式
+  COLLABORATIVE       // 协作模式
+  TEAM_CHALLENGE      // 团队挑战模式
+}
+
+enum ReferralRewardType {
+  VIP_DAYS           // VIP天数奖励
+  PARTICIPATION_POINTS // 参与积分奖励
+  TRUST_POINTS       // 信任积分奖励
+  LABOR_POINTS       // 劳动积分奖励
+}
+
+enum TeamParticipationStatus {
+  ACTIVE              // 活跃参与
+  WITHDRAWN           // 已退出
+  DISQUALIFIED        // 被取消资格
+}
+
+enum FeedbackType {
+  BUG                 // 问题反馈
+  SUGGESTION          // 功能建议
+  OTHER               // 其他
+}
+
+enum FeedbackStatus {
+  PENDING             // 待处理
+  IN_PROGRESS         // 处理中
+  RESOLVED            // 已解决
+  CLOSED              // 已关闭
+}
+
+// === 用户反馈表 ===
+model Feedback {
+  id          String         @id @default(cuid())
+  userId      String?        @map("user_id")  // 可选，允许匿名反馈
+  type        FeedbackType
+  content     String         @db.Text
+  email       String?        // 联系邮箱（可选）
+  status      FeedbackStatus @default(PENDING)
+  adminNotes  String?        @map("admin_notes") @db.Text  // 管理员备注
+  handlerId   String?        @map("handler_id")  // 处理人ID
+  handledAt   DateTime?      @map("handled_at")  // 处理时间
+
+  // 系统信息
+  userAgent   String?        @map("user_agent")
+  url         String?        // 提交时的页面URL
+
+  createdAt   DateTime       @default(now()) @map("created_at")
+  updatedAt   DateTime       @updatedAt @map("updated_at")
+
+  // 关系
+  user        User?          @relation(fields: [userId], references: [id], onDelete: SetNull)
+  handler     User?          @relation("FeedbackHandler", fields: [handlerId], references: [id], onDelete: SetNull)
+
+  @@map("feedbacks")
+}
+
+// === 社交功能相关表 ===
+
+// 用户关注关系表
+model UserFollow {
+  id          String   @id @default(cuid())
+  followerId  String   @map("follower_id")
+  followeeId  String   @map("followee_id")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  // 关系
+  follower    User     @relation("UserFollower", fields: [followerId], references: [id], onDelete: Cascade)
+  followee    User     @relation("UserFollowee", fields: [followeeId], references: [id], onDelete: Cascade)
+
+  @@unique([followerId, followeeId])
+  @@map("user_follows")
+}
+
+// 社交动态表
+model SocialActivity {
+  id          String   @id @default(cuid())
+  userId      String   @map("user_id")
+  type        String   // GAME_CREATED, GAME_JOINED, ACHIEVEMENT_UNLOCKED, etc.
+  title       String
+  description String
+  data        Json?    // 存储相关数据
+  visibility  String   @default("PUBLIC") // PUBLIC, FRIENDS_ONLY, PRIVATE
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  // 关系
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  interactions SocialInteraction[]
+
+  @@map("social_activities")
+}
+
+// 社交互动表
+model SocialInteraction {
+  id           String   @id @default(cuid())
+  fromUserId   String   @map("from_user_id")
+  toUserId     String?  @map("to_user_id")
+  targetType   String   // ACTIVITY, GAME, USER, COMMENT
+  targetId     String   @map("target_id")
+  type         String   // LIKE, COMMENT, SHARE, FOLLOW, MENTION
+  content      String?  // 评论内容等
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  // 关系
+  fromUser     User     @relation(fields: [fromUserId], references: [id], onDelete: Cascade)
+  activity     SocialActivity? @relation(fields: [targetId], references: [id], onDelete: Cascade)
+
+  @@map("social_interactions")
+}
+
+// 社区群组表
+model CommunityGroup {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String
+  category    String
+  isPublic    Boolean  @default(true) @map("is_public")
+  creatorId   String   @map("creator_id")
+  avatar      String?
+  banner      String?
+  tags        String[] @default([])
+  rules       String[] @default([])
+  memberCount Int      @default(1) @map("member_count")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  // 关系
+  creator     User     @relation("GroupCreator", fields: [creatorId], references: [id])
+  members     GroupMember[]
+  posts       GroupPost[]
+
+  @@map("community_groups")
+}
+
+// 群组成员表
+model GroupMember {
+  id           String   @id @default(cuid())
+  groupId      String   @map("group_id")
+  userId       String   @map("user_id")
+  role         String   @default("MEMBER") // OWNER, ADMIN, MODERATOR, MEMBER
+  joinedAt     DateTime @default(now()) @map("joined_at")
+  lastActiveAt DateTime @default(now()) @map("last_active_at")
+
+  // 关系
+  group        CommunityGroup @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([groupId, userId])
+  @@map("group_members")
+}
+
+// 群组帖子表
+model GroupPost {
+  id          String   @id @default(cuid())
+  groupId     String   @map("group_id")
+  authorId    String   @map("author_id")
+  title       String
+  content     String
+  type        String   @default("TEXT") // TEXT, IMAGE, GAME_SHARE, POLL
+  attachments Json?    // 存储附件信息
+  isPinned    Boolean  @default(false) @map("is_pinned")
+  isLocked    Boolean  @default(false) @map("is_locked")
+  likesCount  Int      @default(0) @map("likes_count")
+  commentsCount Int    @default(0) @map("comments_count")
+  viewsCount  Int      @default(0) @map("views_count")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  // 关系
+  group       CommunityGroup @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  author      User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@map("group_posts")
+}
+
+// 游戏加入历史表（防止恶意加入-离开）
+model GameJoinHistory {
+  id          String     @id @default(cuid())
+  userId      String     @map("user_id")
+  gameId      String     @map("game_id")
+  action      JoinAction // JOIN 或 LEAVE
+  createdAt   DateTime   @default(now()) @map("created_at")
+
+  // 关系
+  user        User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  game        BetGame    @relation(fields: [gameId], references: [id], onDelete: Cascade)
+
+  @@map("game_join_history")
+  @@index([userId, gameId])
+}
+
+// 加入动作枚举
+enum JoinAction {
+  JOIN
+  LEAVE
+}
+
+// 密码重置令牌
+model PasswordResetToken {
+  id        String   @id @default(cuid())
+  userId    String   @map("user_id")
+  token     String   @unique
+  expiresAt DateTime @map("expires_at")
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("password_reset_tokens")
+  @@index([userId])
+  @@index([token])
+}
+
+// 收藏表
+model Favorite {
+  id        String   @id @default(cuid())
+  userId    String   @map("user_id")
+  gameId    String   @map("game_id")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  // 关系
+  user User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  game BetGame @relation(fields: [gameId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, gameId]) // 一个用户对一个游戏只能收藏一次
+  @@index([userId])
+  @@index([gameId])
+  @@map("favorites")
+}

@@ -1,0 +1,99 @@
+server {
+    listen 80;
+    server_name 178.128.75.79 localhost;
+    root /opt/challenge-no/frontend/dist;
+    index index.html;
+
+    # 客户端上传文件大小限制 - 支持大文件上传（视频最大150MB）
+    client_max_body_size 200M;
+
+    # 上传文件静态服务 - 支持头像和商品图片 (优先级最高)
+    location ^~ /uploads/ {
+        alias /opt/challenge-no/uploads/;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        add_header Access-Control-Allow-Origin "*" always;
+        try_files $uri =404;
+
+        # 安全设置 - 防止执行上传的脚本文件
+        location ~* \.(php|jsp|asp|sh|py|pl|cgi)$ {
+            deny all;
+        }
+    }
+
+    # API 代理到后端 (使用 ^~ 确保优先级最高)
+    location ^~ /api/ {
+        proxy_pass http://localhost:3000/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+        proxy_read_timeout 300s;
+        proxy_connect_timeout 75s;
+
+        # CORS 头部 - 支持跨域请求
+        add_header Access-Control-Allow-Origin "*" always;
+        add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
+        add_header Access-Control-Allow-Headers "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization" always;
+
+        # 处理 OPTIONS 预检请求
+        if ($request_method = 'OPTIONS') {
+            add_header Access-Control-Allow-Origin "*" always;
+            add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" always;
+            add_header Access-Control-Allow-Headers "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization" always;
+            add_header Access-Control-Max-Age 1728000;
+            add_header Content-Type 'text/plain; charset=utf-8';
+            add_header Content-Length 0;
+            return 204;
+        }
+    }
+
+    # 前端静态资源 - assets目录
+    location /assets/ {
+        root /opt/bet-together/frontend/dist;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        try_files $uri =404;
+    }
+
+    # 其他静态文件 - JS、CSS、图片等
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|webp|avif)$ {
+        root /opt/bet-together/frontend/dist;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        try_files $uri =404;
+    }
+
+    # 安全头设置
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "no-referrer-when-downgrade" always;
+
+    # SPA路由支持 - 所有其他请求返回index.html
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # 健康检查
+    location /health {
+        access_log off;
+        return 200 "healthy\n";
+        add_header Content-Type text/plain;
+    }
+
+    # 错误页面
+    error_page 404 /index.html;
+    error_page 500 502 503 504 /50x.html;
+    location = /50x.html {
+        root /opt/bet-together/frontend/dist;
+    }
+
+    # 日志配置
+    access_log /var/log/nginx/bet-together.access.log;
+    error_log /var/log/nginx/bet-together.error.log warn;
+}

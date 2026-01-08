@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建页面VIP模板调试</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .template { border: 1px solid #ddd; margin: 10px 0; padding: 15px; border-radius: 8px; }
+        .vip { border-color: #f59e0b; background-color: #fef3c7; }
+        .disabled { opacity: 0.6; background-color: #f3f4f6; }
+        .vip-badge { background: #f59e0b; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; }
+        .tier-badge { padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-left: 5px; }
+        .basic { background: #dbeafe; color: #1e40af; }
+        .premium { background: #e9d5ff; color: #7c3aed; }
+        .elite { background: #fef3c7; color: #d97706; }
+        button { margin: 5px; padding: 8px 16px; border: 1px solid #ddd; border-radius: 4px; cursor: pointer; }
+        button:disabled { opacity: 0.6; cursor: not-allowed; }
+        .result { margin: 20px 0; padding: 15px; background: #f0f9ff; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <h1>🔧 创建页面VIP模板调试</h1>
+    
+    <div>
+        <button onclick="testAsAdmin()">测试Admin用户</button>
+        <button onclick="testAsUser()">测试普通用户</button>
+        <button onclick="testAsVip()">测试VIP用户</button>
+        <button onclick="clearCache()">清除缓存</button>
+    </div>
+
+    <div id="result" class="result"></div>
+    <div id="templates"></div>
+
+    <script>
+        const API_BASE = 'http://localhost:3000/api';
+        let currentToken = null;
+
+        function addResult(message, isError = false) {
+            const result = document.getElementById('result');
+            result.innerHTML += `<div style="color: ${isError ? 'red' : 'green'}">${message}</div>`;
+        }
+
+        function clearResult() {
+            document.getElementById('result').innerHTML = '';
+            document.getElementById('templates').innerHTML = '';
+        }
+
+        function clearCache() {
+            localStorage.clear();
+            sessionStorage.clear();
+            addResult('✅ 缓存已清除');
+        }
+
+        async function login(username, password) {
+            try {
+                const response = await fetch(`${API_BASE}/auth/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    credentials: 'include',
+                    body: JSON.stringify({ username, password })
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`登录失败: ${response.status} - ${errorText}`);
+                }
+
+                const data = await response.json();
+                currentToken = data.accessToken;
+                addResult(`✅ ${username} 登录成功`);
+                addResult(`Token: ${currentToken ? currentToken.substring(0, 20) + '...' : 'undefined'}`);
+                return true;
+            } catch (error) {
+                addResult(`❌ ${username} 登录失败: ${error.message}`, true);
+                return false;
+            }
+        }
+
+        async function getTemplates() {
+            try {
+                const headers = {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                };
+                if (currentToken) {
+                    headers['Authorization'] = `Bearer ${currentToken}`;
+                }
+
+                addResult(`🔍 请求模板API，Token: ${currentToken ? '有' : '无'}`);
+
+                const response = await fetch(`${API_BASE}/templates`, {
+                    headers,
+                    credentials: 'include'
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`获取模板失败: ${response.status} - ${errorText}`);
+                }
+
+                const templates = await response.json();
+                displayTemplates(templates);
+                return templates;
+            } catch (error) {
+                addResult(`❌ 获取模板失败: ${error.message}`, true);
+                return [];
+            }
+        }
+
+        function displayTemplates(templates) {
+            const container = document.getElementById('templates');
+            container.innerHTML = '<h2>📋 模板列表</h2>';
+            
+            const vipTemplates = templates.filter(t => t.isVipOnly);
+            const freeTemplates = templates.filter(t => !t.isVipOnly);
+            
+            addResult(`📊 总模板: ${templates.length}, VIP模板: ${vipTemplates.length}, 免费模板: ${freeTemplates.length}`);
+            
+            templates.forEach(template => {
+                const div = document.createElement('div');
+                div.className = `template ${template.isVipOnly ? 'vip' : ''} ${template.canUse === false ? 'disabled' : ''}`;
+                
+                let badges = '';
+                if (template.isVipOnly) {
+                    badges += '<span class="vip-badge">👑 VIP</span>';
+                    if (template.vipTier) {
+                        const tierClass = template.vipTier.toLowerCase();
+                        badges += `<span class="tier-badge ${tierClass}">${template.vipTier}</span>`;
+                    }
+                }
+                
+                div.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h3>${template.title}</h3>
+                            <p>${template.description}</p>
+                            <small>分类: ${template.category} | 最多${template.maxParticipants}人</small>
+                        </div>
+                        <div>
+                            ${badges}
+                            <div style="margin-top: 5px;">
+                                <strong>可用: ${template.canUse !== false ? '✅' : '❌'}</strong>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(div);
+            });
+        }
+
+        async function testAsAdmin() {
+            clearResult();
+            addResult('🔍 测试Admin用户...');
+            if (await login('admin', 'admin123')) {
+                await getTemplates();
+            }
+        }
+
+        async function testAsUser() {
+            clearResult();
+            addResult('🔍 测试普通用户...');
+            if (await login('testuser2', 'testuser2123')) {
+                await getTemplates();
+            }
+        }
+
+        async function testAsVip() {
+            clearResult();
+            addResult('🔍 测试VIP用户...');
+            if (await login('vipbasic', 'password123')) {
+                await getTemplates();
+            }
+        }
+    </script>
+</body>
+</html>

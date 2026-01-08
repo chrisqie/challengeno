@@ -1,0 +1,1930 @@
+{
+  "common": {
+    "appName": "ChallengeNo",
+    "slogan": "チャレンジ？プレッシャーなし！",
+    "developer": "onFuture Studio",
+    "loading": "読み込み中...",
+    "initializing": "アプリケーションを初期化中...",
+    "error": "エラー",
+    "success": "成功",
+    "confirm": "確認",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "delete": "削除",
+    "edit": "編集",
+    "close": "閉じる",
+    "back": "戻る",
+    "next": "次へ",
+    "submit": "送信",
+    "search": "検索",
+    "filter": "フィルター",
+    "sort": "並び替え",
+    "all": "すべて",
+    "yes": "はい",
+    "no": "いいえ",
+    "refreshing": "更新中...",
+    "pullToRefresh": "引っ張って更新"
+  },
+  "nav": {
+    "home": "ホーム",
+    "create": "作成",
+    "discover": "発見",
+    "profile": "プロフィール",
+    "settings": "設定",
+    "logout": "ログアウト",
+    "login": "ログイン",
+    "register": "登録",
+    "search": "チャレンジを検索...",
+    "achievements": "実績",
+    "achievementsTitle": "実績システム",
+    "shop": "ショップ",
+    "shopTitle": "ポイントショップ",
+    "teams": "チーム",
+    "teamsTitle": "マイチーム",
+    "notifications": "通知",
+    "notificationsTitle": "通知",
+    "vip": "VIP",
+    "vipTitle": "VIPセンター",
+    "myProfile": "マイプロフィール",
+    "myGames": "マイチャレンジ",
+    "referral": "紹介",
+    "admin": "管理者",
+    "logoutConfirm": "本当にログアウトしますか？",
+    "darkMode": "ダークモード",
+    "lightMode": "ライトモード"
+  },
+  "home": {
+    "welcomeBack": "おかえりなさい、{{name}}さん！",
+    "welcomeGuest": "ChallengeNoへようこそ",
+    "subtitle": "自分に挑戦し、一緒に成長しよう。プレッシャーなし！",
+    "discoverChallenges": "新しいチャレンジを発見し、友達と一緒に成長しよう",
+    "challengesCreated": "作成したチャレンジ",
+    "challengesJoined": "参加したチャレンジ",
+    "challengesCompleted": "完了したチャレンジ",
+    "myAchievements": "マイ実績",
+    "inviteFriends": "友達を招待",
+    "signUpNow": "今すぐ登録",
+    "logIn": "ログイン",
+    "searchResults": "検索結果",
+    "results": "件",
+    "noChallenges": "チャレンジがありません",
+    "noChallengesDesc": "フィルターに一致するチャレンジがありません。最初に作成しましょう！",
+    "categories": {
+      "all": "すべて",
+      "health": "健康",
+      "fitness": "フィットネス",
+      "learning": "学習",
+      "personal": "個人",
+      "weather": "天気",
+      "custom": "カスタム"
+    },
+    "filters": {
+      "all": "すべて",
+      "open": "募集中",
+      "featured": "注目",
+      "inProgress": "進行中",
+      "peerReview": "相互評価",
+      "completed": "完了"
+    },
+    "location": {
+      "title": "位置フィルター",
+      "subtitle": "あなたの位置に基づくスマートフィルタリング",
+      "all": "すべて",
+      "local": "ローカル",
+      "tough": "タフ",
+      "localDesc": "位置ベースのチャレンジ",
+      "toughDesc": "タフで持続的なチャレンジ"
+    },
+    "advanced": {
+      "title": "詳細フィルター",
+      "sortBy": "並び替え",
+      "smartSort": "スマート並び替え（推奨）",
+      "latest": "最新",
+      "newest": "新しい順",
+      "featured": "おすすめ優先",
+      "startingSoon": "まもなく開始",
+      "oldest": "古い順",
+      "mostParticipants": "参加者が多い順",
+      "leastParticipants": "参加者が少ない順",
+      "mostPopular": "人気順",
+      "highestRewards": "報酬が高い順",
+      "challengeType": "チャレンジタイプ",
+      "gameType": "ゲームタイプ",
+      "allChallenges": "すべてのチャレンジ",
+      "allGames": "すべてのゲーム",
+      "individual": "個人",
+      "individualChallenge": "個人チャレンジ",
+      "team": "チーム",
+      "teamGame": "チームゲーム",
+      "quickFilters": "クイックフィルター",
+      "available": "参加可能",
+      "healthChallenges": "健康チャレンジ",
+      "smartSortHint": "💡 スマート並び替え：まもなく開始するチャレンジを優先、次に最新公開",
+      "createChallenge": "チャレンジを作成"
+    }
+  },
+  "auth": {
+    "loginSuccess": "ログインに成功しました！",
+    "registerSuccess": "登録に成功しました！",
+    "registerFailed": "登録に失敗しました",
+    "logoutSuccess": "ログアウトしました",
+    "sessionExpired": "セッションが期限切れです。再度ログインしてください",
+    "login": {
+      "title": "おかえりなさい！",
+      "subtitle": "チャレンジ？プレッシャーなし！",
+      "username": "ユーザー名またはメール",
+      "usernamePlaceholder": "ユーザー名またはメールを入力",
+      "password": "パスワード",
+      "passwordPlaceholder": "パスワードを入力",
+      "forgotPassword": "パスワードをお忘れですか？",
+      "loginButton": "ログイン",
+      "noAccount": "アカウントをお持ちでないですか？",
+      "signUpNow": "今すぐ登録",
+      "errors": {
+        "usernameRequired": "ユーザー名またはメールを入力してください",
+        "passwordRequired": "パスワードを入力してください",
+        "accountLocked": "アカウントがロックされています。{{time}}後に再試行してください"
+      }
+    },
+    "register": {
+      "title": "アカウントを作成",
+      "subtitle": "チャレンジの旅を始めましょう！",
+      "username": "ユーザー名",
+      "usernamePlaceholder": "ユーザー名を入力",
+      "email": "メール",
+      "emailPlaceholder": "メールアドレスを入力",
+      "fullName": "氏名",
+      "fullNamePlaceholder": "氏名を入力",
+      "dateOfBirth": "生年月日",
+      "referralCode": "紹介コード（任意）",
+      "referralCodePlaceholder": "紹介コードを入力してボーナス獲得",
+      "referralCodeHint": "紹介コードをお持ちですか？ボーナス報酬を獲得！",
+      "password": "パスワード",
+      "passwordPlaceholder": "パスワードを入力",
+      "confirmPassword": "パスワード確認",
+      "confirmPasswordPlaceholder": "パスワードを再入力",
+      "agreeTerms": "以下に同意します",
+      "termsOfService": "利用規約",
+      "privacyPolicy": "プライバシーポリシー",
+      "and": "と",
+      "registerButton": "登録",
+      "haveAccount": "すでにアカウントをお持ちですか？",
+      "logInNow": "今すぐログイン",
+      "errors": {
+        "usernameRequired": "ユーザー名を入力してください",
+        "usernameLength": "ユーザー名は3〜20文字である必要があります",
+        "emailRequired": "メールアドレスを入力してください",
+        "emailInvalid": "有効なメールアドレスを入力してください",
+        "fullNameRequired": "氏名を入力してください",
+        "fullNameLength": "氏名は2文字以上である必要があります",
+        "dateOfBirthRequired": "生年月日を入力してください",
+        "under18": "18歳以上である必要があります",
+        "passwordRequired": "パスワードを入力してください",
+        "passwordLength": "パスワードは6文字以上である必要があります",
+        "passwordMismatch": "パスワードが一致しません",
+        "agreeTermsRequired": "利用規約とプライバシーポリシーに同意してください",
+        "ageWarning18to21": "あなたは18〜21歳です。一部の機能が制限されます：健康チャレンジのみ、1日最大3チャレンジ。"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} ChallengeNo. チャレンジ？プレッシャーなし！",
+    "craftedBy": "❤️を込めて onFuture Studio が制作",
+    "disclaimer": "このプラットフォームは現金/金融賭博をサポートせず、そのような活動を禁止しています"
+  },
+  "settings": {
+    "title": "設定",
+    "subtitle": "アカウントと設定を管理",
+    "sections": {
+      "profile": {
+        "title": "個人プロフィール",
+        "description": "個人情報を管理"
+      },
+      "password": {
+        "title": "パスワード変更",
+        "description": "ログインパスワードを変更"
+      },
+      "notifications": {
+        "title": "通知設定",
+        "description": "通知設定を管理"
+      },
+      "privacy": {
+        "title": "プライバシー設定",
+        "description": "プライバシーとセキュリティ設定を管理"
+      },
+      "vip": {
+        "title": "VIP管理",
+        "description": "VIPメンバーシップを管理"
+      }
+    },
+    "options": "設定オプション"
+  },
+  "createGame": {
+    "title": "新しいチャレンジを作成",
+    "subtitle": "テンプレートを選択し、パラメータを設定し、チャレンジの旅を始めましょう"
+  },
+  "achievements": {
+    "title": "実績システム",
+    "subtitle": "実績をアンロックして報酬を獲得",
+    "shareAchievements": "実績を共有",
+    "shareAchievementsTitle": "私の実績を共有",
+    "noAchievements": "実績なし",
+    "noAchievementsDesc": "このカテゴリにはまだ実績がありません"
+  },
+  "wizard": {
+    "steps": {
+      "safety": "安全に関する注意事項",
+      "template": "テンプレートを選択",
+      "config": "詳細を設定",
+      "confirm": "確認して公開"
+    },
+    "success": "チャレンジが正常に作成されました！",
+    "error": "作成に失敗しました。もう一度お試しください",
+    "agreeTerms": "安全に関する注意事項を読んで同意してください",
+    "selectTemplate": "テンプレートを選択してください",
+    "fillRequired": "すべての必須フィールドに入力してください",
+    "configureDetails": "チャレンジの詳細を設定",
+    "quickTemplate": {
+      "title": "🚀 クイックテンプレート",
+      "description": "このテンプレートには最適な設定が事前設定されています。直接公開するか、基本情報を微調整できます。",
+      "challengeTitle": "チャレンジタイトル",
+      "challengeDescription": "チャレンジの説明",
+      "evidenceInstructions": "証拠の指示"
+    },
+    "generalTemplate": {
+      "title": "🔧 汎用テンプレート",
+      "description": "完全にカスタマイズ可能なチャレンジテンプレート。任意のフィールドを追加してユニークなチャレンジを作成できます。",
+      "basicInfo": "基本情報",
+      "titlePlaceholder": "チャレンジタイトルを入力",
+      "descriptionPlaceholder": "チャレンジの具体的な要件と目標を説明してください"
+    },
+    "parametricTemplate": {
+      "title": "⚙️ パラメトリックテンプレート",
+      "description": "パーソナライズされた設定テンプレート。ニーズに応じてパラメータを調整します。"
+    },
+    "selectTemplateType": "テンプレートタイプを選択",
+    "quickTemplateCard": {
+      "title": "🚀 クイックテンプレート",
+      "subtitle": "設定不要、ワンクリック公開",
+      "description": "ベストプラクティスがプリセット、素早く開始するのに最適"
+    },
+    "customTemplateCard": {
+      "title": "⚙️ 高度なテンプレート",
+      "subtitle": "パーソナライズ設定",
+      "description": "ニーズに応じてパラメータを調整"
+    },
+    "generalTemplateCard": {
+      "title": "🔧  汎用テンプレート",
+      "subtitle": "完全カスタマイズ可能",
+      "description": "フィールドと設定を自由に追加"
+    },
+    "quickTemplates": "🚀 クイックテンプレート",
+    "quickTemplatesDesc": "ベストプラクティスがプリセット、ワンクリックで開始",
+    "advancedTemplates": "⚙️ 高度なテンプレート",
+    "loadingTemplates": "テンプレート読み込み中...",
+    "noTemplatesFound": "テンプレートが見つかりません",
+    "timeSettings": {
+      "title": "時間設定",
+      "quickSelect": "クイック選択",
+      "preciseSet": "詳細設定",
+      "selected": "✅ 選択済み: {{label}}",
+      "startTime": "開始時刻",
+      "endTime": "終了時刻",
+      "evidenceDeadline": "証拠提出期限",
+      "evidenceDeadlineHint": "参加者はこの時刻までに完了証拠を提出する必要があります"
+    },
+    "participationSettings": {
+      "title": "参加設定",
+      "maxParticipants": "最大参加者数",
+      "visibility": "公開範囲",
+      "public": "公開",
+      "friendsOnly": "友達のみ",
+      "locationRestriction": "地理的制限",
+      "noRestriction": "制限なし",
+      "localChallenge": "ローカルチャレンジ",
+      "customLocation": "カスタム位置",
+      "maxDistance": "最大距離: {{distance}}km",
+      "maxDistanceHint": "{{distance}}km以内のユーザーのみがこのチャレンジに参加できます",
+      "customLocationPlaceholder": "例: 東京都渋谷区",
+      "customLocationHint": "特定の場所を指定すると、その地域のユーザーのみが参加できます",
+      "additionalNotes": "追加メモ（オプション）",
+      "additionalNotesPlaceholder": "詳細、特別な要件、または励ましの言葉をここに追加できます...",
+      "charactersRemaining": "{{count}}/500文字"
+    },
+    "confirmPublish": {
+      "title": "確認して公開",
+      "preview": "チャレンジプレビュー",
+      "previewTitle": "タイトル:",
+      "previewCategory": "カテゴリ:",
+      "previewDifficulty": "難易度:",
+      "previewTime": "時間:",
+      "previewParticipants": "参加者:",
+      "previewVisibility": "公開範囲:",
+      "previewNotes": "追加メモ:",
+      "finalReminder": "🏆 最後のリマインダー: 適度は成功や失敗よりも優れており、健康は勝ち負けよりも重要です",
+      "confirmGoals": "合理的なチャレンジ目標を設定し、自分の能力の範囲内で行動することを確認します"
+    },
+    "navigation": {
+      "previous": "前へ",
+      "next": "次へ",
+      "publishing": "公開中...",
+      "publish": "チャレンジを公開"
+    }
+  },
+  "profile": {
+    "title": "プロフィール",
+    "subtitle": "チャレンジの実績と統計を表示",
+    "joinedDate": "参加日: {{date}}",
+    "vipMember": "VIPメンバー",
+    "vipExpiresAt": "有効期限: {{date}}",
+    "settings": "設定",
+    "stats": {
+      "participationPoints": "参加ポイント",
+      "trustPoints": "信頼ポイント",
+      "laborPoints": "労働ポイント"
+    },
+    "pointsStats": {
+      "title": "ポイント統計",
+      "viewHistory": "履歴を表示"
+    },
+    "challengeStats": {
+      "title": "チャレンジ統計",
+      "created": "作成したチャレンジ",
+      "joined": "参加したチャレンジ",
+      "completed": "完了したチャレンジ",
+      "completionRate": "完了率"
+    },
+    "activityStats": {
+      "title": "アクティビティ統計",
+      "daysSinceJoined": "参加日数",
+      "averageGamesPerDay": "1日平均",
+      "totalPoints": "合計ポイント",
+      "currentLevel": "現在のレベル"
+    },
+    "achievements": {
+      "title": "実績バッジ",
+      "unlocked": "{{count}} / {{total}} 解除済み",
+      "noData": "実績データがまだありません",
+      "viewAll": "すべての実績を表示 ({{count}})",
+      "rarity": {
+        "LEGENDARY": "伝説",
+        "EPIC": "エピック",
+        "RARE": "レア",
+        "COMMON": "コモン"
+      }
+    },
+    "favorites": {
+      "title": "お気に入り",
+      "myGames": "お気に入りのゲーム",
+      "viewFavorites": "お気に入りのチャレンジを表示"
+    },
+    "pointsCenter": {
+      "title": "ポイントセンター",
+      "statistics": "ポイント統計",
+      "statisticsDesc": "詳細なポイントデータを表示",
+      "leaderboard": "ランキング",
+      "leaderboardDesc": "コミュニティランキングを表示"
+    },
+    "disputes": {
+      "title": "紛争管理",
+      "records": "紛争記録",
+      "recordsDesc": "紛争リクエストを表示および管理"
+    },
+    "level": {
+      "title": "ユーザーレベル",
+      "level": "レベル {{level}}",
+      "nextLevel": "次のレベル",
+      "pointsToNextLevel": "レベルアップまであと{{points}}ポイント"
+    }
+  },
+  "gameDetail": {
+    "share": {
+      "copySuccess": "ゲーム共有リンクをクリップボードにコピーしました！",
+      "copyFailed": "コピーに失敗しました。手動でリンクをコピーしてください",
+      "shareFailed": "共有に失敗しました。まず紹介コードを生成してください",
+      "achievementCopySuccess": "実績共有リンクをクリップボードにコピーしました！",
+      "shareGame": "ゲームを共有",
+      "shareAchievement": "実績を共有",
+      "shareGameTitle": "友達とゲームを共有",
+      "shareAchievementTitle": "完了実績を共有"
+    },
+    "favorite": {
+      "loginRequired": "まずログインしてください",
+      "favoriteSuccess": "お気に入りに追加しました",
+      "favoriteFailed": "お気に入りに追加できませんでした",
+      "unfavoriteSuccess": "お気に入りから削除しました",
+      "unfavoriteFailed": "お気に入りから削除できませんでした",
+      "favorited": "お気に入り済み",
+      "favorite": "お気に入り",
+      "cancel": "お気に入り解除"
+    },
+    "report": {
+      "title": "ゲームを報告",
+      "submitSuccess": "報告を送信しました。できるだけ早く処理します",
+      "submitFailed": "報告の送信に失敗しました。もう一度お試しください",
+      "selectReason": "報告理由を選択してください",
+      "reasonLabel": "報告理由",
+      "reasonRequired": "必須",
+      "descriptionLabel": "詳細説明（任意）",
+      "descriptionPlaceholder": "報告理由を詳しく説明してください。これにより、より迅速に処理できます...",
+      "cancel": "キャンセル",
+      "submit": "報告を送信",
+      "submitting": "送信中...",
+      "reportButton": "報告",
+      "reasons": {
+        "select": "報告理由を選択してください",
+        "INAPPROPRIATE_CONTENT": "不適切なコンテンツ",
+        "SPAM": "スパム",
+        "FRAUD": "詐欺行為",
+        "HARASSMENT": "嫌がらせ",
+        "FAKE_EVIDENCE": "偽の証拠",
+        "OTHER": "その他"
+      }
+    },
+    "error": {
+      "notFound": "チャレンジが見つかりません",
+      "loadFailed": "読み込みに失敗しました",
+      "notFoundDesc": "このチャレンジは削除されたか、アクセス権がありません",
+      "loadFailedDesc": "後でもう一度お試しいただくか、サポートにお問い合わせください",
+      "backToHome": "ホームに戻る",
+      "reload": "再読み込み",
+      "challengeNotExist": "チャレンジは存在しません"
+    },
+    "status": {
+      "OPEN": "参加受付中",
+      "IN_PROGRESS": "進行中",
+      "EVIDENCE_SUBMISSION": "証拠提出中",
+      "PEER_REVIEW": "相互評価中",
+      "COMPLETED": "完了",
+      "DISPUTED": "紛争中",
+      "CLOSED": "クローズ",
+      "openPhase": "参加受付フェーズ",
+      "inProgressPhase": "ゲーム進行中",
+      "evidencePhase": "証拠提出フェーズ",
+      "reviewPhase": "相互評価フェーズ",
+      "completedPhase": "ゲーム完了",
+      "disputedPhase": "紛争処理中",
+      "closedPhase": "ゲームクローズ",
+      "currentPhase": "現在のフェーズ：",
+      "waitingSettlement": "決済待ち"
+    },
+    "info": {
+      "creator": "作成者：",
+      "trustLevel": "信頼度：",
+      "visibility": {
+        "FRIENDS_ONLY": "友達のみ",
+        "PRIVATE": "非公開",
+        "PUBLIC": "公開"
+      },
+      "localChallenge": "ローカルチャレンジ {{distance}}km",
+      "distanceFromYou": "あなたから{{distance}}",
+      "participants": "参加者",
+      "daysRemaining": "残り日数",
+      "category": "カテゴリー",
+      "evidenceType": "証拠タイプ",
+      "participationProgress": "参加進捗",
+      "stake": "賭け"
+    },
+    "closed": {
+      "title": "ゲームがクローズされました",
+      "description": "このゲームはコミュニティルール違反で報告され、管理者によってクローズされました。"
+    },
+    "dispute": {
+      "title": "ゲーム紛争中",
+      "description": "現在{{count}}件の紛争が処理中です。仲裁結果に基づいてゲーム結果が調整される可能性があります。",
+      "viewDetails": "紛争詳細を表示 →",
+      "records": "紛争記録 ({{count}})",
+      "createNew": "新しい紛争を作成",
+      "deadlinePassed": "⏰ 紛争提出期限が過ぎました（ゲーム完了後48時間以内）",
+      "waitingAdmin": "管理者が既存の紛争を処理するのを待っています",
+      "hoursLeft": "紛争提出まであと{{hours}}時間（1人最大3回）",
+      "canSubmit": "ゲーム結果に異議がありますか？48時間以内に紛争処理を申請できます（1人最大3回）",
+      "status": {
+        "PENDING": "⏳ 保留中",
+        "UNDER_REVIEW": "🔍 審査中",
+        "INVESTIGATING": "🔎 調査中",
+        "RESOLVED": "✅ 解決済み",
+        "REJECTED": "❌ 却下",
+        "CANCELLED": "🚫 キャンセル"
+      }
+    },
+    "actions": {
+      "submitEvidence": "証拠を提出",
+      "evaluate": "他の参加者を評価",
+      "selfEvaluate": "自己評価",
+      "youJoined": "このチャレンジに参加しました",
+      "evidenceSubmitted": "証拠提出：{{status}}",
+      "evidenceSubmittedYes": "✅ 提出済み",
+      "evidenceSubmittedNo": "⏳ 未提出",
+      "viewEvaluationDetails": "クリックして評価詳細を表示",
+      "finalResult": "最終結果：{{result}}",
+      "finalResultSuccess": "✅ 成功",
+      "finalResultFailure": "❌ 失敗",
+      "finalResultPending": "⏳ ゲーム完了待ち",
+      "singlePlayerMode": "シングルプレイヤーチャレンジモード",
+      "singlePlayerCreator": "💪 一人で進むのも勇気の一つ！頑張って自分に証明しよう！",
+      "singlePlayerOther": "作成者が一人で頑張っています！"
+    },
+    "timeline": {
+      "title": "タイムライン",
+      "joinDeadline": "参加締切",
+      "gameStart": "ゲーム開始",
+      "gameEnd": "ゲーム終了",
+      "evidenceDeadline": "証拠締切",
+      "reviewDeadline": "評価締切",
+      "disputeDeadline": "紛争提出締切",
+      "arbitrationDeadline": "管理者仲裁締切"
+    },
+    "evidence": {
+      "title": "証拠要件",
+      "typeLabel": "証拠タイプ：",
+      "typePhoto": "写真証拠",
+      "typeText": "テキスト説明",
+      "notSubmitted": "証拠未提出",
+      "clickToView": "画像をクリックして元の画像を表示",
+      "selfReportSuccess": "自己評価：✅ 成功",
+      "selfReportFailure": "自己評価：❌ 失敗",
+      "videoEvidence": "ビデオ証拠",
+      "participantsTitle": "参加者の証拠",
+      "you": "あなた",
+      "creator": "作成者",
+      "trustLevel": "信頼度：",
+      "evidenceSubmitted": "証拠提出済み",
+      "viewEvidence": "証拠を表示",
+      "evidenceNotSubmitted": "証拠未提出",
+      "modalTitle": "@{{username}}の証拠",
+      "selfEvaluateSuccess": "✅ 参加者は成功と自己評価しました",
+      "selfEvaluateFailure": "❌ 参加者は失敗と自己評価しました"
+    },
+    "evaluations": {
+      "title": "受け取った評価",
+      "count": "{{count}}件の評価を受け取りました",
+      "recognize": "完了を認める",
+      "notRecognize": "未完了"
+    },
+    "progress": {
+      "title": "ゲーム進捗",
+      "joinChallenge": "チャレンジに参加",
+      "joinedSuccess": "このチャレンジに正常に参加しました",
+      "submitEvidence": "証拠を提出",
+      "evidenceSubmitted": "証拠提出済み",
+      "submitNow": "時間内に証拠を提出してください",
+      "waitingPhase": "証拠提出フェーズ待ち",
+      "peerReview": "相互評価",
+      "selfEvaluate": "自己評価フェーズ",
+      "peerReviewCompleted": "相互評価完了",
+      "selfEvaluateCompleted": "自己評価完了",
+      "pleaseEvaluate": "他の参加者を評価してください",
+      "pleaseSelfEvaluate": "自己評価を行ってください",
+      "waitingReview": "相互評価フェーズ待ち",
+      "waitingSelfEvaluate": "自己評価フェーズ待ち",
+      "startReview": "相互評価を開始",
+      "startSelfEvaluate": "自己評価を開始",
+      "arbitration": "仲裁フェーズ",
+      "arbitrationEnded": "仲裁期間が終了しました",
+      "disputeWindowOpen": "紛争提出ウィンドウが開いています（あと{{hours}}時間）",
+      "disputeWindowClosed": "紛争提出期間が過ぎました。管理者の処理を待っています",
+      "disputeProcessing": "紛争があります。管理者の処理を待っています",
+      "noArbitration": "仲裁不要",
+      "challengeResult": "チャレンジ結果",
+      "success": "🎉 チャレンジ成功！",
+      "failure": "😔 チャレンジ失敗",
+      "gameEnded": "✅ ゲーム終了",
+      "waitingArbitration": "⏳ 管理者が紛争を処理するのを待っています",
+      "arbitrationPeriod": "⏳ 仲裁期間中、結果が調整される可能性があります",
+      "disputeProcessingResult": "⚖️ 紛争処理中、結果保留",
+      "waitingReviewEnd": "⏱️ 相互評価の終了を待っています",
+      "viewDetails": "詳細を表示",
+      "waitingAdminDispute": "管理者が紛争を処理するのを待っています",
+      "arbitrationPeriod": "仲裁期間中、結果が調整される可能性があります",
+      "disputeInProgress": "紛争処理中、結果保留"
+    },
+    "modal": {
+      "evidenceTitle": "@{{username}}の証拠",
+      "selfReportSuccess": "参加者は成功と自己評価しました",
+      "selfReportFailure": "参加者は失敗と自己評価しました",
+      "reportTitle": "ゲームを報告",
+      "reportReasonLabel": "報告理由",
+      "selectReason": "報告理由を選択してください",
+      "reasonInappropriate": "不適切なコンテンツ",
+      "reasonSpam": "スパム",
+      "reasonFraud": "詐欺",
+      "reasonHarassment": "嫌がらせ",
+      "reasonFakeEvidence": "偽の証拠",
+      "reasonOther": "その他",
+      "descriptionLabel": "詳細説明（任意）",
+      "descriptionPlaceholder": "報告の理由を詳しく説明してください。これにより、より迅速に処理できます...",
+      "cancel": "キャンセル",
+      "submitting": "送信中...",
+      "submitReport": "報告を送信"
+    }
+  },
+  "notifications": {
+    "title": "通知センター",
+    "unreadCount": "{{count}}件の未読メッセージ",
+    "settings": "設定",
+    "batchActions": "一括操作",
+    "markAllRead": "すべて既読にする",
+    "filter": "フィルター",
+    "filterAll": "すべて",
+    "filterUnread": "未読",
+    "filterRead": "既読",
+    "allTypes": "すべてのタイプ",
+    "types": {
+      "friendRequest": "友達リクエスト",
+      "friendAccepted": "友達承認",
+      "gameStarted": "ゲーム開始",
+      "gameCompleted": "ゲーム完了",
+      "evidenceRequired": "証拠提出",
+      "system": "システム通知",
+      "notification": "通知"
+    },
+    "selected": "{{count}}件選択中",
+    "markRead": "既読にする",
+    "delete": "削除",
+    "selectAll": "すべて選択",
+    "deselectAll": "選択解除",
+    "noNotifications": "通知はありません",
+    "noMatchingNotifications": "条件に一致する通知はありません",
+    "notificationsWillAppear": "通知はここに表示されます",
+    "tryAdjustFilters": "フィルターを調整してください",
+    "markAsRead": "既読にする",
+    "deleteNotification": "通知を削除",
+    "loadFailed": "通知の読み込みに失敗しました",
+    "batchMarkSuccess": "{{count}}件の通知を既読にしました",
+    "batchOperationFailed": "一括操作に失敗しました",
+    "confirmDelete": "{{count}}件の通知を削除してもよろしいですか？",
+    "batchDeleteSuccess": "{{count}}件の通知を削除しました",
+    "batchDeleteFailed": "一括削除に失敗しました",
+    "operationFailed": "操作に失敗しました",
+    "markAllSuccess": "すべての通知を既読にしました",
+    "deleteSuccess": "通知を削除しました",
+    "deleteFailed": "削除に失敗しました",
+    "time": {
+      "justNow": "たった今",
+      "minutesAgo": "{{count}}分前",
+      "hoursAgo": "{{count}}時間前",
+      "daysAgo": "{{count}}日前"
+    },
+    "messages": {
+      "friendRequest": {
+        "title": "新しい友達リクエスト",
+        "message": "@{{requesterUsername}}さんがあなたを友達に追加したいです"
+      },
+      "friendAccepted": {
+        "title": "友達リクエストが承認されました",
+        "message": "@{{addresseeUsername}}さんがあなたの友達リクエストを承認しました"
+      },
+      "friendRejected": {
+        "title": "友達リクエストが拒否されました",
+        "message": "@{{addresseeUsername}}さんがあなたの友達リクエストを拒否しました"
+      },
+      "achievementUnlocked": {
+        "title": "🏆 実績解除！",
+        "message": "おめでとうございます！実績「{{achievementName}}」を解除しました"
+      },
+      "gameInvite": {
+        "title": "ゲーム招待",
+        "message": "{{inviterName}}さんがゲーム「{{gameTitle}}」に招待しました"
+      },
+      "gameStarted": {
+        "title": "ゲーム開始！",
+        "message": "参加したゲーム「{{gameTitle}}」が開始されました"
+      },
+      "evidenceRequired": {
+        "title": "証拠を提出してください",
+        "message": "ゲーム「{{gameTitle}}」の証拠を提出してください。締切：{{deadline}}"
+      },
+      "vipExpired": {
+        "title": "VIPメンバーシップの有効期限が近づいています",
+        "message": "VIPメンバーシップは{{expirationDate}}に期限切れになります"
+      },
+      "gameCompleted": {
+        "title": "チャレンジ完了",
+        "message": "チャレンジ「{{gameTitle}}」が完了しました。結果を確認しましょう！"
+      },
+      "disputeCreated": {
+        "title": "ゲーム紛争通知",
+        "message": "ゲーム「{{gameTitle}}」に新しい紛争があります：「{{disputeTitle}}」"
+      },
+      "vipPurchased": {
+        "title": "VIP購入成功",
+        "message": "{{planName}}の購入おめでとうございます！VIP限定特典をお楽しみください。有効期限：{{expiresAt}}。"
+      },
+      "vipExpiring": {
+        "title": "VIP期限切れ間近",
+        "message": "VIPメンバーシップは{{daysLeft}}日後に期限切れになります。更新して限定特典を継続してお楽しみください。"
+      },
+      "disputeResolved": {
+        "title": "仲裁結果通知"
+      },
+      "disputeResolvedInitiator": {
+        "message": "あなたの紛争「{{disputeTitle}}」が解決されました。決定：{{decision}}。{{resolution}}"
+      },
+      "disputeResolvedParticipant": {
+        "message": "@{{initiatorUsername}}が開始したゲーム「{{gameTitle}}」の紛争「{{disputeTitle}}」が解決されました。決定：{{decision}}。"
+      },
+      "disputeRejectedCanRetry": {
+        "message": "あなたの紛争「{{disputeTitle}}」は却下されました。決定：{{decision}}。{{resolution}} あと{{remainingAttempts}}回仲裁を申請できます。"
+      },
+      "disputeRejectedNoRetry": {
+        "message": "あなたの紛争「{{disputeTitle}}」は却下されました。決定：{{decision}}。{{resolution}} 仲裁申請の上限に達しました。"
+      }
+    }
+  },
+  "userProfile": {
+    "detailsTitle": "詳細情報",
+    "joinedDate": "参加日: {{date}}",
+    "participationPoints": "参加ポイント: {{points}}",
+    "laborPoints": "労働ポイント: {{points}}",
+    "vipMember": "VIPメンバー",
+    "blockSuccess": "ユーザーをブロックしました",
+    "blockFailed": "ブロックに失敗しました",
+    "friendsOnlyMessage": "友達にのみメッセージを送信できます",
+    "confirmRemoveFriend": "この友達を削除してもよろしいですか？",
+    "confirmBlock": "@{{username}}をブロックしてもよろしいですか？"
+  },
+  "changePassword": {
+    "title": "パスワード変更",
+    "subtitle": "アカウントのセキュリティのため、定期的にパスワードを変更してください",
+    "currentPassword": "現在のパスワード",
+    "newPassword": "新しいパスワード",
+    "confirmPassword": "パスワード確認",
+    "enterCurrentPassword": "現在のパスワードを入力してください",
+    "enterNewPassword": "新しいパスワードを入力してください",
+    "minLength": "パスワードは8文字以上である必要があります",
+    "noDigitsOnly": "パスワードは数字のみにできません",
+    "noLettersOnly": "パスワードは文字のみにできません",
+    "tooWeak": "パスワードが簡単すぎます。より複雑なパスワードを使用してください",
+    "noRepeatingChars": "パスワードに4文字以上の連続した同じ文字を含めることはできません",
+    "passwordsNotMatch": "パスワードが一致しません",
+    "changeSuccess": "パスワードが正常に変更されました！",
+    "changeFailed": "パスワード変更に失敗しました。もう一度お試しください",
+    "cancel": "キャンセル",
+    "saving": "保存中...",
+    "save": "変更を保存",
+    "requirements": {
+      "title": "パスワード要件",
+      "length": "8文字以上",
+      "notAllDigits": "数字のみは不可",
+      "notAllLetters": "文字のみは不可",
+      "noRepeating": "4文字以上の連続した同じ文字は不可"
+    }
+  },
+  "profileEditor": {
+    "title": "プロフィール編集",
+    "subtitle": "個人情報を入力して、他のユーザーにあなたをよりよく知ってもらいましょう",
+    "avatar": "アバター",
+    "username": "ユーザー名",
+    "email": "メールアドレス",
+    "fullName": "フルネーム",
+    "bio": "自己紹介",
+    "location": "所在地",
+    "birthDate": "生年月日",
+    "phone": "電話番号",
+    "website": "ウェブサイト",
+    "interests": "興味",
+    "privacySettings": "プライバシー設定",
+    "showEmail": "メールを表示",
+    "showPhone": "電話番号を表示",
+    "showLocation": "所在地を表示",
+    "showBirthDate": "生年月日を表示",
+    "allowFriendRequests": "友達リクエストを許可",
+    "allowGameInvites": "ゲーム招待を許可",
+    "cancel": "キャンセル",
+    "saving": "保存中...",
+    "save": "保存",
+    "saveSuccess": "プロフィールが正常に保存されました",
+    "saveFailed": "保存に失敗しました。もう一度お試しください",
+    "enterUsername": "ユーザー名を入力してください",
+    "enterEmail": "メールアドレスを入力してください",
+    "invalidEmail": "無効なメール形式",
+    "enterFullName": "フルネームを入力してください",
+    "bioMaxLength": "自己紹介は500文字を超えることはできません",
+    "selectInterests": "興味を選択してください（最大10個）",
+    "interestPlaceholder": "興味を検索するには入力してください..."
+  },
+  "pointsStats": {
+    "title": "ポイント統計",
+    "subtitle": "ポイント詳細とランキングを表示",
+    "totalPoints": "合計ポイント",
+    "monthlyChange": "月間変動",
+    "currentPoints": "現在のポイント",
+    "monthlySource": "月間ポイント獲得源",
+    "types": {
+      "participation": {
+        "name": "参加ポイント",
+        "description": "ゲーム参加で獲得したポイント"
+      },
+      "trust": {
+        "name": "信頼ポイント",
+        "description": "コミットメント実績で獲得したポイント"
+      },
+      "labor": {
+        "name": "労働ポイント",
+        "description": "コミュニティ貢献で獲得したポイント"
+      }
+    },
+    "explanation": {
+      "title": "ポイント説明",
+      "participation": {
+        "title": "参加ポイント (Pポイント)",
+        "createGame": "ゲーム作成: +10ポイント",
+        "joinGame": "ゲーム参加: +5ポイント",
+        "completeGame": "ゲーム完了: +15ポイント",
+        "perfectCompletion": "完璧な達成: +5ポイント (ボーナス)"
+      },
+      "trust": {
+        "title": "信頼ポイント (Tポイント)",
+        "approved": "他者から承認: +1-2ポイント",
+        "rejected": "他者から拒否: -2から-5ポイント",
+        "appealSuccess": "異議申し立て成功: +3ポイント",
+        "maliciousDispute": "悪意のある紛争敗訴: -10ポイント"
+      },
+      "labor": {
+        "title": "労働ポイント (Lポイント)",
+        "peerReview": "相互評価参加: +2ポイント",
+        "qualityEvidence": "高品質な証拠提出: +5ポイント",
+        "reportViolation": "違反報告成功: +5ポイント",
+        "arbitration": "仲裁支援: +15ポイント"
+      }
+    }
+  },
+  "shop": {
+    "title": "ポイントショップ",
+    "subtitle": "ポイントで素敵なギフトと交換",
+    "exchangeHistory": "交換履歴",
+    "myPoints": "マイポイント",
+    "pointTypes": {
+      "participation": "参加ポイント",
+      "trust": "信頼ポイント",
+      "labor": "労働ポイント",
+      "total": "合計ポイント",
+      "points": "ポイント"
+    },
+    "category": "カテゴリー",
+    "all": "すべて",
+    "categories": {
+      "virtual": "バーチャルアイテム",
+      "physical": "実物商品",
+      "vip": "VIP",
+      "privilege": "特権機能"
+    },
+    "noItems": "商品がありません",
+    "noItemsInCategory": "このカテゴリーにはまだ商品がありません",
+    "stock": "在庫",
+    "soldOut": "売り切れ",
+    "exchangeNow": "今すぐ交換",
+    "loadFailed": "読み込みに失敗しました。もう一度お試しください",
+    "insufficientPoints": "ポイントが不足しています",
+    "outOfStock": "在庫切れ",
+    "exchangeSuccess": "交換成功！",
+    "exchangeFailed": "交換に失敗しました"
+  },
+  "vip": {
+    "title": "VIP会員",
+    "back": "戻る",
+    "currentMember": "あなたは{{tier}}会員です",
+    "expiresAt": "有効期限",
+    "upgradeTitle": "VIP会員にアップグレード",
+    "upgradeSubtitle": "より多くの機能をアンロックし、専用特典を楽しみ、チャレンジ体験をさらに充実させましょう",
+    "mostPopular": "最も人気",
+    "days": "日",
+    "processing": "処理中...",
+    "currentPlan": "現在のプラン",
+    "buyNow": "今すぐ購入",
+    "pleaseLogin": "まずログインしてください",
+    "purchaseSuccess": "VIP購入成功！",
+    "purchaseFailed": "購入に失敗しました。もう一度お試しください",
+    "benefitsTitle": "VIP会員特典詳細",
+    "benefits": {
+      "moreCreation": "より多くの作成機会",
+      "moreCreationDesc": "1日のゲーム作成回数が大幅に増加",
+      "moreParticipation": "より多くのチャレンジに参加",
+      "moreParticipationDesc": "1日のゲーム参加回数が大幅に増加",
+      "exclusiveBadge": "専用会員バッジ",
+      "exclusiveBadgeDesc": "VIPステータスを誇示",
+      "prioritySupport": "優先カスタマーサポート",
+      "prioritySupportDesc": "専用カスタマーサービスを享受"
+    },
+    "usageStats": {
+      "title": "VIP使用統計",
+      "todayCreated": "今日のチャレンジ",
+      "todayJoined": "今日の参加",
+      "remaining": "残り{{count}}回",
+      "expiresAt": "有効期限"
+    },
+    "purchaseHistory": "購入履歴",
+    "table": {
+      "plan": "プラン",
+      "purchaseDate": "購入日",
+      "validity": "有効期間",
+      "amount": "金額",
+      "status": "ステータス",
+      "active": "有効",
+      "expired": "期限切れ"
+    },
+    "faqTitle": "よくある質問",
+    "faq": {
+      "billing": {
+        "question": "VIP会員の請求方法は？",
+        "answer": "VIP会員は月額制で、購入後すぐに有効になり、期限切れ後は自動的に通常ユーザーに戻ります。"
+      },
+      "cancel": {
+        "question": "いつでもVIPをキャンセルできますか？",
+        "answer": "VIP会員は期限切れ後に自動更新されません。継続購入するかどうかを選択できます。"
+      },
+      "immediate": {
+        "question": "VIP特典はすぐに有効になりますか？",
+        "answer": "はい、VIP購入後すべての特典がすぐに有効になり、すぐにVIPサービスを楽しめます。"
+      }
+    }
+  },
+  "teams": {
+    "title": "チーム",
+    "subtitle": "友達と一緒にチャレンジを完了",
+    "createTeam": "チームを作成",
+    "fetchFailed": "チームの読み込みに失敗しました",
+    "joinSuccess": "チームに参加しました！",
+    "joinFailed": "チームへの参加に失敗しました",
+    "types": {
+      "casual": "カジュアルチーム",
+      "competitive": "競技チーム",
+      "private": "プライベートチーム"
+    },
+    "vipPrompt": {
+      "title": "VIPにアップグレードしてチーム機能をアンロック",
+      "description": "VIP会員はチームを作成・管理でき、友達とより多くのチャレンジを完了できます。",
+      "upgradeNow": "今すぐVIPにアップグレード"
+    },
+    "tabs": {
+      "myTeams": "マイチーム",
+      "discover": "チームを探す"
+    },
+    "loading": "読み込み中...",
+    "emptyMyTeams": "まだチームに参加していません",
+    "createFirstTeam": "最初のチームを作成",
+    "leader": "リーダー",
+    "memberCount": "{{current}}/{{max}} メンバー",
+    "noDescription": "説明なし",
+    "viewDetails": "詳細を見る",
+    "searchPlaceholder": "チームを検索...",
+    "emptyDiscover": "参加可能なチームがありません",
+    "applyToJoin": "参加申請"
+  },
+  "achievements": {
+    "title": "実績",
+    "shareAchievements": "実績を共有",
+    "shareLinkCopied": "「{{name}}」実績の共有リンクをコピーしました！",
+    "overviewLinkCopied": "実績概要の共有リンクをコピーしました！",
+    "copyFailed": "コピーに失敗しました。もう一度お試しください",
+    "shareFailed": "共有に失敗しました。まず紹介コードを生成してください",
+    "loadFailed": "読み込みに失敗しました。もう一度お試しください",
+    "categories": {
+      "participation": "参加",
+      "creation": "作成",
+      "social": "ソーシャル",
+      "trust": "信頼",
+      "milestone": "マイルストーン",
+      "special": "特別",
+      "other": "その他"
+    },
+    "rarity": {
+      "common": "コモン",
+      "rare": "レア",
+      "epic": "エピック",
+      "legendary": "レジェンダリー"
+    },
+    "stats": {
+      "total": "総実績数",
+      "unlocked": "解除済み",
+      "locked": "未解除"
+    },
+    "filterLabel": "カテゴリー：",
+    "filters": {
+      "all": "すべて",
+      "unlocked": "解除済み",
+      "locked": "未解除"
+    },
+    "unlocked": "解除済み",
+    "locked": "未解除",
+    "share": "共有",
+    "shareTitle": "「{{name}}」実績を共有",
+    "reward": "報酬：",
+    "rewardPoints": "+{{amount}} ポイント",
+    "rewardVip": "{{days}}日間VIP"
+  },
+  "myGames": {
+    "title": "マイチャレンジ",
+    "subtitle": "作成および参加したすべてのチャレンジを管理",
+    "tabs": {
+      "all": "すべて",
+      "created": "作成済み",
+      "joined": "参加中",
+      "favorites": "お気に入り"
+    },
+    "empty": {
+      "all": {
+        "title": "まだチャレンジがありません",
+        "description": "チャレンジの旅を始めましょう"
+      },
+      "created": {
+        "title": "まだチャレンジを作成していません",
+        "description": "最初のチャレンジを作成して友達を招待しましょう"
+      },
+      "joined": {
+        "title": "まだチャレンジに参加していません",
+        "description": "発見ページで興味深いチャレンジを見つけましょう"
+      },
+      "favorites": {
+        "title": "まだチャレンジをお気に入りに追加していません",
+        "description": "ホームページで興味深いチャレンジを見つけてお気に入りに追加しましょう"
+      }
+    }
+  },
+  "friends": {
+    "title": "友達管理",
+    "loading": "読み込み中...",
+    "loadFailed": "データの読み込みに失敗しました",
+    "searchFailed": "検索に失敗しました",
+    "requestSent": "友達リクエストを送信しました！",
+    "sendFailed": "送信に失敗しました",
+    "requestAccepted": "友達リクエストを承認しました！",
+    "requestRejected": "友達リクエストを拒否しました",
+    "operationFailed": "操作に失敗しました",
+    "confirmRemove": "この友達を削除してもよろしいですか？",
+    "friendRemoved": "友達を削除しました",
+    "removeFailed": "削除に失敗しました",
+    "confirmBlock": "@{{username}}をブロックしてもよろしいですか？ブロック後はお互いに友達追加やメッセージ送信ができなくなります。",
+    "userBlocked": "ユーザーをブロックしました",
+    "blockFailed": "ブロックに失敗しました",
+    "recommendations": "友達のおすすめ",
+    "blockedList": "ブロックリスト",
+    "tabs": {
+      "myFriends": "マイフレンド",
+      "recommended": "おすすめ",
+      "search": "ユーザー検索"
+    },
+    "advancedSearch": "詳細検索",
+    "pendingRequests": "保留中のリクエスト ({{count}})",
+    "accept": "承認",
+    "reject": "拒否",
+    "block": "ブロック",
+    "myFriendsList": "マイフレンド ({{count}})",
+    "filters": {
+      "all": "すべての友達",
+      "vip": "VIP友達",
+      "online": "オンラインの友達"
+    },
+    "noFriends": "まだ友達がいません。友達を追加しましょう！",
+    "status": {
+      "alreadyFriends": "すでに友達",
+      "requestSent": "リクエスト送信済み",
+      "pendingConfirm": "承認待ち",
+      "cannotAdd": "追加できません"
+    },
+    "addFriend": "友達を追加"
+  },
+  "favorites": {
+    "title": "お気に入りのチャレンジ",
+    "subtitle": "お気に入りのすべてのチャレンジを表示",
+    "totalCount": "合計 {{count}} 件のチャレンジをお気に入り登録",
+    "empty": {
+      "title": "まだお気に入りがありません",
+      "description": "発見ページで興味深いチャレンジを見つけて、お気に入りに追加しましょう"
+    }
+  },
+  "leaderboard": {
+    "title": "ポイントランキング",
+    "subtitle": "コミュニティのポイントランキングを表示",
+    "points": "ポイント",
+    "noData": "ランキングデータがありません",
+    "tabs": {
+      "total": "総合ポイント",
+      "participation": "参加ポイント",
+      "trust": "信頼ポイント",
+      "labor": "労働ポイント"
+    },
+    "explanation": {
+      "title": "ポイントの説明",
+      "participation": {
+        "title": "参加ポイント (P)",
+        "description": "チャレンジの作成と参加で獲得"
+      },
+      "trust": {
+        "title": "信頼ポイント (T)",
+        "description": "コミットメントのパフォーマンスに基づく信用スコア"
+      },
+      "labor": {
+        "title": "労働ポイント (L)",
+        "description": "コミュニティへの貢献で獲得"
+      }
+    }
+  },
+  "pointsHistory": {
+    "title": "ポイント履歴",
+    "subtitle": "ポイントの獲得と使用記録を表示",
+    "loadError": "ポイント履歴の読み込みに失敗しました",
+    "reload": "再読み込み",
+    "currentPoints": "現在のポイント",
+    "types": {
+      "participation": "参加ポイント (P)",
+      "trust": "信頼ポイント (T)",
+      "labor": "労働ポイント (L)",
+      "points": "ポイント"
+    },
+    "time": {
+      "today": "今日",
+      "yesterday": "昨日",
+      "daysAgo": "{{days}}日前"
+    },
+    "filters": {
+      "typeLabel": "ポイントタイプ",
+      "allTypes": "すべてのタイプ",
+      "timeLabel": "期間",
+      "allTime": "すべての期間",
+      "lastWeek": "過去1週間",
+      "lastMonth": "過去1ヶ月",
+      "lastQuarter": "過去3ヶ月"
+    },
+    "recordsCount": "ポイント記録 ({{count}})",
+    "noRecords": "まだポイント記録がありません"
+  },
+  "referral": {
+    "title": "友達を紹介",
+    "myCode": "私の紹介コード",
+    "generateCode": "コードを生成",
+    "generating": "生成中...",
+    "copyCode": "コードをコピー",
+    "generateHint": "上のボタンをクリックして、専用の紹介コードを生成してください",
+    "codeGenerated": "紹介コードが正常に生成されました！",
+    "generateFailed": "生成に失敗しました",
+    "copied": "クリップボードにコピーしました！",
+    "copyFailed": "コピーに失敗しました",
+    "copyFailedManual": "コピーに失敗しました。手動でリンクをコピーしてください",
+    "stats": {
+      "totalReferred": "紹介人数",
+      "totalRewards": "獲得報酬",
+      "pendingRewards": "保留中の報酬"
+    },
+    "shareLink": {
+      "title": "共有リンクを生成",
+      "appTitle": "アプリを共有して友達を招待",
+      "appDesc": "友達をダウンロードと登録に招待し、VIP報酬を獲得",
+      "generateButton": "招待リンクを生成",
+      "linkLabel": "招待リンク：",
+      "copyAgain": "再度コピー",
+      "gameTipTitle": "💡 ゲーム共有のヒント",
+      "gameTipDesc": "特定のゲームを共有したいですか？ゲーム詳細ページに移動し、「ゲームを共有」または「実績を共有」ボタンをクリックすると、より簡単に共有できます！"
+    },
+    "referredUsers": {
+      "title": "紹介したユーザー ({{count}})",
+      "vipUser": "VIPユーザー"
+    },
+    "rewards": {
+      "title": "🎁 紹介報酬",
+      "item1": "• 紹介が成功するたびに、3日間のVIP + 20参加ポイントを獲得",
+      "item2": "• 紹介されたユーザーが登録を完了すると、報酬が自動的に発行されます",
+      "item3": "• VIP期間は累積され、ポイントはショップで交換できます",
+      "item4": "• 紹介すればするほど、より多くの報酬を獲得できます！"
+    }
+  },
+  "userStats": {
+    "title": "データ統計",
+    "subtitle": "詳細なアクティビティデータと実績の進捗を表示",
+    "period": {
+      "last7Days": "過去7日間",
+      "last30Days": "過去30日間",
+      "last90Days": "過去90日間",
+      "allTime": "すべての期間"
+    },
+    "overview": {
+      "totalPoints": "合計ポイント",
+      "thisMonth": "+{{points}} 今月",
+      "completionRate": "完了率",
+      "completed": "{{completed}}/{{total}} 完了",
+      "trustPoints": "信頼ポイント",
+      "trustLevel": "信頼レベル",
+      "excellent": "優秀",
+      "good": "良好",
+      "average": "普通",
+      "activeDays": "アクティブ日数",
+      "joinedOn": "{{date}}に参加"
+    },
+    "details": {
+      "pointsTitle": "ポイント詳細",
+      "participationPoints": "参加ポイント",
+      "trustPoints": "信頼ポイント",
+      "laborPoints": "労働ポイント",
+      "recentChanges": "最近のポイント変化",
+      "gamesTitle": "ゲーム統計",
+      "gamesCreated": "作成したゲーム",
+      "gamesJoined": "参加したゲーム",
+      "gamesCompleted": "完了したゲーム",
+      "categoryStats": "カテゴリ別統計",
+      "times": "{{count}}回",
+      "successRate": "{{rate}}%成功",
+      "recentActivity": "最近のアクティビティ"
+    }
+  },
+  "vipPlans": {
+    "basic": {
+      "name": "ベーシック会員",
+      "benefit1": "1日のゲーム作成制限 +5",
+      "benefit2": "1日のゲーム参加制限 +10",
+      "benefit3": "専用会員バッジ",
+      "benefit4": "優先カスタマーサポート"
+    },
+    "premium": {
+      "name": "プレミアム会員",
+      "benefit1": "1日のゲーム作成制限 +10",
+      "benefit2": "1日のゲーム参加制限 +20",
+      "benefit3": "専用会員バッジ",
+      "benefit4": "優先カスタマーサポート",
+      "benefit5": "高度なデータ統計",
+      "benefit6": "カスタムゲームテンプレート"
+    },
+    "elite": {
+      "name": "エリート会員",
+      "benefit1": "無制限のゲーム作成",
+      "benefit2": "無制限のゲーム参加",
+      "benefit3": "専用会員バッジ",
+      "benefit4": "専任カスタマーサポート",
+      "benefit5": "高度なデータ統計",
+      "benefit6": "カスタムゲームテンプレート",
+      "benefit7": "プライベートゲームルーム",
+      "benefit8": "注目ゲーム優先表示"
+    }
+  },
+  "bottomNav": {
+    "home": "ホーム",
+    "create": "作成",
+    "myGames": "マイゲーム",
+    "friends": "友達",
+    "profile": "プロフィール"
+  },
+  "feedback": {
+    "title": "フィードバック",
+    "type": {
+      "label": "フィードバックタイプ",
+      "suggestion": "機能提案",
+      "bug": "バグ報告",
+      "other": "その他"
+    },
+    "content": {
+      "label": "詳細説明",
+      "placeholder": "問題や提案を詳しく説明してください..."
+    },
+    "email": {
+      "label": "連絡先メール（任意）",
+      "placeholder": "返信が必要な場合はメールアドレスを入力してください"
+    },
+    "buttons": {
+      "cancel": "キャンセル",
+      "submit": "送信",
+      "submitting": "送信中..."
+    },
+    "success": "フィードバックが送信されました！ご提案ありがとうございます。できるだけ早く処理いたします。",
+    "note": "あなたのフィードバックは私たちにとって重要です。すべての提案を慎重に検討します。",
+    "errors": {
+      "emptyContent": "フィードバック内容を入力してください",
+      "submitFailed": "送信に失敗しました。後でもう一度お試しください"
+    }
+  },
+  "enhancedProfile": {
+    "updateSuccess": "プロフィールが正常に更新されました",
+    "updateError": "更新に失敗しました。もう一度お試しください",
+    "editProfile": "プロフィールを編集",
+    "vipUser": "VIPユーザー",
+    "setLocation": "設定された場所",
+    "website": "個人ウェブサイト",
+    "birthday": "誕生日",
+    "interests": "興味・関心",
+    "trustBadges": {
+      "diamond": "ダイヤモンド会員",
+      "gold": "ゴールド会員",
+      "silver": "シルバー会員",
+      "bronze": "ブロンズ会員",
+      "regular": "レギュラー会員",
+      "newbie": "初心者会員"
+    },
+    "stats": {
+      "trustPoints": "信頼ポイント",
+      "gamesJoined": "参加ゲーム",
+      "friendsCount": "友達",
+      "achievements": "実績"
+    },
+    "recentActivity": {
+      "title": "最近のアクティビティ",
+      "empty": "最近のアクティビティはありません",
+      "hint": "ゲームに参加すると、ここにアクティビティ記録が表示されます"
+    },
+    "privacy": {
+      "title": "プライバシー保護",
+      "description": "プロフィールを編集する際に、他のユーザーに表示する情報を制御できます。私たちはあなたのプライバシーとセキュリティを大切にしています。"
+    }
+  },
+  "peerEvaluation": {
+    "title": "他の参加者を評価",
+    "selfEvaluation": "自己評価",
+    "recognize": "完了を認める",
+    "notRecognize": "未完了",
+    "submitSuccess": "評価が正常に送信されました！",
+    "submitFailed": "送信に失敗しました",
+    "selectEvaluation": "評価結果を選択してください",
+    "participantError": "参加者情報エラー",
+    "noEvidence": "このユーザーは証拠を提出していません",
+    "evidencePhoto": "証拠写真",
+    "imageLoadFailed": "画像の読み込みに失敗しました",
+    "videoNotSupported": "お使いのブラウザは動画再生をサポートしていません",
+    "loadFailed": "データの読み込みに失敗しました",
+    "backToHome": "ホームに戻る",
+    "trustPoints": "信頼ポイント",
+    "selfCompleted": "自己評価：完了",
+    "selfNotCompleted": "自己評価：未完了",
+    "submittedEvidence": "提出された証拠",
+    "participantSelfEval": "参加者の自己評価",
+    "believesCompleted": "チャレンジを完了したと考えています",
+    "believesNotCompleted": "チャレンジを完了していないと考えています",
+    "evaluationHint": "証拠と参加者の自己評価に基づいて、客観的な判断を行ってください",
+    "yourEvaluation": "あなたの評価",
+    "submitted": "送信済み",
+    "reasoningLabel": "評価理由（任意）",
+    "reasoningPlaceholder": "評価理由を説明してください...",
+    "evaluationSubmitted": "評価が送信されました",
+    "submitting": "送信中...",
+    "submitEvaluation": "評価を送信",
+    "noParticipants": "評価する参加者がいません",
+    "waitingEvidence": "他の参加者が証拠を提出するのを待っています",
+    "singlePlayer": {
+      "title": "セルフチャレンジモード",
+      "description": "これはあなたの個人的なチャレンジです！目標を達成したかどうか、正直に評価してください。",
+      "tip": "正直な自己評価は成長への第一歩です！",
+      "needEvidence": "シングルプレイヤーゲームは自己評価の前に証拠の提出が必要です"
+    }
+  },
+  "arbitration": {
+    "title": "仲裁を申請",
+    "subtitle": "管理者に紛争仲裁を申請",
+    "relatedGame": "関連ゲーム",
+    "respondentLabel": "紛争対象者 *",
+    "selectRespondentPlaceholder": "紛争対象者を選択してください",
+    "selectRespondent": "紛争対象者を選択してください",
+    "disputeTypeLabel": "紛争タイプ *",
+    "descriptionLabel": "紛争詳細 *",
+    "descriptionPlaceholder": "時間、場所、具体的な出来事などを含めて、紛争を詳しく説明してください...",
+    "descriptionHint": "紛争状況をできるだけ詳しく説明してください。これにより、管理者があなたのリクエストをより適切に処理できます",
+    "describeDispute": "紛争の詳細を説明してください",
+    "submitSuccess": "仲裁申請が送信されました。管理者は24時間以内に処理します",
+    "cancel": "キャンセル",
+    "submit": "申請を送信",
+    "instructions": {
+      "title": "仲裁の説明：",
+      "point1": "管理者は24時間以内にあなたの仲裁申請を処理します",
+      "point2": "提供する情報が真実で正確であることを確認してください",
+      "point3": "悪意のある仲裁申請は処罰される可能性があります",
+      "point4": "仲裁結果はサイト内通知で送信されます"
+    }
+  },
+  "game": {
+    "joinChallenge": "チャレンジに参加",
+    "leaveChallenge": "チャレンジを退出",
+    "youAreCreator": "あなたは作成者です",
+    "challengeInProgress": "チャレンジ進行中",
+    "alreadyJoined": "参加済み",
+    "joinSuccess": "🎉 チャレンジに参加しました！",
+    "leaveSuccess": "✅ チャレンジを退出しました",
+    "textDescription": "テキスト説明",
+    "textDescriptionOptional": "テキスト説明（任意）",
+    "textDescriptionRequired": "テキスト説明（必須）",
+    "loading": "読み込み中...",
+    "loginSuccess": "ログイン成功！",
+    "viewDetails": "詳細を見る",
+    "initiator": "申立人",
+    "respondent": "被申立人",
+    "rejected": "却下",
+    "approved": "承認",
+    "pending": "保留中",
+    "inReview": "審査中",
+    "recruiting": "募集中",
+    "started": "開始済み",
+    "ended": "終了",
+    "category": "カテゴリー",
+    "difficulty": "難易度",
+    "time": "時間",
+    "participants": "参加者",
+    "visibility": "公開設定",
+    "characters": "文字",
+    "startTime": {
+      "5min": "5分後に開始",
+      "5minDesc": "すぐに開始、ユーザーを待機",
+      "15min": "15分後に開始",
+      "15minDesc": "クイックスタート、友達が参加する十分な時間を提供",
+      "1hour": "1時間後に開始",
+      "1hourDesc": "自分と他の人に十分な準備時間を与える",
+      "tonight8": "今夜8時に開始",
+      "tonight8Desc": "夜のゴールデンタイム、参加率が高い",
+      "tomorrow8": "明日朝8時に開始",
+      "tomorrow8Desc": "早朝チャレンジ、良い習慣を身につける",
+      "weekend": "今週末に開始",
+      "weekendDesc": "週末はより多くの参加時間",
+      "selectAppropriateTime": "適切な開始時間を選択して、より多くのユーザーがチャレンジに参加できるようにします"
+    },
+    "timeline": {
+      "preview": "完全なタイムラインプレビュー",
+      "joinDeadline": "参加締切:",
+      "gameStart": "ゲーム開始:",
+      "gameEnd": "ゲーム終了:",
+      "evidenceDeadline": "証拠締切:",
+      "reviewDeadline": "レビュー締切:",
+      "arbitrationDeadline": "仲裁締切:",
+      "gameClosure": "ゲーム終了: 仲裁締切後に自動的に終了"
+    },
+    "admin": {
+      "newGameCreated": "新しいゲームが作成されました",
+      "newUserRegistered": "新しいユーザーが登録されました",
+      "disputeProcessed": "紛争が処理されました",
+      "createdGame": "ゲームを作成しました"
+    },
+    "status": {
+      "open": "参加受付中",
+      "inProgress": "ゲーム進行中",
+      "evidenceSubmission": "証拠提出期間",
+      "peerReview": "ピアレビュー進行中",
+      "completed": "ゲーム終了",
+      "disputed": "紛争処理中",
+      "closed": "終了",
+      "unknown": "不明なステータス"
+    },
+    "visibility": {
+      "public": "公開",
+      "friendsOnly": "友達のみ",
+      "private": "非公開"
+    },
+    "teamGame": "🏆 チームゲーム",
+    "stake": "賭け",
+    "participationProgress": "参加進捗",
+    "teamMode": {
+      "teamVsTeam": "対戦",
+      "collaborative": "協力",
+      "challenge": "チャレンジ"
+    },
+    "trustLevel": "信頼度"
+  },
+  "evidence": {
+    "submitSuccess": "🎉 証拠が正常に送信されました！",
+    "submitFailed": "送信に失敗しました。もう一度お試しください",
+    "invalidFormat": "証拠の形式が正しくありません",
+    "timeExpired": "送信時間が過ぎたか、権限が不足しています",
+    "alreadySubmitted": "すでに証拠を送信しています",
+    "fileTooLarge": "ファイルが大きすぎます！より小さいファイルを選択してください（画像<30MB、動画<150MB）",
+    "networkError": "ネットワークエラー！ファイルが大きすぎるか、ネットワークが不安定です。ファイルサイズを確認して再試行してください",
+    "uploadError": "ファイルのアップロードに失敗しました。もう一度お試しください",
+    "textDescription": "テキスト説明",
+    "textDescriptionOptional": "テキスト説明（任意）",
+    "textDescriptionRequired": "テキスト説明（必須）",
+    "textDescriptionHintOptional": "証拠を補足するためにテキスト説明を追加できます（任意、文字数制限なし）。",
+    "textDescriptionHintRequired": "チャレンジをどのように完了したか詳しく説明してください（最低20文字）。",
+    "textPlaceholderOptional": "証拠を補足するためにテキスト説明を追加... (任意)",
+    "textPlaceholderRequired": "チャレンジをどのように完了したか詳しく説明してください... (最低20文字)",
+    "charactersCount": "{{count}} 文字",
+    "mustUploadOrText": "ファイルをアップロードするか、最低20文字のテキスト説明を入力してください",
+    "mustSelectSelfEvaluation": "自己評価を選択してください（成功または失敗）",
+    "noParticipants": {
+      "title": "まだ誰もあなたのチャレンジに参加していません",
+      "subtitle": "チャレンジには相互レビューを開始するために少なくとも2人の参加者が必要です",
+      "encouragement": "誰も挑戦しないのか、誰も興味がないのか？落胆しないで、友達をチャレンジに招待しましょう！(•̀ᴗ•́)و",
+      "shareLink": "チャレンジリンクを共有",
+      "shareLinkDesc": "リンクをコピーして友達に送信",
+      "shareSocial": "ソーシャルメディアで共有",
+      "shareSocialDesc": "より多くの人にあなたのチャレンジを見てもらう",
+      "copyLink": "共有リンクをコピー",
+      "linkCopied": "リンクがクリップボードにコピーされました！"
+    }
+  },
+  "disputes": {
+    "title": "紛争管理",
+    "subtitle": "紛争申請を表示および管理",
+    "createDispute": "紛争を作成",
+    "viewDetails": "詳細を見る",
+    "initiator": "申立人:",
+    "respondent": "被申立人:",
+    "game": "ゲーム:",
+    "type": "タイプ:",
+    "evidence": "証拠:",
+    "evidenceCount": "{{count}}個",
+    "tabs": {
+      "all": "すべての紛争",
+      "initiated": "私が開始",
+      "targeted": "私に対して"
+    },
+    "status": {
+      "filter": "ステータスフィルター",
+      "all": "すべてのステータス"
+    },
+    "empty": {
+      "title": "紛争記録なし",
+      "all": "まだ紛争記録がありません",
+      "initiated": "まだ紛争を開始していません",
+      "targeted": "まだあなたに対する紛争はありません"
+    },
+    "decisions": {
+      "approveInitiator": "申立人を支持",
+      "approveTarget": "被申立人を支持",
+      "partialApproval": "部分的承認",
+      "noActionNeeded": "対応不要",
+      "insufficientEvidence": "証拠不十分",
+      "invalidDispute": "無効な紛争"
+    }
+  },
+  "safety": {
+    "title": "重要なお知らせ - 安全第一",
+    "coreMessage": "🏆 成功より適度、勝利より健康",
+    "principles": {
+      "withinCapacity": "無理をしない",
+      "withinCapacityDesc": "自分の能力に応じて合理的な目標を設定する",
+      "healthFirst": "健康第一",
+      "healthFirstDesc": "体調が悪いと感じたらすぐに中止し、医師に相談する",
+      "gradual": "段階的な進歩",
+      "gradualDesc": "小さな目標から始めて徐々に改善する",
+      "safetyFirst": "安全第一",
+      "safetyFirstDesc": "専門家の指導に従い、危険な行動を避ける"
+    },
+    "disclaimer": {
+      "title": "免責事項",
+      "description": "このプラットフォームはチャレンジの記録とソーシャルインタラクションサービスのみを提供します。チャレンジへの参加によって引き起こされる身体的傷害、健康問題、またはその他の損失について一切の責任を負いません。参加者は自身の健康状態、能力レベル、リスク許容度に基づいて合理的にチャレンジプロジェクトを選択する必要があります。",
+      "showDetails": "詳細な条件を表示",
+      "hideDetails": "詳細を非表示",
+      "details": {
+        "highRisk": "高リスク活動(エクストリームスポーツなど)には専門家の指導と安全装備が必要です",
+        "healthIssues": "健康問題がある方は、まず医師に相談してください",
+        "minors": "未成年者の参加には保護者の同意と監督が必要です",
+        "noMedicalAdvice": "プラットフォームは医療アドバイスを提供しません。質問がある場合は専門家に相談してください",
+        "fullResponsibility": "参加者は自分の行動と結果に対して完全に責任を負います"
+      }
+    },
+    "mentalHealth": {
+      "title": "メンタルヘルスも同様に重要",
+      "description": "前向きな姿勢を保ち、チャレンジのプロセスを楽しんでください。ストレスや不安を感じすぎる場合は、適切に目標を調整するか、助けを求めてください。覚えておいてください:参加と試みそのものが成功です!"
+    },
+    "agreement": {
+      "title": "上記の安全リマインダーと免責事項を注意深く読み、完全に理解しました",
+      "description": "自分の状況に応じて合理的にチャレンジに参加し、自分の行動に責任を持つことを確認します",
+      "thankYou": "ご理解ありがとうございます!これでチャレンジテンプレートを選択して健康の旅を始めることができます 🎉"
+    }
+  },
+  "evidenceGuide": {
+    "deadline": "締切",
+    "hoursLeft": "残り{{hours}}時間",
+    "closingSoon": "まもなく締切",
+    "requirements": "提出要件",
+    "specificRequirements": "具体的な要件",
+    "importantReminder": "重要なお知らせ",
+    "reminders": {
+      "authentic": "証拠が本物で有効であることを確認してください。虚偽の証拠は信頼スコアに影響します",
+      "noEdit": "提出後は編集できません。提出前に注意深く確認してください",
+      "peerReview": "証拠は他の参加者によってレビューされます",
+      "deadline": "締切後は証拠を提出できません"
+    },
+    "photo": {
+      "title": "写真証拠",
+      "description": "完了証拠として鮮明な写真をアップロード",
+      "tips": {
+        "clear": "写真が鮮明で見やすいことを確認",
+        "keyElements": "完了の重要な要素を含める",
+        "avoidBlur": "ぼやけた写真や暗すぎる写真を避ける",
+        "format": "JPG、PNG形式をサポート、最大10MB"
+      }
+    },
+    "video": {
+      "title": "動画証拠",
+      "description": "完了プロセスを示す動画を録画",
+      "tips": {
+        "duration": "動画の長さは30秒から5分を推奨",
+        "quality": "音声と映像が鮮明であることを確認",
+        "complete": "完全な完了プロセスを表示",
+        "format": "MP4、MOV形式をサポート、最大50MB"
+      }
+    },
+    "text": {
+      "title": "テキスト説明",
+      "description": "完了状況を詳細に説明",
+      "tips": {
+        "detailed": "説明は詳細で具体的であること",
+        "timePlace": "時間、場所、プロセスを含める",
+        "minLength": "最低50文字",
+        "honest": "正直かつ客観的に説明"
+      }
+    },
+    "document": {
+      "title": "文書証拠",
+      "description": "証拠として関連文書をアップロード",
+      "tips": {
+        "readable": "文書が鮮明で読みやすいことを確認",
+        "necessary": "必要な情報を含める",
+        "format": "PDF、DOC、DOCX形式をサポート",
+        "size": "最大10MB"
+      }
+    }
+  },
+  "categoryPage": {
+    "subcategories": "サブカテゴリー",
+    "relatedTemplates": "関連ゲームテンプレート",
+    "allTemplates": "すべてのゲームテンプレート",
+    "noTemplates": "関連するゲームテンプレートはありません",
+    "browseAll": "すべてのテンプレートを閲覧",
+    "backToHome": "ホームに戻る",
+    "retry": "再試行",
+    "error": {
+      "notFound": "カテゴリーが見つかりません",
+      "fetchFailed": "テンプレートの取得に失敗しました。後でもう一度お試しください"
+    }
+  },
+  "simpleTimeSelector": {
+    "title": "ゲーム開始時刻",
+    "hint": "適切な開始時刻を選択して、より多くのユーザーがチャレンジに参加できるようにしましょう",
+    "options": {
+      "fiveMinutes": {
+        "label": "5分後に開始",
+        "description": "すぐに開始、せっかちなユーザーに最適"
+      },
+      "oneHour": {
+        "label": "1時間後に開始",
+        "description": "準備時間を確保"
+      },
+      "tonight": {
+        "label": "今夜8時に開始",
+        "description": "夜のゴールデンタイム、参加率が高い"
+      },
+      "tomorrow": {
+        "label": "明朝8時に開始",
+        "description": "朝のチャレンジ、良い習慣を作る"
+      },
+      "weekend": {
+        "label": "週末に開始",
+        "description": "週末はより多くの時間が取れる"
+      }
+    }
+  },
+  "categories": {
+    "HEALTH": {
+      "name": "健康的な生活",
+      "description": "心身の健康に関するチャレンジ"
+    },
+    "HEALTH_DIET": {
+      "name": "食事と栄養",
+      "description": "健康的な食事、栄養バランス"
+    },
+    "HEALTH_SLEEP": {
+      "name": "睡眠スケジュール",
+      "description": "早寝早起き、規則正しい生活"
+    },
+    "HEALTH_MENTAL": {
+      "name": "メンタルヘルス",
+      "description": "瞑想、マインドフルネス、感情管理"
+    },
+    "HEALTH_HABIT": {
+      "name": "健康習慣",
+      "description": "日常的な健康習慣の形成"
+    },
+    "FITNESS": {
+      "name": "フィットネスと運動",
+      "description": "スポーツとフィットネス関連"
+    },
+    "FITNESS_CARDIO": {
+      "name": "有酸素運動",
+      "description": "ランニング、水泳、サイクリングなど"
+    },
+    "FITNESS_STRENGTH": {
+      "name": "筋力トレーニング",
+      "description": "ジム、器具トレーニング"
+    },
+    "FITNESS_SPORTS": {
+      "name": "球技スポーツ",
+      "description": "サッカー、バスケットボール、テニスなど"
+    },
+    "FITNESS_YOGA": {
+      "name": "ヨガとピラティス",
+      "description": "ヨガ、ピラティス、ストレッチ"
+    },
+    "LEARNING": {
+      "name": "学習と成長",
+      "description": "知識の学習とスキル向上"
+    },
+    "LEARNING_READING": {
+      "name": "読書と執筆",
+      "description": "読書、執筆、ノート作成"
+    },
+    "LEARNING_LANGUAGE": {
+      "name": "語学学習",
+      "description": "外国語学習、会話練習"
+    },
+    "LEARNING_SKILL": {
+      "name": "スキル開発",
+      "description": "プログラミング、デザイン、楽器など"
+    },
+    "LEARNING_EXAM": {
+      "name": "試験準備",
+      "description": "各種試験の準備"
+    },
+    "PERSONAL": {
+      "name": "個人の成長",
+      "description": "個人の成長と自己改善"
+    },
+    "PERSONAL_PRODUCTIVITY": {
+      "name": "生産性",
+      "description": "時間管理、作業効率"
+    },
+    "PERSONAL_CREATIVITY": {
+      "name": "創造的表現",
+      "description": "絵画、写真、手工芸"
+    },
+    "PERSONAL_SOCIAL": {
+      "name": "社会的コミュニケーション",
+      "description": "対人関係、コミュニケーションスキル"
+    },
+    "PERSONAL_FINANCE": {
+      "name": "財務計画",
+      "description": "貯蓄、投資、財務管理"
+    },
+    "LIFESTYLE": {
+      "name": "ライフスタイル",
+      "description": "日常生活と趣味"
+    },
+    "LIFESTYLE_COOKING": {
+      "name": "料理とグルメ",
+      "description": "料理、ベーキング、グルメフード"
+    },
+    "LIFESTYLE_TRAVEL": {
+      "name": "旅行と探検",
+      "description": "観光、アウトドア活動、探検"
+    },
+    "LIFESTYLE_HOBBY": {
+      "name": "趣味",
+      "description": "収集、ゲーム、エンターテイメント"
+    },
+    "LIFESTYLE_HOME": {
+      "name": "家庭生活",
+      "description": "整理整頓、装飾、ガーデニング"
+    },
+    "WORK": {
+      "name": "仕事とキャリア",
+      "description": "キャリア開発と仕事関連"
+    },
+    "WORK_STARTUP": {
+      "name": "スタートアッププロジェクト",
+      "description": "起業、プロジェクト開発、ビジネスプラン"
+    },
+    "WORK_CAREER": {
+      "name": "キャリア開発",
+      "description": "スキル向上、職場での成長"
+    },
+    "WORK_PRODUCTIVITY": {
+      "name": "作業効率",
+      "description": "時間管理、作業方法"
+    },
+    "SOCIAL": {
+      "name": "社会的交流",
+      "description": "対人関係と社会活動"
+    },
+    "SOCIAL_FRIENDSHIP": {
+      "name": "友人と集まり",
+      "description": "友人との集まり、社会活動"
+    },
+    "SOCIAL_FAMILY": {
+      "name": "家族関係",
+      "description": "家族の時間、家族の絆"
+    },
+    "SOCIAL_COMMUNITY": {
+      "name": "コミュニティ参加",
+      "description": "ボランティアサービス、コミュニティ活動"
+    },
+    "ENTERTAINMENT": {
+      "name": "エンターテイメントとレジャー",
+      "description": "エンターテイメント活動と余暇時間"
+    },
+    "ENTERTAINMENT_MEDIA": {
+      "name": "映画とテレビ",
+      "description": "映画、テレビシリーズ、ドキュメンタリー"
+    },
+    "ENTERTAINMENT_GAMING": {
+      "name": "ゲーム",
+      "description": "ビデオゲーム、ボードゲーム"
+    },
+    "ENTERTAINMENT_MUSIC": {
+      "name": "音楽鑑賞",
+      "description": "音楽の発見、コンサート参加"
+    }
+  },
+  "templateConfig": {
+    "pleaseSelect": "選択してください...",
+    "challengeTitle": "チャレンジタイトル",
+    "challengeDescription": "チャレンジの説明",
+    "titlePlaceholder": "チャレンジタイトルを入力",
+    "descriptionPlaceholder": "チャレンジの説明を入力",
+    "characters": "文字",
+    "parameterConfig": "チャレンジパラメータ設定",
+    "evidenceRequirements": "証拠提出要件",
+    "required": "必須",
+    "evidenceDescription": "証拠の説明",
+    "evidencePlaceholder": "証拠提出要件を簡潔に説明してください",
+    "importantReminder": "重要なリマインダー",
+    "customFieldConfig": "カスタムフィールド設定",
+    "addField": "フィールドを追加",
+    "selectFieldTemplate": "事前定義されたフィールドテンプレートを選択:",
+    "noFieldsYet": "カスタムフィールドはまだ追加されていません",
+    "clickToAddField": "「フィールドを追加」をクリックしてチャレンジの設定を開始",
+    "configPreview": "設定プレビュー",
+    "configuredFields": "設定済みフィールド: ",
+    "requiredFields": "必須フィールド: ",
+    "optionalFields": "オプションフィールド: ",
+    "fields": "フィールド",
+    "noExtraConfig": "一般的なチャレンジには追加の設定は必要ありません",
+    "fullyCustomizable": "チャレンジの内容を完全にカスタマイズできます"
+  },
+  "generalFields": {
+    "target_description": {
+      "label": "目標説明",
+      "placeholder": "チャレンジの目標を詳しく説明してください...",
+      "description": "達成したい具体的な目標を説明してください"
+    },
+    "daily_goal": {
+      "label": "毎日の目標",
+      "placeholder": "例：5km走る、30分読書する",
+      "description": "毎日完了する具体的なタスクを設定してください"
+    },
+    "motivation": {
+      "label": "参加動機",
+      "placeholder": "このチャレンジへの理由と期待を共有してください...",
+      "description": "このチャレンジに参加する理由を説明してください"
+    },
+    "difficulty_level": {
+      "label": "難易度レベル",
+      "description": "現在のレベルに合った難易度を選択してください",
+      "options": {
+        "0": "簡単",
+        "1": "中程度",
+        "2": "難しい",
+        "3": "非常に難しい"
+      }
+    },
+    "frequency": {
+      "label": "実行頻度",
+      "description": "チャレンジの実行頻度を選択してください",
+      "options": {
+        "0": "毎日",
+        "1": "週3回",
+        "2": "週5回",
+        "3": "週末",
+        "4": "カスタム"
+      }
+    },
+    "categories": {
+      "label": "関連カテゴリ",
+      "description": "チャレンジに関連するカテゴリを選択してください（複数選択可）",
+      "options": {
+        "0": "健康",
+        "1": "学習",
+        "2": "仕事",
+        "3": "生活",
+        "4": "社交",
+        "5": "創造的",
+        "6": "運動",
+        "7": "その他"
+      }
+    },
+    "time_commitment": {
+      "label": "時間投入",
+      "description": "各チャレンジ実行に必要な時間",
+      "options": {
+        "0": "15分未満",
+        "1": "15-30分",
+        "2": "30-60分",
+        "3": "1-2時間",
+        "4": "2時間以上"
+      }
+    },
+    "tracking_method": {
+      "label": "記録方法",
+      "description": "好みの記録と証拠提出方法を選択してください",
+      "options": {
+        "0": "写真",
+        "1": "テキスト日記",
+        "2": "データ記録",
+        "3": "ビデオ",
+        "4": "音声"
+      }
+    },
+    "success_criteria": {
+      "label": "成功基準",
+      "placeholder": "例：7日間連続で完了、特定の数値目標を達成など...",
+      "description": "チャレンジの成功とみなされる条件を明確に定義してください"
+    },
+    "reward_system": {
+      "label": "報酬システム",
+      "placeholder": "例：完了後に本を買う、映画を見るなど",
+      "description": "チャレンジ完了後の自分への報酬を設定してください"
+    }
+  }
+}
+
